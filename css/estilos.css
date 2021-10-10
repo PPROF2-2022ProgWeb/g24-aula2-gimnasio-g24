@@ -1,0 +1,79 @@
+/*
+definir fuentes a usar por todos.
+no puedo aplicar un bg color a html o body en bootstrap por eso puse important
+
+tendremos una etiqueta semantica html5 MAIN la cual será la que tenga el padding top
+para asi servir el fijado del header
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #EEEEEE;
+    margin-bottom: 0;
+}
+
+div.container {
+    background-color: #BD4B4B;
+    padding: 0;
+}
+
+body {
+    background-color: #000000!important;
+}
+
+header {
+    background-color: #EFB7B7;
+    position: fixed;
+    width: 84%;
+    padding-bottom: 0%;
+    z-index: 99;
+    margin-left: 4px;
+    height: 112px;
+}
+
+header nav.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+footer {
+    background-color: #EFB7B7;
+}
+
+header h1 {
+    text-align: center;
+}
+
+#carousel {
+    padding: 5%;
+}
+
+img {
+    width: 900px;
+    height: 500px;
+}
+
+main {
+    width: 63%;
+    margin: 0 auto;
+    padding-top: 6%;
+    min-height: calc(100vh - 28px);
+}
+
+ul#barra_navegacion {
+    width: 100%;
+}
+
+ul#barra_navegacion li {
+    width: 25%;
+}
+
+footer {
+    height: 28px;
+    background-color: #EFB7B7;
+}
