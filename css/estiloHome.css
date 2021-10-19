@@ -6,14 +6,16 @@ body {
 	align-content: center;
 	
 }
-#CentroHome{
+.CentroHome{
 	
 color: white;
 background-color: black;
 align-content: center;
 align-items: center;
 text-align: center;
+opacity: 95%;
 border-radius: 1% 1%;
+
 }
 
 table{
