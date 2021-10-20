@@ -1,19 +1,21 @@
 body {
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    background-image: url(http://planidear.com.ar/a5-g6-gimnasio/img/fondogym3.jpg);
+    background-image: url(../img/fondogym3.jpg);
     background-size: cover;
     background-attachment: fixed;/*elemento permanece visible*/
 	align-content: center;
 	
 }
-#CentroHome{
+.CentroHome{
 	
-color: black;
-background-color: white;
+color: white;
+background-color: black;
 align-content: center;
 align-items: center;
 text-align: center;
+opacity: 90%;
 border-radius: 1% 1%;
+
 }
 
 table{

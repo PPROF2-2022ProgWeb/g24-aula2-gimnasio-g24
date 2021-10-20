@@ -1,3 +1,0 @@
-# ParcticasISPC
-# ParcticasISPC
-# ParcticasISPC
