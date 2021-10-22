@@ -16,7 +16,24 @@ text-align: center;
 opacity: 90%;
 border-radius: 1% 1%;
 
+
 }
+
+.EstiloFuente{
+
+	font-family: 'Kanit', sans-serif;
+	font-weight: bold;
+	
+}
+
+video-responsive {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+	}
+
 
 table{
 
