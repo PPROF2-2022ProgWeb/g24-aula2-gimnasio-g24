@@ -5,7 +5,7 @@
   <meta name="Sistema web para gimnasio" content="Pagina de inicio"/>
   <meta name="keywords" content="Sistema web, gimnasio, entrenamiento"/>
 <head>
-	 <title>Plantilla</title>
+	 <title>LisUsuario</title>
 
 
  
@@ -62,34 +62,62 @@
     <section>
     <div class="container ">
 
-      <div class="col CentroHome" >
-        
-        <br>
-      </div>
-    </div>
-    
-</section>
-<br>
+      <div class="col" >
 
-  <section class="EstiloFuente">
-  <div class="container">
-    <div class="row">
-      <div class="col-4 CentroHome">
-        <br>
 
+<table border=1 align="center">
+<tr>
+<td border=1 colspan="4" align="center" bgcolor="#E6E7E8">
+
+
+  <p><B>Usuarios</B></p>
+  </td>
+</tr>
+<TR bgcolor="#E6E7E8">
+<TD><B>IdUsuario</B></TD>
+<TD><B>DNI</B></TD>
+<TD><B>Nombre</B></TD>
+<TD><B>Apellido</B></TD>
+
+</TR>
+
+<p>
+					   
+
+  <?php
+
+$mysqli = new mysqli("168.197.48.110","c2110488_PrIspc","98movadoDO","c2110488_PrIspc");
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+
+$query = $mysqli -> query ("SELECT * FROM `PrUsuario`");
+
+
+  while ($fila = mysqli_fetch_array($query))
+
+{
+
+	  
+echo "<TR>\n";
+//echo "<td>".'<img src="'.$fila['Imagen'].'" width="50" heigth="50"/>'."</td>\n";
+echo "<td>".$fila['IdUsuario']."</td>\n";
+echo "<td>"." | ".$fila['DNI']."</td>\n";
+echo "<td>"." | ".$fila['Nombre']."</td>\n";
+echo "<td>"." | ".$fila['Apellido']."</td>\n";
+
+echo "</TR>\n";
+}
+						 
+//echo "</table>";
+
+?>
+				   
+</table>
       </div>
-      <div class="col-4 CentroHome border ">
-        <br>
-        
-        
-      </div>
-      <div class="col-4 CentroHome">
-        <br>
-      </div>
-    </div>
-  </div>
-    </div>
-  </section>
+      
   </main>
   
 <br>
