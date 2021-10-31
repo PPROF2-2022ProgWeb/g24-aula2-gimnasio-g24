@@ -20,7 +20,7 @@ background-color: darkgray;
     margin-top: 100px;
     border-radius: 4px;
     font-family: 'Arial Narrow';
-    color: white;
+    color: black;
     box-shadow: 7px 13px 37px rgb(203, 27, 219);
     
 
@@ -29,7 +29,7 @@ background-color: darkgray;
 .form-register h4 {
     front-size: 20px;
     margin-bottom: 20px;
-    color: white;
+    color: black;
 }
 
 .Controls {

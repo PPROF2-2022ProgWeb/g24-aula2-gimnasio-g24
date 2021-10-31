@@ -28,10 +28,11 @@
 
 <meta charset="utf-8">
 	
-	<link href="img/LogoSF.png" rel="icon" type="image/png"">
+	<link href="img/LogoSF.png" rel="icon" type="image/png">
+
 </head>
 
-<body>
+<body onLoad="controlIngreso()">
   
     
 	<header class="menu">
@@ -67,17 +68,19 @@
 
 <table border=1 align="center">
 <tr>
-<td border=1 colspan="4" align="center" bgcolor="#E6E7E8">
+<td border=1 colspan="6" align="center" bgcolor="#E6E7E8">
 
 
   <p><B>Usuarios</B></p>
   </td>
 </tr>
 <TR bgcolor="#E6E7E8">
-<TD><B>IdUsuario</B></TD>
-<TD><B>DNI</B></TD>
-<TD><B>Nombre</B></TD>
-<TD><B>Apellido</B></TD>
+<TD><B> Imagen </B></TD>
+<TD><B> IdUsuario </B></TD>
+<TD><B> usuario </B></TD>
+<TD><B> DNI </B></TD>
+<TD><B> Nombre </B></TD>
+<TD><B> Apellido </B></TD>
 
 </TR>
 
@@ -102,11 +105,12 @@ $query = $mysqli -> query ("SELECT * FROM `PrUsuario`");
 
 	  
 echo "<TR>\n";
-//echo "<td>".'<img src="'.$fila['Imagen'].'" width="50" heigth="50"/>'."</td>\n";
-echo "<td>".$fila['IdUsuario']."</td>\n";
-echo "<td>"." | ".$fila['DNI']."</td>\n";
-echo "<td>"." | ".$fila['Nombre']."</td>\n";
-echo "<td>"." | ".$fila['Apellido']."</td>\n";
+echo "<td>".'<img src="'.$fila['Imagen'].'" width="50" heigth="50"/>'."</td>\n";
+echo "<td>"."  ".$fila['IdUsuario']."</td>\n";
+	  echo "<td>"."  ".$fila['usuario']."</td>\n";
+echo "<td>"."  ".$fila['DNI']."</td>\n";
+echo "<td>"."  ".$fila['Nombre']."</td>\n";
+echo "<td>"."  ".$fila['Apellido']."</td>\n";
 
 echo "</TR>\n";
 }
