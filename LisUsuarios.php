@@ -32,9 +32,20 @@
 
 </head>
 
-<body onLoad="controlIngreso()">
+<body>
   
-    
+    <?php
+	
+	 if($u == "" || $_POST['clave'] <> null){
+		
+	echo "Ingresaste";
+	}else{
+		echo "<script language='JavaScript'>";
+            echo "location = 'http://planidear.com.ar/a5-g6-gimnasio/form_ingreso.php'";
+            echo "</script>";
+	}
+		
+	?>
 	<header class="menu">
 				<nav>
 					<ul>
@@ -85,20 +96,64 @@
 </TR>
 
 <p>
-					   
+		<?php
 
-  <?php
+include("Conexion/conexion.php");
+
+		  
+// isset() del boton login
+if(isset($_POST['login'])){
+
+    // 3. Variables $_POST[]
+    $u = $_POST['usuario'];
+    $c = $_POST['clave']; 
+
+    if($u == "" || $_POST['clave'] == null){ // Validamos que ningún campo quede vacío
+        echo "<script>alert('Error: usuario y/o clave vacios!!');</script>"; // Se utiliza Javascript dentro de PHP
+    }else{
+        // Cadena de SQL
+        $sql = "SELECT * FROM `PrUsuario` WHERE `usuario` LIKE '$u' AND `Clave` LIKE '$c'";
+		
+
+        // Ejecuto cadena query()
+        if(!$consulta = $conexion->query($sql)){
+            echo "ERROR: no se pudo ejecutar la consulta!";
+        }else{
+
+            // Cuento registros obtenidos del select. 
+            // Como el nombre de usuario en la clave primaria no debería de haber mas de un registro con el mismo nombre.
+            $filas = mysqli_num_rows($consulta);
+
+            // Comparo cantidad de registros encontrados
+            if($filas == 0){
+                echo "<script>alert('Error: usuario y/o clave incorrectos!!');</script>";
+            }else{
+
+echo 
+"<script type=\"text/javascript\">
+window.location.href = \"http://planidear.com.ar/a5-g6-gimnasio/LisUsuarios.php\";
+</script>";
+
+            }
+
+        }
+    }
+}
+	
+
+	
+
 
 $mysqli = new mysqli("168.197.48.110","c2110488_PrIspc","98movadoDO","c2110488_PrIspc");
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-
-
+	
+$u = $_POST['usuario'];
 $query = $mysqli -> query ("SELECT * FROM `PrUsuario`");
 
-
+//$query = $mysqli -> query ("SELECT * FROM `PrUsuario` WHERE `usuario` LIKE '$u'");
   while ($fila = mysqli_fetch_array($query))
 
 {
