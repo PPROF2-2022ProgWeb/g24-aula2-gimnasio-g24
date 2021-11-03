@@ -13,9 +13,15 @@ CREATE TABLE USUARIO
 
 
 
+<<<<<<< HEAD
 CREATE TABLE PrMaquina
        (
        Id_Maquina INT NOT NULL AUTO_INCREMENT,                              
+=======
+CREATE TABLE MAQUINA
+       (
+       ID_MAQUINA INT NOT NULL AUTO_INCREMENT,                              
+>>>>>>> 96727203d122f81f99d2f0dd7ca87459e7ad93c7
        DESCRIPCION VARCHAR(100) NOT NULL,                              
        PRIMARY KEY
                (
@@ -25,6 +31,7 @@ CREATE TABLE PrMaquina
 
 
 
+<<<<<<< HEAD
 CREATE TABLE PrTipoPlan
        (
        ID_TipoPlan INT NOT NULL AUTO_INCREMENT,                              
@@ -36,11 +43,25 @@ CREATE TABLE PrTipoPlan
        PRIMARY KEY
                (
                ID_TipoPlan
+=======
+CREATE TABLE TIPO_PLAN
+       (
+       ID_TIPO_PLAN INT NOT NULL AUTO_INCREMENT,                              
+       DESCRIPCION VARCHAR(100) NOT NULL,                              
+       EDAD_ACEPTADA_DESDE INT NOT NULL,                              
+       EDAD_ACEPTADA_HASTA INT NOT NULL,                              
+       PESO_ACEPTADO_DESDE INT NOT NULL,                              
+       PESO_ACEPTADO_HASTA INT NOT NULL,                              
+       PRIMARY KEY
+               (
+               ID_TIPO_PLAN
+>>>>>>> 96727203d122f81f99d2f0dd7ca87459e7ad93c7
                )
        );
 
 
 
+<<<<<<< HEAD
 CREATE TABLE PrRutina
        (
        IdTipoRutina INT NOT NULL AUTO_INCREMENT,                              
@@ -48,6 +69,15 @@ CREATE TABLE PrRutina
        PRIMARY KEY
                (
                IdTipoRutina
+=======
+CREATE TABLE TIPO_RUTINA
+       (
+       ID_TIPO_RUTINA INT NOT NULL AUTO_INCREMENT,                              
+       DESCRIPCION VARCHAR(100) NOT NULL,                              
+       PRIMARY KEY
+               (
+               ID_TIPO_RUTINA
+>>>>>>> 96727203d122f81f99d2f0dd7ca87459e7ad93c7
                )
        );
 
