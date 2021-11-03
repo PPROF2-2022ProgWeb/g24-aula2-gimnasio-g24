@@ -41,7 +41,7 @@
 		<li><a href="index.html"> Home </a></li>
 		<li><a href="sobre_nosotros.html">Equipo</a></li>
 		<li><a href="contacto.html"> Contacto </a></li>
-   	<li><a href="form_ingreso.php"> Login </a></li>
+   	<li><a href="form_ingreso.html"> Login </a></li>
     <li><a href="help.html"> Ayuda </a></li>
        
 		</ul>
@@ -131,7 +131,7 @@ echo "</TR>\n";
         </a>
         <a href="sobre_nosotros.html">Equipo</a>
         <a href="contacto.html"> Contacto </a>
-        <a href="form_ingreso.php"> Login </a>
+        <a href="form_ingreso.html"> Login </a>
         <a href="help.html"> Ayuda </a>
       </div>
     </nav>
