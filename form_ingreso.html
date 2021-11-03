@@ -62,16 +62,28 @@
       <div class="row justify-content-md-center">
         
       <div class="col-6 EstiloFormIngreso">
+		  
   
-        <form class="form-loguin" method="POST" action="#">
-          <label>Ya tenés una cuenta? Ingresá!!</label>
-          <label form="usuario_loguin">Nombre de usuario</label>
-          <input class="form-control" type="text" name="user_loguin" placeholder="Ingrese su usuario" required>
-          <label form="usuario_loguin">Contraseña</label>
-          <input class="form-control" type="password" name="clave_loguin" required>
-          <button class="btn btn-primary" type="submit">Ingresar</button>
-          <a class="btn btn-primary" href="form_registro.html" role="button">Registrarse</a>
-        </form>
+		  
+
+		  
+<form method="post" action="http://planidear.com.ar/a5-g6-gimnasio/LisUsuarios.php" name="form1">
+
+        <label>Ya tenés una cuenta? Ingresá!!</label>
+        <label form="usuario">Nombre de usuario</label>
+        <input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" >
+        <label form="clave">Contraseña</label>
+        <input class="form-control" type="password" name="txtClave"  id="txtClave" >
+
+		<button class="btn btn-primary" type="submit" name="login">Ingresar</button>
+	
+	
+	
+        <a class="btn btn-primary" href="form_registro.html" role="button">Registrarse</a>
+    </form>
+		  
+
+		  
       </div>
     </div>
   </div>
