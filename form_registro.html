@@ -18,8 +18,8 @@
 	<link rel="stylesheet" href="css/estiloHome.css">
 	<script type="text/javascript" src="js/Archivo.js"></script>
     <link rel="stylesheet" href="css/Formregistro.css">
+	<link href="img/LogoSF.png" rel="icon" type="image/png">
     <title>Formulario_registro</title>
-	<link href="img/LogoSF.png" rel="icon" type="image/png"">
 </head>
 <body>
     
@@ -30,7 +30,7 @@
               <li><a href="index.html"> Home </a></li>
               <li><a href="sobre_nosotros.html">Equipo</a></li>
               <li><a href="contacto.html"> Contacto </a></li>
-              <li><a href="form_ingreso.html"> Login </a></li>
+              <li><a href="form_ingreso.php"> Login </a></li>
               <li><a href="help.html"> Ayuda </a></li>
 
 </ul>
@@ -39,15 +39,18 @@
 </header>
 
 <section class="form-register">
-  <form id="formRegister" name="formRegister" method="post" action="" enctype="multipart/form-data">
+  <form id="formRegister" name="formRegister" method="post" action="InsUsuario.php" enctype="multipart/form-data">
  <h4>Alta De Nuevo Usuario</h4>
 
-<input class="Controls" type="text" name="Nombre" id="Nombre" placeholder="Ingrese su nombre">
-<input class="Controls" type="text" name="Apellido" id="Apellido" placeholder="Ingrese su Apellido">
+<input class="Controls" type="text" name="txtNombre" id="txtNombre" placeholder="Ingrese su nombre">
+<input class="Controls" type="text" name="txtApellido" id="txtApellido" placeholder="Ingrese su Apellido">
+ <input class="Controls" type="file" name="imagen">
+ 
 <input class="Controls" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion">
 <input class="Controls" type="text" name="Edad" id="Edad" placeholder="Ingrese su Edad">
 <input class="Controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
-<input class="Controls" type="password" name="Contrasenia" id="Contrasenia" placeholder="Ingrese su Contraseña">
+<input class="Controls" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" required>
+<input class="Controls" type="password" name="txtClave" id="txtClave" placeholder="Ingrese su Contraseña" required>
 <p>Estoy de acuerdo con<a href="#">Teminos y Condiciones</a></p>
 <input class="botons" type="submit" value="Registrar">
 <p><a href="#"> Tengo cuenta!</a></p>
@@ -66,8 +69,8 @@
           Home
         </a>
         <a href="sobre_nosotros.html">Equipo</a>
-        <a href="contacto.html"> Contacto </a>
-        <a href="form_ingreso.html"> Login </a>
+        <a href="#"> Contacto </a>
+        <a href="form_ingreso.php"> Login </a>
         <a href="help.html"> Ayuda </a>
       </div>
     </nav>
