@@ -9,7 +9,7 @@
 <head>
 	
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	 <title>LisUsuario</title>
+	 <title>Registro</title>
 
 
  
@@ -75,57 +75,47 @@
 
 
 		<?php
-
-include("Conexion/conexion.php");
-  
-if(isset($_POST['txtUsuario'])){
-
-    // Variables $_POST[]
-    $u = $_POST['txtUsuario'];
-    $c = MD5($_POST['txtClave']); // La función MD5() estará encriptando lo ingresado para comparar con lo guardado
- 
-	
-
-    if($u == "" || $_POST['txtClave'] == null){ // Validamos que ningún campo quede vacío
-echo "<script>alert('Error: usuario y/o clave vacios!!');</script>"; // Se utiliza Javascript dentro de PHP
-echo "<script type=\"text/javascript\">
-window.location.href = \"http://planidear.com.ar/a5-g6-gimnasio/form_ingreso.php\";
-</script>";
-    }else{
-        // Cadena de SQL
-
-        $sql = "SELECT * FROM `PrUsuario`";
-
-
-        // Ejecuto cadena query()
-        if(!$consulta = $conexion->query($sql)){
-echo "ERROR: no se pudo ejecutar la consulta!";
-        }else{
-
-            // Cuento registros obtenidos del select. 
-            // Como el nombre de usuario en la clave primaria no debería de haber mas de un registro con el mismo nombre.
-			
 $mysqli = new mysqli("168.197.48.110","c2110488_PrIspc","98movadoDO","c2110488_PrIspc");
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-			
-$Clave=$_POST['txtClave'];
-$query = $mysqli -> query ("SELECT * FROM `PrUsuario` WHERE `Clave` LIKE '$Clave'");
-			
-            $filas = mysqli_num_rows($query);
+  
+$nombre_imagen=$_FILES['imagen']['name'];
+$tipo_iamgen=$_FILES['imagen']['type'];
+$tamagno_imegen=$_FILES['imagen']['size'];
 
-            // Comparo cantidad de registros encontrados
-            if($filas == 0){
-echo "<script>alert('Error: usuario y/o clave incorrectos!!');</script>";
-echo "<script type=\"text/javascript\">
-window.location.href = \"http://planidear.com.ar/a5-g6-gimnasio/form_ingreso.php\";
-</script>";	
-				
-            }else{
-$usuario=$_POST['txtUsuario'];
-//echo"Usuario : $usuario";
+
+$carpetas_destino='ftp.planidear.com.ar' . $nombre_imagen;
+
+move_uploaded_file($_FILES['imagen']['tmp_name'],$nombre_imagen);
+
+
+$IdUsuario=(NULL);
+
+$Imagen = 'http://planidear.com.ar/a5-g6-gimnasio/'.$nombre_imagen;
+$Nombre=$_POST['txtNombre'];
+$Apellido=$_POST['txtApellido'];
+$Usuario=$_POST['txtUsuario'];
+$Clave=$_POST['txtClave'];
+
+	
+$conInser=mysqli_connect("168.197.48.110","c2110488_PrIspc","98movadoDO","c2110488_PrIspc");
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  } 
+  
+$res=mysqli_query($con,"SELECT * FROM `PrUsuario`");
+
+
+
+$insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`) VALUES (NULL, '', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave');";
+
+$ejecutar_insertar=mysqli_query($conInser,$insertarUsuario);
+
+echo "<script>alert('REGISTRADO!!');</script>";
+
 
 	
 $mysqli1 = new mysqli("168.197.48.110","c2110488_PrIspc","98movadoDO","c2110488_PrIspc");
@@ -154,11 +144,6 @@ echo "<h2>"." Apellido: ".$fila['Apellido']."</h2>";
 //echo "</TR>\n";
 }
 
-            }
-
-        }
-    }
-}
 	
 
   ?>  

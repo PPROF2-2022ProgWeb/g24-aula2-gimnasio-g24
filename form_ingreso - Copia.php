@@ -71,12 +71,34 @@
 
         <label>Ya tenés una cuenta? Ingresá!!</label>
         <label form="usuario">Nombre de usuario</label>
-        <input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" >
+        <input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" required>
         <label form="clave">Contraseña</label>
-        <input class="form-control" type="password" name="txtClave"  id="txtClave" >
+        <input class="form-control" type="password" name="clave" required>
 
 		<button class="btn btn-primary" type="submit" name="login">Ingresar</button>
+	<?php
 	
+	print "<pre>";
+print_r($_REQUEST);
+print "</pre>";
+	
+	 $mysqli = new mysqli("168.197.48.110","c2110488_PrIspc","98movadoDO","c2110488_PrIspc");
+
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$usuario= $_POST['txtUsuario'];
+
+$query = $mysqli -> query ("SELECT * FROM `PrUsuario` WHERE `usuario` LIKE '$usuario'");
+
+$row = mysqli_fetch_assoc($query);
+
+
+echo "<a class=\"btn btn-primary\" href=\"http://planidear.com.ar/a5-g6-gimnasio/LisUsuarios.php?usuario=".$_GET['txtUsuario']."\" role=\"button\">INGRESAR</a>";
+	
+	?>
 	
 	
         <a class="btn btn-primary" href="form_registro.html" role="button">Registrarse</a>
