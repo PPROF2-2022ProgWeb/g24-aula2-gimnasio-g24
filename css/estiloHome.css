@@ -2,120 +2,127 @@ body {
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
     background-image: url(../img/fondogym3.jpg);
     background-size: cover;
-    background-attachment: fixed;/*elemento permanece visible*/
-	align-content: center;
-	
-}
-.CentroHome{
-	
-color: white;
-background-color: black;
-align-content: center;
-align-items: center;
-text-align: center;
-opacity: 90%;
-border-radius: 1% 1%;
+    background-attachment: fixed;
+    /*elemento permanece visible*/
+    align-content: center;
 }
 
-.EstiloContacto{
-	
-	color: white;
-	background-color: black;
-	align-content: center;
-	align-items: center;
-	text-align:left;
-	opacity: 90%;
-	border-radius: 1% 1%;
-	}
-
-.EstiloFormIngreso{
-	
-	color: white;
-	background-color: black;
-	align-content: center;
-	align-items: center;
-	text-align:left;
-	opacity: 90%;
-	border-radius: 1% 1%;
-	size: 50;
-	}
-
-.EstiloFuente{
-
-	font-family: 'Kanit', sans-serif;
-	font-weight: bold;
-	
+.CentroHome {
+    color: white;
+    background-color: black;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 90%;
+    border-radius: 1% 1%;
 }
-.EstiloFuenteSobreNosotros{
-	font-family: arial, helvetica, sans-serif;
-	
-	font-size: 18px;
 
+.EstiloContacto {
+    color: white;
+    background-color: black;
+    align-content: center;
+    align-items: center;
+    text-align: left;
+    opacity: 90%;
+    border-radius: 1% 1%;
+}
+
+.EstiloFormIngreso {
+    color: white;
+    background-color: black;
+    align-content: center;
+    align-items: center;
+    text-align: left;
+    opacity: 90%;
+    border-radius: 1% 1%;
+    size: 50;
+}
+
+.EstiloFuente {
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+
+.EstiloFuenteSobreNosotros {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 18px;
 }
 
 .video-responsive {
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	position: relative;
-	}
-
-
-table{
-
-	text-align:center;
-	background-color: white;
-	border: groove;
-	
+    list-style: none;
+    padding: 0;
+    background: #000000;
+    width: 100%;
+    margin: auto;
+    align-content: initial;
 }
-#textNombre{
-		text-align: center;
-	
+
+table {
+    text-align: center;
+    background-color: white;
+    border: groove;
 }
-.CssImage{
-    position:relative;
+
+#textNombre {
+    text-align: center;
+}
+
+.CssImage {
+    position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50% 50%;
-   	
 }
 
-
-
-.menu{
-	list-style: none;
-	padding: 0;
-	background: #000000;
-	width: 80%;
-	
-	margin: auto;
-	align-content: initial;
-	
-	
+.menu {
+    list-style: none;
+    padding: 0;
+    background: #000000;
+    width: 80%;
+    margin: auto;
+    align-content: initial;
 }
+
 .menu li a {
-	
-	text-decoration: none;
-	color: white;
-	padding: 20px; /*separa ligeramente del borde*/
-	display: block;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    /*separa ligeramente del borde*/
+    display: block;
 }
-.menu li {
-	display: inline-block; /*situar uno al lado de otro */
-	text-align: center;
-	
-	
-}
-.menu1 {
-	
 
-	width: 150px;
-	border: none;
-	display: inline-block;
-	vertical-align: top;
-	z-index: 1;
+.menu li {
+    display: inline-block;
+    /*situar uno al lado de otro */
+    text-align: center;
 }
-.aCss{
-	color: black;
+
+.menu1 {
+    width: 150px;
+    border: none;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 1;
+}
+
+.aCss {
+    color: black;
+}
+
+.form-loguin {
+    padding: 1%;
+}
+
+.form-loguin label:first-child {
+    font-size: 1.3em;
+    display: block;
+    text-align: center;
+}
+
+.form-loguin button {
+    padding: 1%;
+}
+
+.form-loguin input {
+    margin: 1%;
 }
