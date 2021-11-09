@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
+<<<<<<< HEAD
 <file name="estilo.css" server="ftp.planidear.com.ar" local="132784497677824517" remote="132784497600000000" Dst="0" />
 <file name="estilo1.css" server="ftp.planidear.com.ar" local="132784374483180484" remote="132781959600000000" Dst="0" />
 <file name="estiloHome.css" server="ftp.planidear.com.ar" local="132808887747604021" remote="132808888200000000" Dst="0" />
 <file name="Formregistro.css" server="ftp.planidear.com.ar" local="132808878692860731" remote="132808914000000000" Dst="0" />
+=======
+<file name="estilo.css" server="ftp.planidear.com.ar" local="132793914298538894" remote="132795886800000000" Dst="0" />
+<file name="estilo1.css" server="ftp.planidear.com.ar" local="132784374483180484" remote="132795886800000000" Dst="0" />
+<file name="estiloHome.css" server="ftp.planidear.com.ar" local="132795880565050263" remote="132795886800000000" Dst="0" />
+<file name="Formregistro.css" server="ftp.planidear.com.ar" local="132795799036282562" remote="132795886800000000" Dst="0" />
+>>>>>>> 43b2b91af8e6c537ed641e5333dac6688529709c
 </dwsync>
