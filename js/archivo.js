@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 window.addEventListener("load", inicio);
 
 function inicio() {
@@ -33,7 +32,6 @@ function envioMensaje(e) {
 function volverAInicio() {
     window.location = "index.html";
 }
-=======
 function pruebaExterna(){
 	alert('al actualizar Un mensaje de prueba desde un archivo externo');}
 
@@ -51,4 +49,3 @@ function pruebaExterna(){
 			var x = 5;
 		  }
 		  console.log(x); // x vale 5		  
->>>>>>> 43b2b91af8e6c537ed641e5333dac6688529709c
