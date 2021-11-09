@@ -21,7 +21,7 @@
     
       <link href="img/LogoSF.png" rel="icon" type="image/png">
   </head>
-  <body class="estiloBody">
+  <body id="estiloBody">
 
 	<header class="menu">
 		<nav>
@@ -36,64 +36,61 @@
       </ul>
     </nav>
   </header>
-
-  <section>
-    <div class="container ">
-      <div class="col CentroHome" >
-        <p></p>
-      <h1>Contacto</h1>
-      <p></p>
-      </div>
-    </div>
-  </section>
-  <br>
-  <section>
-    <div class="container EstiloContacto">
-      <form method="post" action="http://planidear.com.ar/a5-g6-gimnasio/EnvCorreo.php" name="formContacto">
-        <div class="mb-3 ">
-          <label class="form-label">Nombre</label>
-          <input id='txtNombre' name='txtNombre' type="text" class="form-control">
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Correo electrónico</label>
-          <input id='txtEmail' name='txtEmail' type="email" class="form-control">
-          <div class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Consulta</label>
-          <textarea id='txtConsulta' name='txtConsulta' type="text" class="form-control" rows="3"></textarea>
-        </div>
-
-        <button id="btn-enviar" type="submit" class="btn btn-primary">Enviar</button>
-        <button id="btn-volver" type="button" class="btn btn-primary">Volver</button>
+  <section id='cuerpoPagina'>
+    <section>
+      <div class="container encabezado">
+        <!--<div class="col CentroHome" >-->
         
-      </form>
-      <br>
-    </div>
-    <!--</div>-->
-  </section>
-<p>&nbsp;</p>
-
-
-<br>
-	<footer class ="estiloFooter">
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-      
-        <a class="navbar-brand" href="#">
-          <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
-          Home
-        </a>
-        <a href="sobre_nosotros.html">Equipo</a>
-        <a href="contacto.html"> Contacto </a>
-        <a href="form_ingreso.html"> Login </a>
-        <a href="help.html"> Ayuda </a>
+        <h1>Contacto</h1>
+        
+        <!--</div>-->
       </div>
-    </nav>
+    </section>
+    <br>
+    <section>
+      <div class="container EstiloContacto">
+        <form method="post" action="http://planidear.com.ar/a5-g6-gimnasio/EnvCorreo.php" name="formContacto">
+          <div class="mb-3 ">
+            <label class="form-label">Nombre</label>
+            <input id='txtNombre' name='txtNombre' type="text" class="form-control">
+          </div>
 
-  </footer>
+          <div class="mb-3">
+            <label class="form-label">Correo electrónico</label>
+            <input id='txtEmail' name='txtEmail' type="email" class="form-control">
+            <div class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Consulta</label>
+            <textarea id='txtConsulta' name='txtConsulta' type="text" class="form-control" rows="3"></textarea>
+          </div>
+
+          <button id="btn-enviar" type="submit" class="btn btn-primary">Enviar</button>
+          <button id="btn-volver" type="button" class="btn btn-primary">Volver</button>
+          
+        </form>
+        <br>
+      </div>
+      <!--</div>-->
+    </section>
+  </section>
+    <footer id='cuerpoPagina'>
+      <nav class="navbar navbar-light bg-light quitarMargenInferior">
+        <div class="container-fluid">
+        
+          <a class="navbar-brand" href="#">
+            <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
+            Home
+          </a>
+          <a href="sobre_nosotros.html">Equipo</a>
+          <a href="contacto.html"> Contacto </a>
+          <a href="form_ingreso.html"> Login </a>
+          <a href="help.html"> Ayuda </a>
+        </div>
+      </nav>
+    </footer>
+
   <script src="dir/js/bootstrap.min.js" ></script>
   <!-- Minified JS library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

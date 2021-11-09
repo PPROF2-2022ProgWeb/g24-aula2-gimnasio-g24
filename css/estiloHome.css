@@ -127,20 +127,23 @@ table {
     margin: 1%;
 }
 
+
+/*
 .estiloFooter {
     width: 100%;
     position: absolute;
     bottom: 0;
-}
+}*/
 
-.estiloFooter nav {
+.quitarMargenInferior {
     margin-bottom: 0;
 }
 
-.estiloBody {
+#estiloBody {
     background: linear-gradient(to right, rgb(16 38 54 / 46%), rgb(209 170 124 / 40%)), url(../img/gim2.jpg);
     background-size: cover;
     background-position: top;
+    background-attachment: fixed;
 }
 
 @font-face {
@@ -150,4 +153,17 @@ table {
 
 h1 {
     font-family: Facon;
+}
+
+section#cuerpoPagina {
+    min-height: calc(90vh - 60px);
+}
+
+div.encabezado {
+    text-align: center;
+    background-color: black;
+}
+
+div.encabezado h1 {
+    color: aliceblue;
 }
