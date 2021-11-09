@@ -13,15 +13,9 @@ CREATE TABLE USUARIO
 
 
 
-<<<<<<< HEAD
-CREATE TABLE PrMaquina
-       (
-       Id_Maquina INT NOT NULL AUTO_INCREMENT,                              
-=======
 CREATE TABLE MAQUINA
        (
        ID_MAQUINA INT NOT NULL AUTO_INCREMENT,                              
->>>>>>> 96727203d122f81f99d2f0dd7ca87459e7ad93c7
        DESCRIPCION VARCHAR(100) NOT NULL,                              
        PRIMARY KEY
                (
@@ -31,19 +25,6 @@ CREATE TABLE MAQUINA
 
 
 
-<<<<<<< HEAD
-CREATE TABLE PrTipoPlan
-       (
-       ID_TipoPlan INT NOT NULL AUTO_INCREMENT,                              
-       descripcion VARCHAR(100) NOT NULL,                              
-       EdadAceptDesde INT NOT NULL,                              
-       EdadAceptHasta INT NOT NULL,                              
-       PesoAcepDesde INT NOT NULL,                              
-       PesoAcepHasta INT NOT NULL,                              
-       PRIMARY KEY
-               (
-               ID_TipoPlan
-=======
 CREATE TABLE TIPO_PLAN
        (
        ID_TIPO_PLAN INT NOT NULL AUTO_INCREMENT,                              
@@ -55,21 +36,11 @@ CREATE TABLE TIPO_PLAN
        PRIMARY KEY
                (
                ID_TIPO_PLAN
->>>>>>> 96727203d122f81f99d2f0dd7ca87459e7ad93c7
                )
        );
 
 
 
-<<<<<<< HEAD
-CREATE TABLE PrRutina
-       (
-       IdTipoRutina INT NOT NULL AUTO_INCREMENT,                              
-       Descripcion VARCHAR(100) NOT NULL,                              
-       PRIMARY KEY
-               (
-               IdTipoRutina
-=======
 CREATE TABLE TIPO_RUTINA
        (
        ID_TIPO_RUTINA INT NOT NULL AUTO_INCREMENT,                              
@@ -77,7 +48,6 @@ CREATE TABLE TIPO_RUTINA
        PRIMARY KEY
                (
                ID_TIPO_RUTINA
->>>>>>> 96727203d122f81f99d2f0dd7ca87459e7ad93c7
                )
        );
 

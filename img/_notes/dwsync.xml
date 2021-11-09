@@ -35,10 +35,6 @@
 <file name="ImgBanner4.jpg" server="ftp.planidear.com.ar" local="132784493931486602" remote="132796829400000000" Dst="0" />
 <file name="ImgBanner5.jpg" server="ftp.planidear.com.ar" local="132784494121968811" remote="132796829400000000" Dst="0" />
 <file name="ImgBanner6.jpg" server="ftp.planidear.com.ar" local="132784494181877131" remote="132784494000000000" Dst="0" />
-<<<<<<< HEAD
 <file name="ImgCentroHome.jpg" server="ftp.planidear.com.ar" local="132791104590025157" remote="132804552600000000" Dst="0" />
-=======
-<file name="gim1.jpg" server="ftp.planidear.com.ar" local="132796551883036541" remote="132796816800000000" Dst="0" />
-<file name="ImgCentroHome.jpg" server="ftp.planidear.com.ar" local="132791104590025157" remote="132796829400000000" Dst="0" />
->>>>>>> 96727203d122f81f99d2f0dd7ca87459e7ad93c7
+<file name="gim2.jpg" server="ftp.planidear.com.ar" local="132808879215630220" remote="132808883400000000" Dst="0" />
 </dwsync>

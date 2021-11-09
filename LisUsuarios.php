@@ -50,11 +50,7 @@
 		<li><a href="index.html"> Home </a></li>
 		<li><a href="sobre_nosotros.html">Equipo</a></li>
 		<li><a href="contacto.html"> Contacto </a></li>
-<<<<<<< HEAD
-   	<li><a href="form_ingreso.html"> Login </a></li>
-=======
    	<li><a href="form_ingreso.php"> Login </a></li>
->>>>>>> 96727203d122f81f99d2f0dd7ca87459e7ad93c7
     <li><a href="help.html"> Ayuda </a></li>
        
 		</ul>
@@ -184,11 +180,7 @@ echo "<h2>"." Apellido: ".$fila['Apellido']."</h2>";
         </a>
         <a href="sobre_nosotros.html">Equipo</a>
         <a href="contacto.html"> Contacto </a>
-<<<<<<< HEAD
-        <a href="form_ingreso.html"> Login </a>
-=======
         <a href="form_ingreso.php"> Login </a>
->>>>>>> 96727203d122f81f99d2f0dd7ca87459e7ad93c7
         <a href="help.html"> Ayuda </a>
       </div>
     </nav>
