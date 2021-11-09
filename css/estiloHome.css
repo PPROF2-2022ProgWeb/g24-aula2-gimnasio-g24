@@ -126,3 +126,19 @@ table {
 .form-loguin input {
     margin: 1%;
 }
+
+.estiloFooter {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.estiloFooter nav {
+    margin-bottom: 0;
+}
+
+.estiloBody {
+    background: linear-gradient(to right, rgb(16 38 54 / 46%), rgb(209 170 124 / 40%)), url(../img/gim2.jpg);
+    background-size: cover;
+    background-position: top;
+}
