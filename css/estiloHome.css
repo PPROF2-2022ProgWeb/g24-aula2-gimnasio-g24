@@ -142,3 +142,12 @@ table {
     background-size: cover;
     background-position: top;
 }
+
+@font-face {
+    font-family: Facon;
+    src: url(../font/Facon.otf);
+}
+
+h1 {
+    font-family: Facon;
+}
