@@ -21,7 +21,7 @@
     
       <link href="img/LogoSF.png" rel="icon" type="image/png">
   </head>
-  <body class="estiloBody">
+  <body id="estiloBody">
 
 	<header class="menu">
 		<nav>
@@ -36,72 +36,78 @@
       </ul>
     </nav>
   </header>
-
-  <section>
-    <div class="container ">
-      <div class="col CentroHome" >
-        <p></p>
-      <h1>Contacto</h1>
-      <p></p>
-      </div>
-    </div>
-  </section>
-  <br>
-  <section>
-    <div class="container EstiloContacto">
-      <form">
-        <div class="mb-3 ">
-          <label class="form-label">Nombre</label>
-          <input id="input_nombre" type="text" class="form-control">
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Correo electrónico</label>
-          <input id="input_correo" type="email" class="form-control">
-          <div class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Consulta</label>
-          <textarea id="input_textarea" type="text" class="form-control" rows="3"></textarea>
-        </div>
-
-        <button id="btn-enviar" type="submit" class="btn btn-primary">Enviar</button>
-        <button id="btn-volver" type="button" class="btn btn-primary">Volver</button>
+  <section id='cuerpoPagina'>
+    <section>
+      <div class="container encabezado">
+        <!--<div class="col CentroHome" >-->
         
-      </form>
-      <br>
-    </div>
-    <!--</div>-->
-  </section>
-
-  
-
-<p>&nbsp;</p>
-
-
-<br>
-	<footer class ="estiloFooter">
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-      
-        <a class="navbar-brand" href="#">
-          <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
-          Home
-        </a>
-        <a href="sobre_nosotros.html">Equipo</a>
-        <a href="contacto.html"> Contacto </a>
-        <a href="form_ingreso.html"> Login </a>
-        <a href="help.html"> Ayuda </a>
+        <h1>Contacto</h1>
+        
+        <!--</div>-->
       </div>
-    </nav>
+    </section>
+    <br>
+    <section>
+      <div class="container EstiloContacto">
+        <form class='EstiloFormIngreso' method="post" action="EnvCorreo.php" name="formContacto">
+          
+          <div class='row'>
+            <div class='col-sm-6'>
+              <label class="form-label">Nombre</label>
+            </div>
+            <div class='col-sm-6'>
+              <input id='txtNombre' name='txtNombre' type="text" class="form-control">
+            </div>
+          </div>
+          
+          
+          <div class='row'>
+            <div class='col-sm-6'>
+              <label class="form-label">Correo electrónico</label>
+            </div>
+            <div class='col-sm-6'>
+              <input id='txtEmail' name='txtEmail' type="email" class="form-control">
+              <span>Nunca compartiremos su correo electrónico con nadie más.</span>
+            </div>
+          </div>
+            
+          <div class='row'>
+            <div class='col-sm-6'>
+              <label class="form-label">Consulta</label>
+            </div>
+            <div class='col-sm-6'>
+              <textarea id='txtConsulta' name='txtConsulta' type="text" class="form-control" rows="3"></textarea>
+            </div>
+          </div>
 
-  </footer>
+          <button class="btn btn-primary" type="submit" name="login">Ingresar</button>
+          
+        </form>
+      </div>
+      <!--</div>-->
+    </section>
+  </section>
+    <footer id='cuerpoPagina'>
+      <nav class="navbar navbar-light bg-light quitarMargenInferior">
+        <div class="container-fluid">
+        
+          <a class="navbar-brand" href="#">
+            <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
+            Home
+          </a>
+          <a href="sobre_nosotros.html">Equipo</a>
+          <a href="contacto.html"> Contacto </a>
+          <a href="form_ingreso.html"> Login </a>
+          <a href="help.html"> Ayuda </a>
+        </div>
+      </nav>
+    </footer>
+
   <script src="dir/js/bootstrap.min.js" ></script>
   <!-- Minified JS library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Compiled and minified Bootstrap JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-  <script type="text/javascript" src="js/Archivo.js"></script>
+  <script type="text/javascript" src="js/scriptContacto.js"></script>
 </body>
 </html>
