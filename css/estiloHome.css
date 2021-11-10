@@ -30,12 +30,25 @@ body {
 .EstiloFormIngreso {
     color: white;
     background-color: black;
-    align-content: center;
+    text-align: center;
+    /*align-content: center;
     align-items: center;
     text-align: left;
+    size: 50;*/
     opacity: 90%;
     border-radius: 1% 1%;
-    size: 50;
+}
+
+.EstiloFormIngreso .row {
+    margin: 5% 0;
+}
+
+.EstiloFormIngreso button {
+    margin-bottom: 5%;
+}
+
+.EstiloFormIngreso label {
+    font-size: 1.5em;
 }
 
 .EstiloFuente {
@@ -109,6 +122,8 @@ table {
     color: black;
 }
 
+
+/*
 .form-loguin {
     padding: 1%;
 }
@@ -126,6 +141,7 @@ table {
 .form-loguin input {
     margin: 1%;
 }
+*/
 
 
 /*

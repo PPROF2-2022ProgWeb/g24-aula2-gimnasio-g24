@@ -49,28 +49,40 @@
     <br>
     <section>
       <div class="container EstiloContacto">
-        <form method="post" action="http://planidear.com.ar/a5-g6-gimnasio/EnvCorreo.php" name="formContacto">
-          <div class="mb-3 ">
-            <label class="form-label">Nombre</label>
-            <input id='txtNombre' name='txtNombre' type="text" class="form-control">
+        <form class='EstiloFormIngreso' method="post" action="http://planidear.com.ar/a5-g6-gimnasio/EnvCorreo.php" name="formContacto">
+          
+          <div class='row'>
+            <div class='col-sm-6'>
+              <label class="form-label">Nombre</label>
+            </div>
+            <div class='col-sm-6'>
+              <input id='txtNombre' name='txtNombre' type="text" class="form-control">
+            </div>
           </div>
-
-          <div class="mb-3">
-            <label class="form-label">Correo electrónico</label>
-            <input id='txtEmail' name='txtEmail' type="email" class="form-control">
-            <div class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+          
+          
+          <div class='row'>
+            <div class='col-sm-6'>
+              <label class="form-label">Correo electrónico</label>
+            </div>
+            <div class='col-sm-6'>
+              <input id='txtEmail' name='txtEmail' type="email" class="form-control">
+              <span>Nunca compartiremos su correo electrónico con nadie más.</span>
+            </div>
           </div>
-
-          <div class="mb-3">
-            <label class="form-label">Consulta</label>
-            <textarea id='txtConsulta' name='txtConsulta' type="text" class="form-control" rows="3"></textarea>
+            
+          <div class='row'>
+            <div class='col-sm-6'>
+              <label class="form-label">Consulta</label>
+            </div>
+            <div class='col-sm-6'>
+              <textarea id='txtConsulta' name='txtConsulta' type="text" class="form-control" rows="3"></textarea>
+            </div>
           </div>
 
           <button id="btn-enviar" type="submit" class="btn btn-primary">Enviar</button>
           <button id="btn-volver" type="button" class="btn btn-primary">Volver</button>
-          
         </form>
-        <br>
       </div>
       <!--</div>-->
     </section>

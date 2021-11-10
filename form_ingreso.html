@@ -56,13 +56,28 @@
             
             <form method="post" action="http://planidear.com.ar/a5-g6-gimnasio/LisUsuarios.php" name="form1">
 
-              <label>Ya tenés una cuenta? Ingresá!!</label>
-              <label form="usuario">Nombre de usuario</label>
-              <input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" >
-              <label form="clave">Contraseña</label>
-              <input class="form-control" type="password" name="txtClave"  id="txtClave" >
+              <h2>Ya tenés una cuenta? Ingresá!!</h2>
+              
+              <div class='row'>
+                <div class='col-sm-6'>
+                  <label form="usuario">Nombre de usuario</label>
+                </div>
+                <div class='col-sm-6'>
+                  <input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" >
+                </div>
+              </div>
+              
+              <div class='row'>
+                <div class='col-sm-6'>
+                  <label form="clave">Contraseña</label>
+                </div>
+                <div class='col-sm-6'>
+                  <input class="form-control" type="password" name="txtClave"  id="txtClave" >
+                </div>
+              </div>
+              
               <button class="btn btn-primary" type="submit" name="login">Ingresar</button>
-              <a class="btn btn-primary" href="form_registro.html" role="button">Registrarse</a>
+              <button id='btn-form' class="btn btn-primary" type="submit">Registrarse</button>
             </form>
       
           </div>
@@ -90,5 +105,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
     <script src="dir/js/bootstrap.min.js" ></script>
     <script type="text/javascript" src="js/Archivo.js"></script>
+    <script type="text/javascript" src="js/scriptForm.js"></script>
 </body>
 </html>
