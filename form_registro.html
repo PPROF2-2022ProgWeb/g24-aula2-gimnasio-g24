@@ -42,13 +42,13 @@
   <form id="formRegister" name="formRegister" method="post" action="InsUsuario.php" enctype="multipart/form-data">
  <h4>Alta De Nuevo Usuario</h4>
 
-<input class="Controls" type="text" name="txtNombre" id="txtNombre" placeholder="Ingrese su nombre">
-<input class="Controls" type="text" name="txtApellido" id="txtApellido" placeholder="Ingrese su Apellido">
+<input class="Controls" type="text" name="txtNombre" id="txtNombre" placeholder="Ingrese su nombre" required>
+<input class="Controls" type="text" name="txtApellido" id="txtApellido" placeholder="Ingrese su Apellido" required>
  <input class="Controls" type="file" name="imagen">
  
-<input class="Controls" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion">
-<input class="Controls" type="text" name="Edad" id="Edad" placeholder="Ingrese su Edad">
-<input class="Controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
+<input class="Controls" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion" required>
+<input class="Controls" type="text" name="Edad" id="Edad" placeholder="Ingrese su Edad" required>
+<input class="Controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo" required>
 <input class="Controls" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" required>
 <input class="Controls" type="password" name="txtClave" id="txtClave" placeholder="Ingrese su Contraseña" required>
 <p>Estoy de acuerdo con<a href="#">Teminos y Condiciones</a></p>
@@ -63,14 +63,13 @@
 	<footer>
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-      
-        <a class="navbar-brand" href="#">
+     
+        
           <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
-          Home
-        </a>
-        <a href="sobre_nosotros.html">Equipo</a>
-        <a href="#"> Contacto </a>
-        <a href="form_ingreso.php"> Login </a>
+		<a href="index.html"> Home </a>
+         <a href="sobre_nosotros.html">Equipo</a>
+        <a href="contacto.html"> Contacto </a>
+        <a href="form_ingreso.html"> Login </a>
         <a href="help.html"> Ayuda </a>
       </div>
     </nav>
@@ -78,4 +77,5 @@
   </footer>
 
 </body>
+
 </html>
