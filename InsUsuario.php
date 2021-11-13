@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="js/Archivo.js"></script>
-
+<script type="text/javascript" src="js/funcionesGrupo6.js"></script>
 <meta charset="utf-8">
 	
 	<link href="img/LogoSF.png" rel="icon" type="image/png">
@@ -38,11 +38,7 @@
 
 <body id="estiloBody">
   
-    <?php
-	
 
-		
-	?>
 	<header class="menu">
 				<nav>
 					<ul>
@@ -50,7 +46,7 @@
 		<li><a href="index.html"> Home </a></li>
 		<li><a href="sobre_nosotros.html">Equipo</a></li>
 		<li><a href="contacto.html"> Contacto </a></li>
-   	<li><a href="form_ingreso.php"> Login </a></li>
+   	<li><a href="form_ingreso.html"> Login </a></li>
     <li><a href="help.html"> Ayuda </a></li>
        
 		</ul>
@@ -98,7 +94,24 @@ $Nombre=$_POST['txtNombre'];
 $Apellido=$_POST['txtApellido'];
 $Usuario=$_POST['txtUsuario'];
 $Clave=$_POST['txtClave'];
+$FechaNac=$_POST['txtFechaNac'];
+//$FechaNac=date('11-11-2021');
+$FecActual=date('Y-m-d');
 
+  
+
+$Dif=$FecActual-$FechaNac;
+//echo $Dif."<br>";
+if($Dif>=18){
+	
+	
+	echo "<script>alert(\"Eres mayor de edad\");</script>";
+		  
+		  }
+		  else {
+			  
+		echo "<script>alert(\"CUIDAD, ERES MENOR\");</script>";	  
+		  }
 	
 $conInser=mysqli_connect("168.197.48.110","c2110488_PrIspc","98movadoDO","c2110488_PrIspc");
 if (mysqli_connect_errno())
@@ -110,7 +123,7 @@ $res=mysqli_query($con,"SELECT * FROM `PrUsuario`");
 
 
 
-$insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`) VALUES (NULL, '', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave');";
+$insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`, `FechaNac`) VALUES (NULL, '', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave', '$FechaNac');";
 
 $ejecutar_insertar=mysqli_query($conInser,$insertarUsuario);
 
@@ -159,10 +172,9 @@ echo "<h2>"." Apellido: ".$fila['Apellido']."</h2>";
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
       
-        <a class="navbar-brand" href="#">
+        
           <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
-          Home
-        </a>
+        <a href="index.html">Home</a
         <a href="sobre_nosotros.html">Equipo</a>
         <a href="contacto.html"> Contacto </a>
         <a href="form_ingreso.php"> Login </a>

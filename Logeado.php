@@ -28,7 +28,7 @@
 
 <meta charset="utf-8">
 	
-	<link href="img/LogoSF.png" rel="icon" type="image/png"">
+	<link href="img/LogoSF.png" rel="icon" type="image/png">
 </head>
 
 <body id="estiloBody">
@@ -124,10 +124,9 @@ echo "</TR>\n";
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
       
-        <a class="navbar-brand" href="#">
+        
           <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
-          Home
-        </a>
+        <a href="index.html">Home</a>
         <a href="sobre_nosotros.html">Equipo</a>
         <a href="contacto.html"> Contacto </a>
         <a href="form_ingreso.php"> Login </a>
