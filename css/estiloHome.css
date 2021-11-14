@@ -141,13 +141,10 @@ table {
 .form-loguin input {
     margin: 1%;
 }
-*/
 
-
-/*
 .estiloFooter {
     width: 100%;
-    position: absolute;
+    position:inherit;
     bottom: 0;
 }*/
 

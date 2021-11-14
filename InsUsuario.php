@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+	<!-- caracter en lenguaje humano -->
   <meta charset="UTF-8">
+	<!-- Vista distintas ventanas -->
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+	<!-- Informacion de la pagina -->
   <meta name="Sistema web para gimnasio" content="Pagina de inicio"/>
+	<!-- Etiquetas para los bucadores -->
   <meta name="keywords" content="Sistema web, gimnasio, entrenamiento"/>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	
+
 <head>
-	
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	 <title>Registro</title>
 
-
- 
-<link rel="stylesheet" href="../dir/css/bootstrap.min.css">
+    
+	<!-- Script JS -->
 	<script src="../dir/js/bootstrap.min.js" ></script>
-  <script type="text/javascript" src="js/archivo.js" ></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="js/Archivo.js"></script>
+	<script type="text/javascript" src="js/funcionesGrupo6.js"></script>
+	<!-- Estilo Alertas -->
+	<script type="text/javascript" src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	
-	<!-- Compiled and minified Bootstrap CSS -->
+	<!-- CSS -->
+	<link rel="stylesheet" href="../dir/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estiloHome.css">
+	<link rel="stylesheet" href="css/Formregistro.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-	<!-- Minified JS library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- Compiled and minified Bootstrap JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-	<link rel="stylesheet" href="css/estiloHome.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
-	<script type="text/javascript" src="js/Archivo.js"></script>
-<script type="text/javascript" src="js/funcionesGrupo6.js"></script>
-<meta charset="utf-8">
 	
-	<link href="img/LogoSF.png" rel="icon" type="image/png">
-
+	<!-- Logo Icono -->
+    <link href="img/LogoSF.png" rel="icon" type="image/png">
+ <title>Registrado</title>
 </head>
 
 <body id="estiloBody">
@@ -98,7 +95,8 @@ $Clave=$_POST['txtClave'];
 $FechaNac=$_POST['txtFechaNac'];
 $FecActual=date('Y-m-d');
 $Dif=$FecActual-$FechaNac;
-/*
+
+
 if($Dif>=18){
 	
 	
@@ -139,7 +137,7 @@ $res=mysqli_query($con,"SELECT * FROM `PrUsuario`");
 $insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`, `FechaNac`, `Correo` ) VALUES (NULL, '', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave', '$FechaNac', `$Correo`);";
 
 $ejecutar_insertar=mysqli_query($conInser,$insertarUsuario);
-
+mysqli_close($conInser);
 
 $cabeceras = 'From: gymsistem<gymsistem@planidear.com.ar>';
 $enviado = mail($Correo, $Nombre, "REGISTRADO!!",$cabeceras);
@@ -149,7 +147,7 @@ if ($enviado)
 else
   echo 'Error en el envío del email';
 
-echo "<script>alert('REGISTRADO!!');</script>";
+echo "<script>swal (\"¡iNGRESASTE!\");</script>";
 
 
 	
@@ -178,9 +176,9 @@ echo "<h2>"." Apellido: ".$fila['Apellido']."</h2>";
 
 //echo "</TR>\n";
 }
-
+mysqli_close($mysqli1);
 	
-*/
+
   ?>  
 				   
 </table>
@@ -189,6 +187,12 @@ echo "<h2>"." Apellido: ".$fila['Apellido']."</h2>";
   
   </main>
   
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>

@@ -1,10 +1,13 @@
 //funciones js
+
 function EresMayoEdad(){
-	alert("Eres mayor de edad");
+	//alert("Eres mayor de edad");
+	swal ( "Eres mayor de edad" ) ;
 }
 
 function EresMenorEdad(){
-	alert("Eres Menor de edad se enviara un correo!!!");
+	//alert("Eres Menor de edad se enviara un correo!!!");
+	swal ( "Eres Menor de edad se enviara un correo!!!" ) ;
 }
 
 function CambiarImagen(){
@@ -12,12 +15,20 @@ function CambiarImagen(){
 	document.getElementById("logo").style.width="200px"
 	
 }
-	function valida(){
+
+	function validaNombre(){
 		if(document.getElementById("txtNombre").value.length <= 2 ){
-			alert('ingrese un nombre de minimo 2 caracteres');
+document.getElementById ("AvNombre"). innerHTML = "ingrese un nombre de minimo 2 caracteres" ;		
+			swal ( "ingrese un nombre de minimo 2 caracteres" ) ;
 			return false;
-		}else if(document.getElementById("txtApellido").value.length <= 2){
-				alert('ingrese un Apellido de minimo 2 caracteres');
+		}
+	}
+function validaApellido(){
+		if(document.getElementById("txtApellido").value.length <= 2){
+document.getElementById ("AvApellido"). innerHTML = "ingrese un nombre de minimo 2 caracteres" ;	
+			swal ( "ingrese un Apellido de minimo 2 caracteres" ) ;
 			return false;
+		}else{
+document.getElementById ("ParNombre"). innerHTML = "Apellido ok" ;
 		}
 	}
