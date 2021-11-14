@@ -117,7 +117,7 @@ $cabeceras = 'From: gymsistem<gymsistem@planidear.com.ar>';
 $enviado = mail($Correo, $Nombre, "Usteded es menor de edad",$cabeceras);
 
 if ($enviado)
-  echo 'Email enviado correctamente: '.$Correo;
+  echo 'Email enviado correctamente: '.$Correo ."<br>";
 else
   echo 'Error en el envío del email';
 			  
@@ -133,17 +133,17 @@ if (mysqli_connect_errno())
 $res=mysqli_query($con,"SELECT * FROM `PrUsuario`");
 
 
-
-$insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`, `FechaNac`, `Correo` ) VALUES (NULL, '', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave', '$FechaNac', `$Correo`);";
+		  
+$insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`, `FechaNac`, `Correo`, `Fecha`) VALUES (NULL, '1', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave', '$FechaNac', '$Correo', CURRENT_TIMESTAMP);";
 
 $ejecutar_insertar=mysqli_query($conInser,$insertarUsuario);
-mysqli_close($conInser);
+//mysqli_close($conInser);
 
 $cabeceras = 'From: gymsistem<gymsistem@planidear.com.ar>';
 $enviado = mail($Correo, $Nombre, "REGISTRADO!!",$cabeceras);
 
 if ($enviado)
-  echo 'Email REGISTRADO!!: '.$Correo;
+  echo 'Email REGISTRADO!!: '.$Correo."<br>";
 else
   echo 'Error en el envío del email';
 
