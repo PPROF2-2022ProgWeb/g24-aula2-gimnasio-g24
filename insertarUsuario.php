@@ -86,8 +86,10 @@ window.location.href = \"http://planidear.com.ar/a5-g6-gimnasio/form_ingreso.php
 		<a href="index.html"> Home </a>
         <a href="sobre_nosotros.html">Equipo</a>
         <a href="contacto.html"> Contacto </a>
-        <a href="form_ingreso.html"> Login </a>
-        <a href="help.html"> Ayuda </a>
+        <li><a href="form_ingreso.html"> Login </a></li>
+		<li><a href="http://planidear.com.ar/a5-g6-gimnasio/form_registro.html"> Reg Usuario </a></li>
+        <li><a href="help.html"> Ayuda </a></li>
+        <li><a href="alta_cliente.html"> Alta Cliente </a></li>
       </div>
     </nav>
 
