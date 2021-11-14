@@ -17,6 +17,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 	<link rel="stylesheet" href="css/estiloHome.css">
 	<script type="text/javascript" src="js/Archivo.js"></script>
+	<script type="text/javascript" src="js/funcionesGrupo6.js"></script>
     <link rel="stylesheet" href="css/Formregistro.css">
 	<link href="img/LogoSF.png" rel="icon" type="image/png">
     <title>Formulario_registro</title>
@@ -42,8 +43,10 @@
   <form class="aCss" id="formRegister" name="formRegister" method="post" action="InsUsuario.php" enctype="multipart/form-data">
  <h4>Alta De Nuevo Usuario</h4>
 
-<input class="Controls" type="text" name="txtNombre" id="txtNombre" minlength="2" maxlength="20" placeholder="Ingrese su nombre">
-<input class="Controls" type="text" name="txtApellido" id="txtApellido" min="2" placeholder="Ingrese su Apellido" minlength="2" maxlength="20">
+	  
+<input class="Controls" type="text" name="txtNombre" id="txtNombre" maxlength="20" placeholder="Ingrese su nombre">
+	  
+<input class="Controls" type="text" name="txtApellido" id="txtApellido" placeholder="Ingrese su Apellido" maxlength="20">
  <input class="Controls" type="file" name="imagen">
  
 <input class="Controls" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion" required>
@@ -57,7 +60,7 @@
 
 	 
 <p>Estoy de acuerdo con<a href="#">Teminos y Condiciones</a></p>
-<input class="botons" type="submit" value="Registrar">
+<input class="botons" type="submit" value="Registrar" onClick="valida()">
 <p><a href="#"> Tengo cuenta!</a></p>
 
 </form>

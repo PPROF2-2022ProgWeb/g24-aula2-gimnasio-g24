@@ -15,7 +15,7 @@
  
 <link rel="stylesheet" href="../dir/css/bootstrap.min.css">
 	<script src="../dir/js/bootstrap.min.js" ></script>
-  <script src="js/archivo.js" ></script>
+  <script type="text/javascript" src="js/archivo.js" ></script>
 	
 	<!-- Compiled and minified Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -92,25 +92,38 @@ $IdUsuario=(NULL);
 $Imagen = 'http://planidear.com.ar/a5-g6-gimnasio/'.$nombre_imagen;
 $Nombre=$_POST['txtNombre'];
 $Apellido=$_POST['txtApellido'];
+$Correo=$_POST['Correo'];
 $Usuario=$_POST['txtUsuario'];
 $Clave=$_POST['txtClave'];
 $FechaNac=$_POST['txtFechaNac'];
-//$FechaNac=date('11-11-2021');
 $FecActual=date('Y-m-d');
-
-  
-
 $Dif=$FecActual-$FechaNac;
-//echo $Dif."<br>";
+/*
 if($Dif>=18){
 	
 	
-	echo "<script>alert(\"Eres mayor de edad\");</script>";
+	echo '<script type="text/javascript">';
+    echo 'EresMayoEdad();';
+    echo '</script>';
 		  
 		  }
 		  else {
 			  
-		echo "<script>alert(\"CUIDAD, ERES MENOR\");</script>";	  
+	echo '<script type="text/javascript">';
+    echo 'EresMenorEdad();';
+    echo '</script>'; 
+			  
+
+
+$cabeceras = 'From: gymsistem<gymsistem@planidear.com.ar>';
+$enviado = mail($Correo, $Nombre, "Usteded es menor de edad",$cabeceras);
+
+if ($enviado)
+  echo 'Email enviado correctamente: '.$Correo;
+else
+  echo 'Error en el envío del email';
+			  
+
 		  }
 	
 $conInser=mysqli_connect("168.197.48.110","c2110488_PrIspc","98movadoDO","c2110488_PrIspc");
@@ -123,9 +136,18 @@ $res=mysqli_query($con,"SELECT * FROM `PrUsuario`");
 
 
 
-$insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`, `FechaNac`) VALUES (NULL, '', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave', '$FechaNac');";
+$insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`, `FechaNac`, `Correo` ) VALUES (NULL, '', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave', '$FechaNac', `$Correo`);";
 
 $ejecutar_insertar=mysqli_query($conInser,$insertarUsuario);
+
+
+$cabeceras = 'From: gymsistem<gymsistem@planidear.com.ar>';
+$enviado = mail($Correo, $Nombre, "REGISTRADO!!",$cabeceras);
+
+if ($enviado)
+  echo 'Email REGISTRADO!!: '.$Correo;
+else
+  echo 'Error en el envío del email';
 
 echo "<script>alert('REGISTRADO!!');</script>";
 
@@ -158,7 +180,7 @@ echo "<h2>"." Apellido: ".$fila['Apellido']."</h2>";
 }
 
 	
-
+*/
   ?>  
 				   
 </table>
@@ -168,21 +190,32 @@ echo "<h2>"." Apellido: ".$fila['Apellido']."</h2>";
   </main>
   
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+		
 	<footer>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light quitarMargenInferior">
       <div class="container-fluid">
-      
-        
+
           <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
-        <a href="index.html">Home</a
+        <a href="index.html">Home</a>
         <a href="sobre_nosotros.html">Equipo</a>
         <a href="contacto.html"> Contacto </a>
-        <a href="form_ingreso.php"> Login </a>
+        <a href="form_ingreso.html"> Login </a>
         <a href="help.html"> Ayuda </a>
       </div>
     </nav>
 
   </footer>
+  <!-- Minified JS library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Compiled and minified Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+  <script src="dir/js/bootstrap.min.js" ></script>
+  <script type="text/javascript" src="js/Archivo.js"></script>
 </body>
 
 </html>
