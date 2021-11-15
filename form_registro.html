@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
  	<!-- caracter en lenguaje humano -->
   <meta charset="UTF-8">
@@ -36,64 +36,115 @@
 	
 	<!-- Titulo -->
     <title>Formulario_registro</title>
-</head>
-<body id="estiloBody">
-    
-    <header class="menu">
-        <nav>
-            <ul>
+  </head>
+  <body id="estiloBody">
+
+	<header class="menu">
+		<nav>
+			<ul>
         <li class="CssImage"><img class="CssImage" src="img/LogoSF.png" width="70" height="70" alt="Imagen logo"/></li>
   		<li><a href="index.html"> Home </a></li>
 		<li><a href="sobre_nosotros.html">Equipo</a></li>
 		<li><a href="contacto.html"> Contacto </a></li>
         <li><a href="form_ingreso.html"> Login </a></li>
-		<li><a href="alta_cliente.html"> Alta Cliente </a></li>
+		
+        <li><a href="alta_cliente.html"> Alta Cliente </a></li>
 		<li><a href="help.html"> Ayuda </a></li>
 
-</ul>
-</nav>
-
-</header>
-
-<section class="form-register">
-	<div class="mb-12">
-  <form class="aCss" id="formRegister" name="formRegister1" method="post" action="InsUsuario.php" enctype="multipart/form-data">
-
- <h4>Alta De Nuevo Usuario</h4>
-
-	  
-<input class="Controls" name="txtNombre" type="text"  id="txtNombre" placeholder="Ingrese su nombre" onChange="validaNombre()" size="50" maxlength="20">
+      </ul>
+    </nav>
+  </header>
+  <section id="cuerpoPagina">
+    <section>
+      <div class="container encabezado">
+        <!--<div class="col CentroHome" >-->
+        
+        <h1>Registro</h1>
+        
+        <!--</div>-->
+      </div>
+    </section>
+    <br>
+    <section>
+      <div class="container EstiloContacto ">
+        <form class="EstiloFormIngreso" method="post" action="InsUsuario.php" name="formRegister">
+          
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+            <input class="form-control" name="txtNombre" type="text"  id="txtNombre" placeholder="Ingrese su nombre" onChange="validaNombre()" maxlength="20">
 <h4 id="AvNombre"></h4>
-	  
-<input class="Controls" name="txtApellido" type="text" required  id="txtApellido" placeholder="Ingrese su Apellido" onChange="validaApellido()" size="50" maxlength="20">
+            </div>
+          </div>
+          
+          
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<input class="form-control" name="txtApellido" type="text" required  id="txtApellido" placeholder="Ingrese su Apellido" onChange="validaApellido()" maxlength="20">
 <h4 id="AvApellido"></h4>
- <input class="Controls" type="file" name="imagen" size="20%">
-<br>
-<input class="Controls" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion" size="50" required>
-	  <br>
-<input class="Controls" type="text" name="Edad" id="Edad" placeholder="Ingrese su Edad" size="50" required>
-	  <br>
-<input class="Controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo" size="50" required>
-	  <br>
-<input class="Controls" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" size="50" required>
-	  <br>
-<input class="Controls" type="password" name="txtClave" id="txtClave" placeholder="Ingrese su Contraseña" size="50" required>
-<input class="Controls" type="date" name="txtFechaNac" id="txtFechaNac" placeholder="Ingrese su fecha nacimiento" size="20%" required>
-<p>Estoy de acuerdo con<a href="#">Teminos y Condiciones</a></p>
+            </div>
+          </div>
+            
+          <div class="row justify-content-md-center">
+          <div class="col-sm-8">
+			<input class="form-control" type="file" name="imagen">
+            </div>
+          </div>
+			
+
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<input class="form-control" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion" required>
+            </div>
+          </div>
+			
+
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<input class="form-control" type="text" name="Edad" id="Edad" placeholder="Ingrese su Edad">
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<input class="form-control" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo"  required>
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" required>
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<input class="form-control" type="password" name="txtClave" id="txtClave" placeholder="Ingrese su Contraseña" required>
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<input class="form-control" type="date" name="txtFechaNac" id="txtFechaNac" placeholder="Ingrese su fecha nacimiento" required>
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
 <button class="btn btn-primary" type="submit" name="login">Registrar</button>
+            </div>
+          </div>
 
-<p><a href="#"> Tengo cuenta!</a></p>
-
-</form>
-</div>	
-</section>
-
-
-<br>
-	<footer>
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-     
+          
+          
+        </form>
+      </div>
+      <!--</div>-->
+    </section>
+	  <br>
+  </section>
+    <footer>
+      <nav class="navbar navbar-light bg-light quitarMargenInferior">
+        <div class="container-fluid">
         
           <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
 		<a href="index.html"> Home </a>
@@ -101,11 +152,9 @@
         <a href="contacto.html"> Contacto </a>
         <a href="form_ingreso.html"> Login </a>
         <a href="help.html"> Ayuda </a>
-      </div>
-    </nav>
-
-  </footer>
+        </div>
+      </nav>
+    </footer>
 
 </body>
-
 </html>

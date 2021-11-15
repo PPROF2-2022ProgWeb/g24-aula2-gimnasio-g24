@@ -94,8 +94,8 @@ table {
     width: 80%;
     margin: auto;
     align-content: initial;
-    font-family: Facon;
-    font-size: 1.4em;
+    /*font-family: Facon;
+    font-size: 1.4em;*/
 }
 
 .menu li a {
@@ -172,7 +172,7 @@ table {
 }
 
 h1 {
-    font-family: Facon;
+    font-family: Facon, "sans-serif";
 }
 
 section#cuerpoPagina {

@@ -38,7 +38,7 @@
       </ul>
     </nav>
   </header>
-  <section id='cuerpoPagina'>
+  <section id="cuerpoPagina">
     <section>
       <div class="container encabezado">
         <!--<div class="col CentroHome" >-->
@@ -51,34 +51,34 @@
     <br>
     <section>
       <div class="container EstiloContacto">
-        <form class='EstiloFormIngreso' method="post" action="EnvCorreo.php" name="formContacto">
+        <form class="EstiloFormIngreso" method="post" action="EnvCorreo.php" name="formContacto">
           
-          <div class='row'>
-            <div class='col-sm-6'>
+          <div class="row">
+            <div class="col-sm-6">
               <label class="form-label">Nombre</label>
             </div>
-            <div class='col-sm-6'>
-              <input id='txtNombre' name='txtNombre' type="text" class="form-control">
+            <div class="col-sm-6">
+              <input id="txtNombre" name="txtNombre" type="text" class="form-control" minlength="2"  maxlength="20" required="">
             </div>
           </div>
           
           
-          <div class='row'>
-            <div class='col-sm-6'>
+          <div class="row">
+            <div class="col-sm-6">
               <label class="form-label">Correo electrónico</label>
             </div>
-            <div class='col-sm-6'>
-              <input id='txtEmail' name='txtEmail' type="email" class="form-control">
+            <div class="col-sm-6">
+              <input id="txtEmail" name="txtEmail" type="email" class="form-control" minlength="2"  maxlength="50" required>
               <span>Nunca compartiremos su correo electrónico con nadie más.</span>
             </div>
           </div>
             
-          <div class='row'>
-            <div class='col-sm-6'>
+          <div class="row">
+            <div class="col-sm-6">
               <label class="form-label">Consulta</label>
             </div>
-            <div class='col-sm-6'>
-              <textarea id='txtConsulta' name='txtConsulta' type="text" class="form-control" rows="3"></textarea>
+            <div class="col-sm-6">
+              <textarea id="txtConsulta" name="txtConsulta" type="text" class="form-control" rows="3"></textarea>
             </div>
           </div>
 
@@ -88,19 +88,18 @@
       </div>
       <!--</div>-->
     </section>
+	  <br>
   </section>
-    <footer id='cuerpoPagina'>
+    <footer>
       <nav class="navbar navbar-light bg-light quitarMargenInferior">
         <div class="container-fluid">
         
-          <a class="navbar-brand" href="#">
-            <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
-            Home
-          </a>
-          <a href="sobre_nosotros.html">Equipo</a>
-          <a href="contacto.html"> Contacto </a>
-          <a href="form_ingreso.html"> Login </a>
-          <a href="help.html"> Ayuda </a>
+          <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
+		<a href="index.html"> Home </a>
+         <a href="sobre_nosotros.html">Equipo</a>
+        <a href="contacto.html"> Contacto </a>
+        <a href="form_ingreso.html"> Login </a>
+        <a href="help.html"> Ayuda </a>
         </div>
       </nav>
     </footer>

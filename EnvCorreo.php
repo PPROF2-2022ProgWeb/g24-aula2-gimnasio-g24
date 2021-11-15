@@ -105,6 +105,7 @@ else
 <br>
 
 </body>
+	  <!--
 	<footer>
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
@@ -118,4 +119,5 @@ else
     </nav>
 
   </footer>
+-->
 </html>
