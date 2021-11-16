@@ -36,7 +36,7 @@ document.getElementById ("AvNombre"). innerHTML = "ingrese un nombre de minimo 2
 	}
 function validaApellido(){
 		if(document.getElementById("txtApellido").value.length <= 2){
-document.getElementById ("AvApellido"). innerHTML = "ingrese un nombre de minimo 2 caracteres" ;	
+document.getElementById ("AvApellido"). innerHTML = "ingrese un nombre de apellido 2 caracteres" ;	
 			swal ( "ingrese un Apellido de minimo 2 caracteres" ) ;
 			return false;
 		}else{
