@@ -67,7 +67,7 @@
     <br>
     <section>
       <div class="container EstiloContacto ">
-        <form class="EstiloFormIngreso" method="post" action="InsUsuario.php" name="formRegister">
+        <form class="EstiloFormIngreso" method="post" action="InsUsuario.php" name="formRegister" enctype="multipart/form-data">
           
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
@@ -86,7 +86,7 @@
             
           <div class="row justify-content-md-center">
           <div class="col-sm-8">
-			<input class="form-control" type="file" name="imagen">
+			<input class="form-control" type="file" name="imagen" id="imagen">
             </div>
           </div>
 			
@@ -100,7 +100,7 @@
 
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-<input class="form-control" type="text" name="Edad" id="Edad" placeholder="Ingrese su Edad">
+<input class="form-control" type="number" name="NumDni" id="NumDni" placeholder="Ingrese su DNI">
             </div>
           </div>
 			

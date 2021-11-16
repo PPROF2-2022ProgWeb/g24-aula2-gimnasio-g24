@@ -86,7 +86,7 @@ move_uploaded_file($_FILES['imagen']['tmp_name'],$nombre_imagen);
 
 
 $IdUsuario=(NULL);
-
+$DNI=$_POST['NumDni'];
 $Imagen = 'http://planidear.com.ar/a5-g6-gimnasio/'.$nombre_imagen;
 $Nombre=$_POST['txtNombre'];
 $Apellido=$_POST['txtApellido'];
@@ -135,7 +135,7 @@ $res=mysqli_query($con,"SELECT * FROM `PrUsuario`");
 
 
 		  
-$insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`, `FechaNac`, `Correo`, `Fecha`) VALUES (NULL, '1', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave', '$FechaNac', '$Correo', CURRENT_TIMESTAMP);";
+$insertarUsuario = "INSERT INTO `PrUsuario` (`IdUsuario`, `DNI`, `Nombre`, `Apellido`, `Imagen`, `usuario`, `Clave`, `FechaNac`, `Correo`, `Fecha`) VALUES (NULL, '$DNI', '$Nombre', '$Apellido', '$Imagen', '$Usuario', '$Clave', '$FechaNac', '$Correo', CURRENT_TIMESTAMP);";
 
 $ejecutar_insertar=mysqli_query($conInser,$insertarUsuario);
 //mysqli_close($conInser);
