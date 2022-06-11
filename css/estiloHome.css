@@ -1,11 +1,7 @@
 body {
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	background-image: url(../img/fondogym3.jpg);
-	/*
-	
-	*/
 
-	
 	/*La imagen es renderizada, preservando su proporción propia, en el tamaño mayor contenido dentro de, o cubriendo
 	*/
 
@@ -28,7 +24,9 @@ body {
  /*Puede ser 0.9*/
     opacity: 90%;
     border-radius: 1% 1%;
+    width: 90%;
 }
+
 
 .EstiloContacto {
     color: white;
@@ -91,11 +89,24 @@ requerido en la parte inferior de un elemento
     align-content: initial;
 }
 
-table {
+.Clastable {
     text-align: center;
     background-color: white;
 /* Bode una groove: una línea estriada; */
     border: groove;
+}
+
+.ClastableHelp {
+    text-align: center;
+    
+/* Bode una groove: una línea estriada; */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+	background-color: black;
+    text-align: start;
+    padding-inline-start: 1px;
+width: 95%;
 }
 
 #textNombre {
@@ -117,7 +128,7 @@ table {
     list-style: none;/*Propiedades elemento lista */
     padding: 0;
     background: #000000;/*establece el espacio de relleno */
-    width: 80%; /*ancho */
+    width: 90%; /*ancho */
     margin: auto; /*Margen */
     align-content: initial; /*ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal. Valores globales */
     /*font-family: Facon;

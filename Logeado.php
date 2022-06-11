@@ -68,7 +68,7 @@
       <div class="col CentroHome" >
 
 
-<table border=1 align="center">
+<table border=1 align="center" class="Clastable">
 <tr>
 <td border=1 colspan="4" align="center" bgcolor="#E6E7E8">
 
