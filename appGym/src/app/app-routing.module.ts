@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import  { HomeComponent } from './home/home.component';
-import  { ContactoComponent } from './contacto/contacto.component';
-import  { EquipoComponent } from './equipo/equipo.component';
-import  { LoginComponent } from './login/login.component';
-import  { AyudaComponent } from './ayuda/ayuda.component';
-import  { MenuNavComponent } from './menu-nav/menu-nav.component';
+import  { HomeComponent } from '../app/Page/home/home.component';
+import  { ContactoComponent } from '../app/Page/contacto/contacto.component';
+import  { EquipoComponent } from '../app/Page/equipo/equipo.component';
+import  { LoginComponent } from '../app/Page/login/login.component';
+import  { AyudaComponent } from '../app/Page/ayuda/ayuda.component';
+import  { MenuNavComponent } from '../app/Layout/menu-nav/menu-nav.component';
 
 
 const routes: Routes = [

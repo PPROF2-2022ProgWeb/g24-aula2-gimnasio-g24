@@ -7,10 +7,10 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuNavComponent } from './menu-nav/menu-nav.component';
-import { HomeComponent } from './home/home.component';
-import { EquipoComponent } from './equipo/equipo.component';
-import { ContactoComponent } from './contacto/contacto.component';
+import { MenuNavComponent } from './Layout/menu-nav/menu-nav.component';
+import { HomeComponent } from './Page/home/home.component';
+import { EquipoComponent } from './Page/equipo/equipo.component';
+import { ContactoComponent } from './Page/contacto/contacto.component';
 
 
 
