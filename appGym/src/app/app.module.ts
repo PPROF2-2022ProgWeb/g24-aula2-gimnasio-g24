@@ -11,6 +11,8 @@ import { MenuNavComponent } from './Layout/menu-nav/menu-nav.component';
 import { HomeComponent } from './Page/home/home.component';
 import { EquipoComponent } from './Page/equipo/equipo.component';
 import { ContactoComponent } from './Page/contacto/contacto.component';
+import {PageComponent} from './Page/Page.component';
+import { LayoutComponent } from "./Layout/LayoutComponent";
 
 
 
@@ -21,6 +23,9 @@ import { ContactoComponent } from './Page/contacto/contacto.component';
     HomeComponent,
     EquipoComponent,
     ContactoComponent,
+    PageComponent,
+    LayoutComponent,
+
 
   ],
   imports: [

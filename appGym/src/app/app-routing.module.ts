@@ -5,8 +5,7 @@ import  { ContactoComponent } from '../app/Page/contacto/contacto.component';
 import  { EquipoComponent } from '../app/Page/equipo/equipo.component';
 import  { LoginComponent } from '../app/Page/login/login.component';
 import  { AyudaComponent } from '../app/Page/ayuda/ayuda.component';
-import  { MenuNavComponent } from '../app/Layout/menu-nav/menu-nav.component';
-
+import {PageNotFoundComponent} from '../app/Page/PageNotFound/PageNotFound.component';
 
 const routes: Routes = [
 
@@ -15,6 +14,12 @@ const routes: Routes = [
 { path: 'equipo', component: EquipoComponent},
 { path: 'login', component: LoginComponent},
 { path: 'ayuda', component: AyudaComponent},
+
+/* re direcciona al inicio */
+{path: '', redirectTo: '/home', pathMatch: 'full'},
+
+/* Para configurar la página 404 (not found), */
+{path: '**', component: PageNotFoundComponent}
 
 ];
 

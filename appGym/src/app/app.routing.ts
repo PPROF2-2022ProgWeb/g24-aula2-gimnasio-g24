@@ -1,8 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import  { HomeComponent } from './home/home.component';
-import  { MenuNavComponent } from './menu-nav/menu-nav.component';
-import  { ContactoComponent } from './contacto/contacto.component';
+import  { HomeComponent } from '../app/Page/home/home.component';
+import  { MenuNavComponent } from '../app/Layout/menu-nav/menu-nav.component';
+import  { ContactoComponent } from '../app/Page/contacto/contacto.component';
 import { state } from '@angular/animations';
 import { concat } from 'rxjs';
 
