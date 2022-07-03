@@ -1,0 +1,99 @@
+Body {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    background-image: url(http://planidear.com.ar/g24-aula2-gimnasio-g24/img/fondogym3.jpg);
+   
+
+	/*La imagen es renderizada, preservando su proporción propia, en el tamaño mayor contenido dentro de, o cubriendo
+	*/
+
+    background-size: cover;
+	
+	/*
+	la imagen del fondo permanece fija
+	*/
+    background-attachment: fixed;
+    /*aliena al centro*/
+    align-content: center;
+}
+
+.CentroHome {
+    color: white;
+    background-color: black;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+ /*Puede ser 0.9*/
+    opacity: 90%;
+    border-radius: 1% 1%;
+    width: 90%;
+}
+
+.CssImage {
+	
+/* Posicionamiento relativo: permite al elemento estar fuera de su posición normal.*/
+    position: relative;
+	
+    width: 100;
+    height: 100;
+	
+   border-radius: 50% 50%;
+}
+
+
+
+#estiloBody {
+    background: linear-gradient(to right, rgb(16 38 54 / 46%), rgb(209 170 124 / 40%)); /*fondos degradados en una dirección específica */
+    background-image: url(http://planidear.com.ar/g24-aula2-gimnasio-g24/img/fondogym3.jpg);
+    background-size: cover; /*La imagen es renderizada, preservando su proporción propia,*/
+    background-position: top; /* Posicion de la imagen: 0% en la posición vertical*/
+    background-attachment: fixed; /* determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor: a imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor*/
+}
+
+
+
+#Idbreadcrumbs1 li {
+	
+/* Los elementos se colocan uno al lado del otro*/
+    display:inline;
+/*Estable cel espacio de relleno*/
+    padding:10px;  
+    color:white
+}
+
+
+
+#idbreadcrumbs1 a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    width: 80%; 
+    margin: auto; 
+    align-content: initial; 
+    font-size: 1em;
+   
+    
+}
+div.encabezado {
+    text-align: center;
+    background-color: black;
+}
+
+div.encabezado h1 {
+    color: aliceblue;
+}
+
+
+
+.EstiloFormIngreso {
+    color: white;
+    background-color: black;
+    text-align: center;
+    /*align-content: center;
+    align-items: center;
+    text-align: left;
+    size: 50;*/
+    opacity: 90%;
+    border-radius: 1% 1%;
+    
+}

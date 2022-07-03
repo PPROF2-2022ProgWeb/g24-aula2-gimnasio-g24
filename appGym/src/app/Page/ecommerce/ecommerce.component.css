@@ -22,11 +22,21 @@ Body {
     align-content: center;
     align-items: center;
     text-align: center;
-    font-size: large;
  /*Puede ser 0.9*/
     opacity: 90%;
     border-radius: 1% 1%;
     width: 90%;
+}
+
+.EstiloFuente {
+    font-family: 'Kanit', sans-serif;
+/*el texto estará en negrita;*/
+    font-weight: bold;
+}
+
+
+#textNombre {
+    text-align: center;
 }
 
 .CssImage {
@@ -83,32 +93,27 @@ div.encabezado h1 {
     color: aliceblue;
 }
 
-
-
-.EstiloFormIngreso {
+.EstiloContacto {
     color: white;
     background-color: black;
-    text-align: center;
-    /*align-content: center;
-    align-items: center;
-    text-align: left;
-    size: 50;*/
-    opacity: 90%;
-    border-radius: 1% 1%;
-    
-}
-
-button{
-    margin: 10px;
-}
-.estiloLogin{
-    text-align: center;
     align-content: center;
     align-items: center;
     text-align: left;
-    size: 50;
     opacity: 90%;
     border-radius: 1% 1%;
-    font-size: large;
-    
 }
+
+.Controls {
+    color: black;
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    margin-top:12px;
+    border: 1px solid white;
+    font-family: 'Arial Narrow';
+    font-size: 18px;
+}
+
+
