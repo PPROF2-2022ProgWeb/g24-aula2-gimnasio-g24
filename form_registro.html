@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
 
 <head>
@@ -37,7 +37,7 @@
     <link href="img/LogoSF.png" rel="icon" type="image/png">
 	
 	<!-- Titulo -->
-    <title>Formulario_registro - a5-g6-gimnasio</title>
+    <title>Registration Form - a5-g6-gimnasio</title>
   </head>
   <body id="estiloBody">
 
@@ -54,12 +54,12 @@
 
         <div id="MenuNavegacion" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-3">
-            <li class="nav-item"><a href="index.html"> Home </a></li>
-            <li class="nav-item"><a href="sobre_nosotros.html">Equipo</a></li>
-            <li class="nav-item"><a href="contacto.html"> Contacto </a></li>
-            <li class="nav-item"><a href="form_ingreso.html"> Login </a></li>
-            <li class="nav-item"><a href="alta_cliente.html"> Alta Cliente </a></li>
-            <li class="nav-item"><a href="help.html"> Ayuda </a></li>
+              <li class="nav-item"><a href="index.html"> Home </a></li>
+              <li class="nav-item"><a href="sobre_nosotros.html">Team</a></li>
+              <li class="nav-item"><a href="contacto.html"> Contact </a></li>
+              <li class="nav-item"><a href="form_ingreso.html"> Login </a></li>
+              <li class="nav-item"><a href="ecommerce.html"> E-commerce </a></li>
+              <li class="nav-item"><a href="help.html"> Help </a></li>
           </ul>
         </div>
       </div>
@@ -67,10 +67,10 @@
   </header>
 	  
 <div id="idbreadcrumbs1">
-   		<a href="index.html"> Home >></a> 
-		<a href="sobre_nosotros.html"> Equipo >></a>
-		<a href="contacto.html"> Contacto >></a>
-		<a href="form_ingreso.html"> Login >></a>
+   		<a href="index.html"> Home </a> 
+		<a href="sobre_nosotros.html"> Team </a>
+		<a href="contacto.html"> Contacto </a>
+		<a href="form_ingreso.html"> Login </a>
 		<a href="form_registro.html"> Registro </a>
 </div>
 	  
@@ -79,7 +79,7 @@
       <div class="container encabezado">
         <!--<div class="col CentroHome" >-->
         
-        <h1>Registro</h1>
+        <h1>Register</h1>
         
         <!--</div>-->
       </div>
@@ -91,7 +91,8 @@
           
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-            <input class="form-control" name="txtNombre" type="text"  id="txtNombre" placeholder="Ingrese su nombre" onChange="validaNombre()" maxlength="20">
+				<label form="txtNombre">Name</label>
+            <input class="form-control" name="txtNombre" type="text"  id="txtNombre" placeholder="Enter your name" onChange="validaNombre()" maxlength="20">
 <h4 id="AvNombre"></h4>
             </div>
           </div>
@@ -99,13 +100,15 @@
           
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-<input class="form-control" name="txtApellido" type="text" required  id="txtApellido" placeholder="Ingrese su Apellido" onChange="validaApellido()" maxlength="20">
+				<label form="txtApellido">Last Name</label>
+<input class="form-control" name="txtApellido" type="text" required  id="txtApellido" placeholder="Enter your Last Name" onChange="validaApellido()" maxlength="20">
 <h4 id="AvApellido"></h4>
             </div>
           </div>
             
           <div class="row justify-content-md-center">
           <div class="col-sm-8">
+			  <label form="imagen">Image</label>
 			<input class="form-control" type="file" name="imagen" id="imagen">
             </div>
           </div>
@@ -113,45 +116,50 @@
 
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-<input class="form-control" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion" required>
+				<label form="Direccion">Address</label>
+<input class="form-control" type="text" name="Direccion" id="Direccion" placeholder="Enter your Address" required>
             </div>
           </div>
 			
 
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-<input class="form-control" type="number" name="NumDni" id="NumDni" placeholder="Ingrese su DNI">
+				<label form="NumDni">ID</label>
+<input class="form-control" type="number" name="NumDni" id="NumDni" placeholder="Enter your ID">
             </div>
           </div>
 			
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-<input class="form-control" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo"  required>
+<label form="Correo">E-mail</label>				
+<input class="form-control" type="email" name="Correo" id="Correo" placeholder="Enter your email"  required>
             </div>
           </div>
 			
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-<input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" required>
+<label form="txtUsuario">User</label>					
+<input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Enter your user" required>
             </div>
           </div>
 			
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-<input class="form-control" type="password" name="txtClave" id="txtClave" placeholder="Ingrese su Contraseña" required>
+<label form="txtClave">Password</label>					
+<input class="form-control" type="password" name="txtClave" id="txtClave" placeholder="Enter your password" required>
             </div>
           </div>
 			
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-<label for="txtFechaNac">Fecha Nacimiento</label>
-<input class="form-control" type="date" name="txtFechaNac" id="txtFechaNac" placeholder="Ingrese su fecha nacimiento" required>
+<label for="txtFechaNac">Birth date<!--Fecha Nacimiento--></label>
+<input class="form-control" type="date" name="txtFechaNac" id="txtFechaNac" placeholder="Enter your Birth date" required>
             </div>
           </div>
 			
           <div class="row justify-content-md-center">
             <div class="col-sm-8">
-<button class="btn btn-primary" type="submit" name="login">Registrar</button>
+<button class="btn btn-primary" type="submit" name="login">Register</button>
             </div>
           </div>
 
@@ -169,10 +177,10 @@
         
           <img src="img/LogoSF.png" alt="" width="25" height="25" class="d-inline-block align-text-top" href="index.html">
 		<a href="index.html"> Home </a>
-         <a href="sobre_nosotros.html">Equipo</a>
-        <a href="contacto.html"> Contacto </a>
+         <a href="sobre_nosotros.html">Team</a>
+        <a href="contacto.html"> Contact </a>
         <a href="form_ingreso.html"> Login </a>
-        <a href="help.html"> Ayuda </a>
+        <a href="help.html"> Help </a>
         </div>
       </nav>
     </footer>

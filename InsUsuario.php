@@ -53,7 +53,7 @@
             <li class="nav-item"><a href="sobre_nosotros.html">Equipo</a></li>
             <li class="nav-item"><a href="contacto.html"> Contacto </a></li>
             <li class="nav-item"><a href="form_ingreso.html"> Login </a></li>
-            <li class="nav-item"><a href="alta_cliente.html"> Alta Cliente </a></li>
+            <li class="nav-item"><a href="ecommerce.html"> E-commerce </a></li>
             <li class="nav-item"><a href="help.html"> Ayuda </a></li>
           </ul>
         </div>
@@ -62,11 +62,11 @@
   </header>
 	
 <div id="idbreadcrumbs1">
-   		<a href="index.html"> Home >></a> 
-		<a href="sobre_nosotros.html"> Equipo >></a>
-		<a href="contacto.html"> Contacto >></a>
-		<a href="form_ingreso.html"> Login >></a>
-		<a href="form_registro.html"> Registro >></a>
+   		<a href="index.html"> Home </a> 
+		<a href="sobre_nosotros.html"> Equipo </a>
+		<a href="contacto.html"> Contacto </a>
+		<a href="form_ingreso.html"> Login </a>
+		<a href="form_registro.html"> Registro </a>
 		<a href=""> InsUsuario </a>
 </div>
 

@@ -45,7 +45,7 @@
 		<li><a href="sobre_nosotros.html">Equipo</a></li>
 		<li><a href="contacto.html"> Contacto </a></li>
         <li><a href="form_ingreso.html"> Login </a></li>
-		<li><a href="alta_cliente.html"> Alta Cliente </a></li>
+		<li class="nav-item"><a href="ecommerce.html"> E-commerce </a></li>
 		<li><a href="help.html"> Ayuda </a></li>
 		</ul>
 	</nav>

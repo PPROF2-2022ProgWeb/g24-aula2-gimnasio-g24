@@ -10,8 +10,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'appGym';
   constructor(private router:Router){}
-  Listar(){
-    this.router.navigate(["listar"]);
-  }
+
   
 }
