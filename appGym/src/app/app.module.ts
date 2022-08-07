@@ -13,6 +13,9 @@ import { EquipoComponent } from './Page/equipo/equipo.component';
 import { ContactoComponent } from './Page/contacto/contacto.component';
 import {PageComponent} from './Page/Page.component';
 import { LayoutComponent } from "./Layout/LayoutComponent";
+import { RegisterComponent } from "./Page/register/register.component";
+
+
 
 
 
@@ -25,6 +28,7 @@ import { LayoutComponent } from "./Layout/LayoutComponent";
     ContactoComponent,
     PageComponent,
     LayoutComponent,
+    RegisterComponent,
 
 
   ],

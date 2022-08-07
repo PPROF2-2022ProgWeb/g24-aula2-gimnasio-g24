@@ -30,59 +30,69 @@
 
 <div id="idbreadcrumbs1">
    		<a routerLink="/home"> Home >></a> 
-		<a routerLink="/equipo"> Equipo >></a>
-		<a routerLink="/contacto"> Contacto </a>
+		<a routerLink="/equipo"> Team >></a>
+		<a routerLink="/contacto"> Contact </a>
+    <a routerLink="/contacto"> Login </a>
 </div>
 
 
-  <section id="cuerpoPagina">
-    <section>
-      <div class="container encabezado">
-        <h1>LOGIN</h1>
-      </div>
-    </section>
-    <br>
-    <section>
-      <div class="container EstiloFormIngreso CentroHome">
-
-        <form method="post" action="LisUsuarios.php" name="form1">
-
-          <h2>Ya tenés una cuenta? Ingresá!!</h2>
-          
-          <div class="row estilosmargenes">
-            <div class="col-sm-6">
-              <label form="usuario">Nombre de usuario</label>
-            </div>
-            <div class="col-sm-6">
-              <input class="estiloLogin" type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese su usuario" >
-            </div>
-          </div>
-          
-          <div class="row ">
-            <div class="col-sm-6">
-              <label form="clave">Contraseña</label>
-            </div>
-            
-            <div class="col-sm-6">
-              <input class="estiloLogin" type="password" name="txtClave"  id="txtClave" title="contrasenia">
-            </div>
-          </div>
-          
-          <button class="btn btn-primary" type="submit" name="login">Ingresar</button>
-          <button id="btn-form" class="btn btn-primary" type="submit">Registrarse</button>
-    
-        </form>
-      </div>
-    </section>
-	  <br>
+<section id="cuerpoPagina">
+  <section>
+    <div class="container encabezado">
+      <!--<div class="col CentroHome" >-->
+        <h1>Login</h1>
+      <!--</div>-->
+    </div>
   </section>
 
+  <!--form loguin-->
+  <section class="mt-5"><!--margin top 5 clase bootstrap-->
+    <div class="container">
+      <div class="row justify-content-md-center">
+          
+        <div class="col-6 EstiloFormIngreso">            
+          
+          <form method="" action="" name="form1">
 
-  <script src="dir/js/bootstrap.min.js" ></script>
-  <!-- Minified JS library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Compiled and minified Bootstrap JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-  <script type="text/javascript" src="js/scriptContacto.js"></script>
+            <h2>¿Do you have already an account? Enter!!<!--Ya tenés una cuenta? Ingresá!!--></h2>
+            
+            <div class="row">
+              <div class="col-sm-6">
+                <label form="usuario">User name</label>
+              </div>
+              <div class="col-sm-6">
+                <input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Enter your user" >
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6">
+                <label form="clave">Password</label>
+              </div>
+              <div class="col-sm-6">
+                <input class="form-control" type="password" name="txtClave"  id="txtClave" placeholder="Password" >
+              </div>
+            </div>
+            
+            <button class="btn btn-primary" type="submit" name="login">Enter<!--Ingresar--></button>
+
+            <button id="btn-form" class="btn btn-primary btn-form" type="button"><a class="estiloA" href="http://localhost:4200/register">Register</a></button>
+            
+      
+          </form>
+     
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<script src="dir/js/bootstrap.min.js" ></script>
+<!-- Minified JS library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/scriptContacto.js"></script>
 </body>
 </html>

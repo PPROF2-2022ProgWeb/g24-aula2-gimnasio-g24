@@ -7,6 +7,8 @@ import  { LoginComponent } from '../app/Page/login/login.component';
 import  { AyudaComponent } from '../app/Page/ayuda/ayuda.component';
 import {PageNotFoundComponent} from '../app/Page/PageNotFound/PageNotFound.component';
 import {EcommerceComponent } from '../app/Page/ecommerce/ecommerce.component';
+import { RegisterComponent } from '../app/Page/register/register.component';
+
 
 const routes: Routes = [
 
@@ -16,6 +18,7 @@ const routes: Routes = [
 { path: 'login', component: LoginComponent},
 { path: 'ayuda', component: AyudaComponent},
 { path: 'ecommerce', component: EcommerceComponent},
+{ path: 'register', component: RegisterComponent},
 
 /* re direcciona al inicio */
 {path: '', redirectTo: '/home', pathMatch: 'full'},

@@ -1,0 +1,108 @@
+<body id="estiloBody">
+
+		  
+<div id="idbreadcrumbs1">
+   		<a href="index.html"> Home </a> 
+		<a href="sobre_nosotros.html"> Team </a>
+		<a href="contacto.html"> Contacto </a>
+		<a href="form_ingreso.html"> Login </a>
+		<a href="form_registro.html"> Registro </a>
+</div>
+	  
+  <section id="cuerpoPagina">
+    <section>
+      <div class="container encabezado">
+        <!--<div class="col CentroHome" >-->
+        
+        <h1>Register</h1>
+        
+        <!--</div>-->
+      </div>
+    </section>
+    <br>
+    <section>
+      <div class="container EstiloContacto ">
+        <form id="IdformRegister" class="EstiloFormIngreso" method="post" action="InsUsuario.php" name="formRegister" enctype="multipart/form-data">
+          
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+				<label form="txtNombre">Name</label>
+            <input class="form-control" name="txtNombre" type="text"  id="txtNombre" placeholder="Enter your name" onChange="validaNombre()" maxlength="20">
+<h4 id="AvNombre"></h4>
+            </div>
+          </div>
+          
+          
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+				<label form="txtApellido">Last Name</label>
+<input class="form-control" name="txtApellido" type="text" required  id="txtApellido" placeholder="Enter your Last Name" onChange="validaApellido()" maxlength="20">
+<h4 id="AvApellido"></h4>
+            </div>
+          </div>
+            
+          <div class="row justify-content-md-center">
+          <div class="col-sm-8">
+			  <label form="imagen">Image</label>
+			<input class="form-control" type="file" name="imagen" id="imagen">
+            </div>
+          </div>
+			
+
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+				<label form="Direccion">Address</label>
+<input class="form-control" type="text" name="Direccion" id="Direccion" placeholder="Enter your Address" required>
+            </div>
+          </div>
+			
+
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+				<label form="NumDni">ID</label>
+<input class="form-control" type="number" name="NumDni" id="NumDni" placeholder="Enter your ID">
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<label form="Correo">E-mail</label>				
+<input class="form-control" type="email" name="Correo" id="Correo" placeholder="Enter your email"  required>
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<label form="txtUsuario">User</label>					
+<input class="form-control" type="text" name="txtUsuario" id="txtUsuario" placeholder="Enter your user" required>
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<label form="txtClave">Password</label>					
+<input class="form-control" type="password" name="txtClave" id="txtClave" placeholder="Enter your password" required>
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<label for="txtFechaNac">Birth date<!--Fecha Nacimiento--></label>
+<input class="form-control" type="date" name="txtFechaNac" id="txtFechaNac" placeholder="Enter your Birth date" required>
+            </div>
+          </div>
+			
+          <div class="row justify-content-md-center">
+            <div class="col-sm-8">
+<button class="btn btn-primary" type="submit" name="login">Register</button>
+            </div>
+          </div>
+
+          
+          
+        </form>
+      </div>
+      <!--</div>-->
+    </section>
+	  <br>
+  </section>
