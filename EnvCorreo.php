@@ -29,6 +29,15 @@
 	<!-- Logo Icono -->
     <link href="img/LogoSF.png" rel="icon" type="image/png">
 	
+	<style>
+	
+		img{
+			width: 350px;
+			height: 350px;
+		}
+	
+	</style>
+	
 <title>Envio de correo- a5-g6-gimnasio</title>
 </head>
 
