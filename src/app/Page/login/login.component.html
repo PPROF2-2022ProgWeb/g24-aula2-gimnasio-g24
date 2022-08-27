@@ -45,12 +45,33 @@
     </div>
   </section>
 
-  <!--form loguin-->
+
   <section class="mt-5"><!--margin top 5 clase bootstrap-->
     <div class="container">
       <div class="row justify-content-md-center">
           
-        <div class="col-6 EstiloFormIngreso">            
+        <div class="col-6 EstiloFormIngreso">    
+          
+                     <!--form loguin-->
+<form class="m2">
+  <div class="form-group">
+    <h2>¿Do you have already an account? Enter!!<!--Ya tenés una cuenta? Ingresá!!--></h2>
+    <label for="Usuario">User</label>
+    <input type="text" [formControl]="Usuario" class="form-control" id="Usuario">
+
+    <label for="Clave">Key</label>
+    <p *ngIf="Clave.errors">
+      <!--otra forma:  <small *ngIf="Clave.hasError('required') && Clave.dirty">Este campo es requerido</small>-->
+      <small *ngIf="Clave.hasError('required')">Este campo es requerido</small>
+      <small *ngIf="Clave.hasError('maxlength')">Este campo supero el maximo </small>
+      <small *ngIf="Clave.hasError('minlength')">Este campo no llega al minimo</small>
+    </p>
+    <input type="text" [formControl]="Clave" class="form-control" id="Clave">
+<!--[disabled]="Clave.invalid" es para usar la validacion de requerido -->
+    <button [disabled]="Clave.invalid" type="button" (click)="getClave($event)">Save</button>
+  </div>
+  
+  </form>
           
           <form method="" action="" name="form1">
 

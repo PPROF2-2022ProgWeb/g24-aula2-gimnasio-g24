@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 /*para botones */
 import { MatButtonModule } from '@angular/material/button';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuNavComponent } from './Layout/menu-nav/menu-nav.component';
@@ -14,6 +16,7 @@ import { ContactoComponent } from './Page/contacto/contacto.component';
 import {PageComponent} from './Page/Page.component';
 import { LayoutComponent } from "./Layout/LayoutComponent";
 import { RegisterComponent } from "./Page/register/register.component";
+import { LoginComponent } from './Page/login/login.component';
 
 
 
@@ -29,6 +32,7 @@ import { RegisterComponent } from "./Page/register/register.component";
     PageComponent,
     LayoutComponent,
     RegisterComponent,
+    LoginComponent
 
 
   ],
@@ -36,7 +40,8 @@ import { RegisterComponent } from "./Page/register/register.component";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
