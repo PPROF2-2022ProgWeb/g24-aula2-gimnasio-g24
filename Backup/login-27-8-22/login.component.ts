@@ -14,23 +14,15 @@ import { debounce, debounceTime } from 'rxjs/operators';
 })
 export class LoginComponent implements OnInit {
 
+
   
 Clave= new FormControl('',[Validators.required, Validators.maxLength(10), Validators.minLength(2)],[]);
-Usuario= new FormControl('',[Validators.required, Validators.maxLength(10), Validators.minLength(2)],[]);
+Usuario= new FormControl('');
 
   constructor() { 
 /*Para recivir cambios constantes en tiempo real  */
 /*https://www.youtube.com/watch?v=sxpWh7x7uoQ */
 this.Clave.valueChanges
-.pipe(
-  debounceTime(500)
-)
-.subscribe(value => {
-  console.log(value);
-  
-})
-
-this.Usuario.valueChanges
 .pipe(
   debounceTime(500)
 )
@@ -48,17 +40,6 @@ this.Usuario.valueChanges
 getClave(event: Event){
   event.preventDefault();
   console.log(this.Clave.value);
-}
-
-getUsuario(event: Event){
-  event.preventDefault();
-  console.log(this.Usuario.value);
-}
-
-getUsuario1(event: Event){
-  event.preventDefault();
-  const value = this.Usuario;
-  console.log(value);
 }
 
 
