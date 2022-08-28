@@ -4,6 +4,7 @@ import  { HomeComponent } from '../app/Page/home/home.component';
 import  { ContactoComponent } from '../app/Page/contacto/contacto.component';
 import  { EquipoComponent } from '../app/Page/equipo/equipo.component';
 import  { LoginComponent } from '../app/Page/login/login.component';
+import  { LogeadoComponent } from '../app/Page/logeado/logeado.component';
 import  { AyudaComponent } from '../app/Page/ayuda/ayuda.component';
 import {PageNotFoundComponent} from '../app/Page/PageNotFound/PageNotFound.component';
 import {EcommerceComponent } from '../app/Page/ecommerce/ecommerce.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
 { path: 'contacto', component: ContactoComponent},
 { path: 'equipo', component: EquipoComponent},
 { path: 'login', component: LoginComponent},
+{ path: 'logeado', component: LogeadoComponent},
 { path: 'ayuda', component: AyudaComponent},
 { path: 'ecommerce', component: EcommerceComponent},
 { path: 'register', component: RegisterComponent},

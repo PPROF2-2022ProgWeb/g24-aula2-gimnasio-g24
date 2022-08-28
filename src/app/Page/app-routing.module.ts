@@ -4,6 +4,7 @@ import  { HomeComponent } from '../Page/home/home.component';
 import  { ContactoComponent } from '../Page/contacto/contacto.component';
 import  { EquipoComponent } from '../Page/equipo/equipo.component';
 import  { LoginComponent } from '../Page/login/login.component';
+import  { LogeadoComponent } from '../Page/logeado/logeado.component';
 import  { AyudaComponent } from '../Page/ayuda/ayuda.component';
 import {PageNotFoundComponent} from '../Page/PageNotFound/PageNotFound.component';
 import {EnvCorreoComponent } from '../Page/EnvCorreo/EnvCorreo.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
 { path: 'contacto', component: ContactoComponent},
 { path: 'equipo', component: EquipoComponent},
 { path: 'login', component: LoginComponent},
+{ path: 'logeado', component: LogeadoComponent},
 { path: 'ayuda', component: AyudaComponent},
 { path: 'EnvCorreo', component: EnvCorreoComponent},
 { path: 'envCorreo', component: EnvCorreoComponent},

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuntenticacionService } from 'src/app/Conexion/auntenticacion.service';
 
 
 @Component({
@@ -10,7 +11,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'appGym';
-  constructor(private router:Router){}
+  constructor(private loginProd: AuntenticacionService){}
 
+  public visualizarMenu(): Boolean{
+    return this.loginProd.habilitarlogeo();
+
+  }
   
 }

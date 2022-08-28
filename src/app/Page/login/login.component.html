@@ -53,32 +53,42 @@
         <div class="col-6 EstiloFormIngreso">    
           
                      <!--form loguin-->
-<form class="m2" (ngSubmit)="getUsuario1($event)" action="" method="" name="form1">
-  <div class="form-group">
+<form class="m2" (ngSubmit)="submitFormulario()" [formGroup]="form1" action="" method="" name="form1">
+  <div class="form-group m3">
     <h2>¿Do you have already an account? Enter!!<!--Ya tenés una cuenta? Ingresá!!--></h2>
     <label for="Usuario">User</label>
-    <p *ngIf="Usuario.errors">
-      <!--otra forma:  <small *ngIf="Clave.hasError('required') && Clave.dirty">Este campo es requerido</small>-->
+    <!-- <p *ngIf="Usuario.errors">
+     otra forma:  <small *ngIf="Clave.hasError('required') && Clave.dirty">Este campo es requerido</small>
       <small *ngIf="Usuario.hasError('required')">Este campo es requerido</small>
       <small *ngIf="Usuario.hasError('maxlength')">Este campo supero el maximo </small>
       <small *ngIf="Usuario.hasError('minlength')">Este campo no llega al minimo</small>
-    </p>
-    <input type="text" [formControl]="Usuario" class="form-control" id="Usuario">
+    </p> -->
+    <input formControlName="usuario" [class.is-invalid]="f.usuario.errors && f.usuario.touched" type="text"  class="form-control" id="Usuario">
+    <div id="validationServerUsernameFeedback" class="invalid-feedback">
+      Este es un campo obligarorio, de al menos mas de 1 a 20 caracteres
+     </div>
 
     <label for="Clave">Key</label>
-    <p *ngIf="Clave.errors">
-      <!--otra forma:  <small *ngIf="Clave.hasError('required') && Clave.dirty">Este campo es requerido</small>-->
+      <!--<p *ngIf="Clave.errors">
+    otra forma:  <small *ngIf="Clave.hasError('required') && Clave.dirty">Este campo es requerido</small>
       <small *ngIf="Clave.hasError('required')">Este campo es requerido</small>
       <small *ngIf="Clave.hasError('maxlength')">Este campo supero el maximo </small>
       <small *ngIf="Clave.hasError('minlength')">Este campo no llega al minimo</small>
-    </p>
-    <input type="text" [formControl]="Clave" class="form-control" id="Clave">
-<!--[disabled]="Clave.invalid" es para usar la validacion de requerido -->
-  <button class="btn btn-primary" [disabled]="Clave.invalid" type="button"(click)="getClave($event)" (click)="getUsuario($event)">Enter<!--Ingresar--></button>
-  <button class="btn btn-primary" type="submit">ControlGroup</button>
+    </p>-->
+    <input formControlName="clave" [class.is-invalid]="f.clave.errors && f.usuario.touched" type="text" class="form-control" id="Clave">
+    <div id="validationServerUsernameFeedback" class="invalid-feedback">
+      Este es un campo obligarorio, de al menos mas de 1 a 20 caracteres
+    </div>
+<!--[disabled]="Clave.invalid" es para usar la validacion de requerido
+  <button class="btn btn-success" [disabled]="Clave.invalid" type="submit"(click)="getClave($event)" (click)="getUsuario($event)">Enter</button>
+  <button class="btn btn-success" [disabled]="Clave.invalid" type="submit">Enter</button>
+-->
+<button class="btn btn-success"  type="submit">Enter</button>
+
 
   <button id="btn-form" class="btn btn-primary btn-form" type="button"><a class="estiloA" href="http://localhost:4200/register">Register</a></button>
   
+
 
 </div>     
 </form>     

@@ -19,6 +19,8 @@ import {PageComponent} from './Page/Page.component';
 import { LayoutComponent } from "./Layout/LayoutComponent";
 import { RegisterComponent } from "./Page/register/register.component";
 import { LoginComponent } from './Page/login/login.component';
+import { LogeadoComponent } from './Page/logeado/logeado.component';
+
 
 
 
@@ -34,7 +36,9 @@ import { LoginComponent } from './Page/login/login.component';
     PageComponent,
     LayoutComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    LogeadoComponent
+
 
 
   ],
