@@ -1,0 +1,125 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-3" id="ColIzq">
+     <div ngForm class="form-control col-sm-2 float-right">
+
+      <label for="TituloLib" class="form-label ">Titulo</label>
+      <input type="text" class="form-control" id="Titulo" name="Titulo" [(ngModel)]="Titul.title"
+        placeholder="Titulo">
+
+        <label for="Descripcion" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" id="Descripcion" name="edit" [(ngModel)]="Titul.description" />
+
+
+        <label for="author" class="form-label">Autor </label>
+        <input type="text" class="form-control" id="author" name="author" [(ngModel)]="Titul.author" />
+
+        <label for="category" class="form-label">Categoria</label>
+        <select class="form-select" aria-label="category" id="category" name="category" [(ngModel)]="Titul.category">
+          <option selected >{{Titul.category}}</option>
+          <option value="Ficcion">Ficcion</option>
+          <option value="Amor">Amor</option>
+          <option value="Terror">Terror</option>
+        </select>
+
+        <label for="edit" class="form-label">Editorial</label>
+        <input type="text" class="form-control" id="edit" name="edit" [(ngModel)]="Titul.edit" />
+
+        <label for="lang" class="form-label">Idioma</label>
+        <select class="form-select" aria-label="lang" id="lang" name="lang" [(ngModel)]="Titul.lang">
+          <option selected >{{Titul.lang}}</option>
+          <option value="Ficcion">Ingles</option>
+          <option value="Amor" selected>Español</option>
+          <option value="Terror" >Portugues</option>
+        </select>
+
+
+        <label for="pages" class="form-label">Paginas</label>
+        <input type="number" class="form-control" id="pages" name="pages" [(ngModel)]="Titul.pages" />
+
+
+
+      <label for="ejem" class="form-label">Ejemplares</label>
+      <input type="number" class="form-control" id="ejem" name="ejem" [(ngModel)]="Titul.ejemplares" />
+
+      <label for="ImgLibro" class="form-label">ImgLibro</label>
+      <input type="text" class="form-control" id="ImgLibro" name="ImgLibro" [(ngModel)]="Titul.ImgLibro" />
+
+      <label for="FechaAlquiler" class="form-label">Fecha Alquiler </label>
+      <input type="date" class="form-control" id="FechaAlquiler" name="FechaAlquiler" [(ngModel)]="Titul.FechaAlquiler" />
+
+
+    <div class="row">
+      <div class="col-sm-2 ">
+        <p><button class="btn btn-info text-white float-left" (click)="Agregar()">Agregar</button></p>&nbsp;
+      </div>
+      <div class="col-sm-2 offset-md-2">
+        <p><button class="btn btn-info text-white float-right" (click)="Modificar()">Modificar</button></p>
+      </div>
+    </div>
+  </div>
+
+    </div>
+    <div class="col-9" id="ColCentral">
+
+      <h1>{{titulo}}</h1>
+      <div class="col float-left" *ngFor="let Titul of TituloLib">
+
+
+        <table class="table table-success table-striped table-bordered table-borderless" *ngIf="hayRegistros(); else sinarticulos">
+          <thead>
+            <tr >
+              <td>id</td>
+              <td>Titulo</td>
+
+
+              <td>author</td>
+              <td>FechaAlquiler</td>
+              <td>Descripcion</td>
+              <td></td>
+              <td></td>
+              <td></td>
+
+              <td>ImgLibro</td>
+              <td>Borrar</td>
+              <td>Selecc</td>
+
+            </tr>
+          </thead>
+          <tbody >
+            <tr>
+              <td>{{Titul.id}}</td>
+              <td>{{Titul.title}}</td>
+
+
+              <td>{{Titul.author}}</td>
+              <td>{{Titul.FechaAlquiler}}</td>
+              <td colspan="4">{{Titul.description}}</td>
+
+              <td><img id="CssImage" src="{{Titul.ImgLibro}}" alt=""></td>
+
+              <td><button class="btn btn-danger text-white" (click)="Eliminar(Titul.id)">Borrar</button></td>
+              <td><button class="btn btn-info text-white" (click)="Seleccionar(Titul.id)">Seleccionar</button></td>
+
+            </tr>
+          </tbody>
+        </table>
+        <ng-template #sinarticulos>
+          <p>No hay articulos.</p>
+        </ng-template>
+      </div>
+
+
+
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+

@@ -1,0 +1,50 @@
+<div ngForm class="container-fluid center Result">
+
+  <div class="row">
+    <div class="col-3" id="ColIzq">
+
+    </div>
+    <div  class="col-3" id="ColCentral">
+      <form  [formGroup]="userForm" (ngSubmit)="MostrarTodos1()" >
+        <div class="form-control float-right">
+
+   <label for="name" class="form-label">Nombre</label>
+         <input type="text" class="form-control" id="name" name="name" [(ngModel)]="Usuarios.name"
+         [ngClass]="{'error-input': userForm.controls['nameControl'].errors?.['minlength'] || userForm.controls['nameControl'].errors?.['required']} "
+         formControlName="nameControl" required minlength="4" placeholder="Nombre de usuario"/>
+
+        <div *ngIf="userForm.invalid && userForm.touched" >
+         <span *ngIf="userForm.controls['nameControl'].errors?.['minlength']">Este campo no debe ser menos de 4 digitos</span>
+         <span *ngIf="userForm.controls['nameControl'].errors?.['required']">Este campo es requerido</span>
+
+         </div>
+
+         <label for="Clave" class="form-label">Clave</label>
+         <input type="text" class="form-control" id="Clave" name="Clave" [(ngModel)]="Usuarios.Clave"
+         [ngClass]="{'error-input': userForm.controls['ClaveControl'].errors?.['minlength'] || userForm.controls['ClaveControl'].errors?.['required']}"
+         formControlName="ClaveControl" required minlength="4" placeholder="Clave de usaurio"/>
+
+        <div *ngIf="userForm.invalid && userForm.touched" >
+         <span *ngIf="userForm.controls['ClaveControl'].errors?.['minlength']">Este campo no debe ser menos de 4 digitos</span>
+         <span *ngIf="userForm.controls['ClaveControl'].errors?.['required']">Este campo es requerido</span>
+
+         </div>
+
+
+       <div  class="row">
+         <div  class="col ">
+           <p><button class="btn btn-info text-white float-left" [disabled]="userForm.invalid" name="btnLogin" type="submit"  >Ingresar</button></p>&nbsp;
+           <span *ngIf="logeado">Ingresado
+
+            <ng-template [ngIf]="logeado"><button class="btn btn-info text-white float-left" routerLink="home" >Ingresar</button></ng-template>
+
+           </span>
+
+
+         </div>
+
+       </div>
+     </div>
+   </form>
+    </div>
+    </div>

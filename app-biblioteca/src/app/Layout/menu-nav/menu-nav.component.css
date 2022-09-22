@@ -1,0 +1,58 @@
+.CssImage {
+
+    /* Posicionamiento relativo: permite al elemento estar fuera de su posición normal.*/
+        position: relative;
+        width: 100;
+        height: 100;
+       border-radius: 50% 50%;
+
+
+    }
+    a{
+      color: black;
+    }
+
+.subMenu{
+  background-color: blue;
+}
+    /*si esta*/
+    .menu {
+        list-style: none;/*Propiedades elemento lista */
+        padding: 0;
+        background: blue;/*establece el espacio de relleno */
+        width: 100%; /*ancho */
+        margin: auto; /*Margen */
+        align-items: initial;
+        align-content: initial; /*ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal. Valores globales */
+        /*font-family: Facon;
+        font-size: 1.4em;*/
+    }
+    /*si esta*/
+    .menu li a {
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+        /*separa ligeramente del borde*/
+        display: block;
+    }
+    /*si esta*/
+    .menu li a:hover {
+        background-color: aliceblue;
+        color: #000000;
+    }
+    /*si esta*/
+    .menu li {
+        display: inline-block;
+        /*situar uno al lado de otro */
+        text-align: center;
+    }
+
+    .aCss {
+        color: black;
+    }
+
+    .estilo_navbar{
+        padding: 0mm;
+        margin: 0mm;
+        width: 100%;
+    }

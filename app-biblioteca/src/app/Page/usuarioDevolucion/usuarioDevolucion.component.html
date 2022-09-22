@@ -1,0 +1,83 @@
+<div class="container-fluid">
+
+
+
+  <div class="row">
+    <div class="col-3" id="ColIzq">
+<div ngForm class="form-control col-sm-2 float-right">
+
+  <label for="user_id" class="form-label ">id de usuario</label>
+  <input type="text" class="form-control" id="user_id" name="user_id"  required [(ngModel)]="Titul.user_id" >
+
+  <label for="book_id" class="form-label ">id del libro</label>
+  <input type="text" class="form-control" id="book_id" name="book_id" [(ngModel)]="Titul.book_id" >
+
+    <label for="TituloLib" class="form-label ">Titulo</label>
+    <input type="text" class="form-control" id="Titulo" name="Titulo" [(ngModel)]="Titul.title" placeholder="Titulo">
+
+    <label for="author" class="form-label">Autor </label>
+    <input type="text" class="form-control" id="author" name="author" [(ngModel)]="Titul.author" />
+
+
+    <label for="date_return" class="form-label">Dia devuelto??</label>
+    <input type="date" class="form-control" id="date_return" name="date_return" required [(ngModel)]="Titul.date_return" />
+
+
+    <label for="CantLendigs" class="form-label">Cantidad devolver??</label>
+    <input type="number" class="form-control" id="CantLendigs" name="CantLendigs" minlength="0" required [(ngModel)]="Titul.CantLendigs" placeholder="Cantidad alquilar?" />
+
+
+    <label for="ImgLibro" class="form-label">ImgLibro</label>
+    <td> <img id="CssImage1"  src="{{Titul.ImgLibro}}" alt="Imagen de libro"></td>
+
+
+  <div class="row">
+    <div class="col-sm-2 offset-md-2">
+      <p><button class="btn btn-info text-white float-right" (click)="Agregar()">Alquilar</button></p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+<div class="col-9" id="ColCentral">
+
+<h1>{{titulo}}</h1>
+<div class="col float-left" *ngFor="let Titul of TituloLib">
+
+
+  <table class="table table-success table-striped table-bordered table-borderless" *ngIf="hayRegistros(); else sinarticulos">
+    <tbody >
+
+      <tr >
+        <td>id</td>
+        <td>Titulo</td>
+        <td>author</td>
+        <td>Descripcion</td>
+        <td>ImgLibro</td>
+        <td>Disp</td>
+        <td>User</td>
+        <td>Seleccionar</td>
+      </tr>
+
+
+      <tr>
+        <td>{{Titul.id}}</td>
+        <td>{{Titul.title}}</td>
+        <td>{{Titul.author}}</td>
+        <td>{{Titul.description}}</td>
+        <td><img id="CssImage" src="{{Titul.ImgLibro}}" alt=""></td>
+        <td>{{Titul.available}}</td>
+        <td>{{Titul.name}}</td>
+        <td><button class="btn btn-info text-white" (click)="Seleccionar(Titul.id)">Seleccionar</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <ng-template #sinarticulos>
+    <p>No hay articulos.</p>
+  </ng-template>
+
+</div>
+</div>

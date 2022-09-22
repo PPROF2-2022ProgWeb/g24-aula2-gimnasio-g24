@@ -1,0 +1,89 @@
+npm install -g @angular/cli
+
+ng new my-app
+
+cd my-app
+ng serve --open
+
+
+ng serve --o
+
+
+
+<div class="card col-sm-4 p-2 float-right">
+  <p>
+    Titulo <input type="text" class="form-control m-1" [(ngModel)]="item.TituloLib" placeholder="Titulo">
+  </p>
+  <p>
+    Fecha <input type="date" class="form-control m-1"  [(ngModel)]="item.Fecha" />
+  </p>
+
+  <p>
+    Author <input type="text" class="form-control m-1"  [(ngModel)]="item.author" placeholder="author">
+  </p>
+  <p>
+    Fecha Alquiler <input type="date" class="form-control m-1"  [(ngModel)]="Titul.FechaAlquiler" >
+  </p>
+
+    <p>
+    Descripcion <input type="text" class="form-control m-1"  [(ngModel)]="Titul.Descripcion" placeholder="Descripcion">
+  </p>
+
+
+  <p>
+    ImgLibro <input type="email" class="form-control m-1"  [(ngModel)]="Titul.ImgLibro" placeholder="ImgLibro">
+  </p>
+
+
+  <div class="row">
+    <div class="col-sm-2 "> <p><button class="btn btn-outline-dark float-left" (click)="Agregar()" >Agregar</button></p>&nbsp;
+    </div>
+    <div class="col-sm-2 offset-md-2"> <p><button class="btn btn-outline-dark float-right" (click)="Modificar()" >Modificar</button></p></div>
+  </div>
+
+</div>
+
+
+INSERT INTO `books` (`idTitul`, `TituloLib`, `Fecha`, `FechaAlquiler`, `Descripcion`, `author`, `category`, `edit`, `lang`, `pages`, `descr`, `ejem`, `stock`,
+`Disponible`, `ImgLibro`) VALUES (NULL, 'La ciudad de las ranas', current_timestamp(), '2022-10-05', 'La Argentina de o.', 'Hugo Alconada Mon', '1',
+'Grupo Editorial Planeta S.A.I.', 'lang', '416', 'descr', '100', '2', 'Si', 'C:\\xampp\\htdocs\\planidear\\app-Biblioteca\\my-app\\src\\assets\\img');
+
+UPDATE `books` SET `ImgLibro` = 'https://cdn.shopify.com/s/files/1/0557/0153/6957/products/Laciudaddelasranas_fte_720x.jpg?v=1661209682' WHERE `books`.`idTitul` = 4;
+
+
+SELECT * FROM `VisTecLendings`
+
+EXPLAIN SELECT 
+`books`.`id`, 
+`books`.`title`, 
+`books`.`author`, 
+`books`.`description`, 
+`books`.`ImgLibro`, 
+`lendings`.`id`, 
+`lendings`.`user_id`, 
+`users`.`name`, 
+`lendings`.`book_id`, 
+`books`.`ejemplares`, 
+`lendings`.`CantLendigs`,
+ SUM(
+        `c2110488_PrIspc`.`books`.`ejemplares`
+    ) AS `Sumejemplares`,
+    SUM(
+        `c2110488_PrIspc`.`lendings`.`CantLendigs`
+    ) AS `SumCantLendigs`,
+    (
+        `c2110488_PrIspc`.`books`.`ejemplares` - SUM(
+            `c2110488_PrIspc`.`lendings`.`CantLendigs`
+        )
+    ) AS `available`
+FROM `books` 
+	LEFT JOIN `lendings` ON `lendings`.`book_id` = `books`.`id` 
+	LEFT JOIN `users` ON `lendings`.`user_id` = `users`.`id`
+    
+    GROUP BY
+    `c2110488_PrIspc`.`books`.`title`
+
+ng build
+
+ng build --configuration production --aot
+

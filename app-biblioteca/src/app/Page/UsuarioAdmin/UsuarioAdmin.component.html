@@ -1,0 +1,114 @@
+<div ngForm class="container-fluid">
+
+  <div class="row">
+    <div class="col-3" id="ColIzq">
+      <form  [formGroup]="userForm" >
+     <div ngForm  class="form-control col-sm-2 float-right">
+
+<label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="Usuarios.name"
+      required minlength="4" placeholder="Debe ingresas mas de un caracter"/>
+
+
+<!--
+<label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="Usuarios.name"
+      [ngClass]="{'error-input': userForm.controls['nameControl'].errors?.['minlength']}"
+      formControlName="nameControl" required minlength="4" placeholder="Debe ingresas mas de un caracter"/>
+     <div *ngIf="userForm.invalid && userForm.touched" >
+      <span *ngIf="userForm.controls['nameControl'].errors?.['minlength']">Este campo no debe ser menos de 4 digitos</span>
+      <span *ngIf="userForm.controls['nameControl'].errors?.['required']">Este campo es requerido</span>
+      </div>
+
+-->
+
+<label for="last_name_p" class="form-label">Apellido paterno</label>
+      <input type="text" class="form-control" id="last_name_p" name="last_name_p" [(ngModel)]="Usuarios.last_name_p"
+     required minlength="4" placeholder="Apellido paterno"/>
+
+
+
+      <label for="last_name_m" class="form-label">Apellido Materno</label>
+      <input type="text" class="form-control" id="last_name_m" name="last_name_m" [(ngModel)]="Usuarios.last_name_m" />
+
+      <label for="domicilio" class="form-label">Domicilio</label>
+      <input type="text" class="form-control" id="domicilio" name="domicilio" [(ngModel)]="Usuarios.domicilio" required minlength="4" placeholder="Domicilio"/>
+
+      <label for="tel" class="form-label">Telefono</label>
+      <input type="text" class="form-control" id="tel" name="tel" [(ngModel)]="Usuarios.tel" required minlength="4" placeholder="Telefono"/>
+
+      <label for="sanctions" class="form-label">Sanciones</label>
+      <input type="text" class="form-control" id="sanctions" name="sanctions" [(ngModel)]="Usuarios.sanctions" />
+
+      <label for="sanc_money" class="form-label">Ejemplares</label>
+      <input type="text" class="form-control" id="sanc_money" name="sanc_money" [(ngModel)]="Usuarios.sanc_money" />
+
+      <label for="Clave" class="form-label">Clave</label>
+      <input type="text" class="form-control" id="Clave" name="Clave" [(ngModel)]="Usuarios.Clave" />
+
+
+    <div  class="row">
+      <div  class="col-sm-2 ">
+        <p><button class="btn btn-info text-white float-left" (click)="Agregar()" >Agregar</button></p>&nbsp;
+      </div>
+      <div class="col-sm-2 offset-md-2">
+        <p><button class="btn btn-info text-white float-right" (click)="Modificar()">Modificar</button></p>
+      </div>
+    </div>
+  </div>
+</form>
+    </div>
+    <div  class="col-9" id="ColCentral">
+
+      <h1>{{titulo}}</h1>
+      <div class="col float-left" *ngFor="let Name of NameUse">
+
+
+        <table class="table table-success table-striped table-bordered table-borderless" *ngIf="hayRegistros(); else sinarticulos">
+          <thead>
+            <tr >
+              <td>id</td>
+              <td>Nombre</td>
+              <td>Apellido P</td>
+              <td>Apellido M</td>
+              <td>Domicilio</td>
+              <td>Tel</td>
+              <td>Sanciones</td>
+              <td>Sanc Moneda</td>
+              <td>Clave</td>
+              <td>Borrar</td>
+              <td>Selecc</td>
+
+            </tr>
+          </thead>
+          <tbody >
+            <tr>
+              <td>{{Name.id}}</td>
+              <td>{{Name.name}}</td>
+              <td>{{Name.last_name_p}}</td>
+              <td>{{Name.last_name_m}}</td>
+              <td>{{Name.domicilio}}</td>
+              <td>{{Name.tel}}</td>
+              <td>{{Name.sanctions}}</td>
+              <td>{{Name.sanc_money}}</td>
+              <td>{{Name.Clave}}</td>
+
+              <td><button class="btn btn-danger text-white" (click)="Eliminar(Name.id)">Borrar</button></td>
+              <td><button class="btn btn-info text-white" (click)="Seleccionar(Name.id)">Seleccionar</button></td>
+
+            </tr>
+          </tbody>
+        </table>
+        <ng-template #sinarticulos>
+          <p>No hay articulos.</p>
+        </ng-template>
+      </div>
+
+
+
+
+    </div>
+
+
+
+    </div>

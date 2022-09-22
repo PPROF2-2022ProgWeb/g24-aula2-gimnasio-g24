@@ -1,0 +1,45 @@
+
+<div class="container">
+  <h1>{{titulo}}</h1>
+  <div class="col float-left" *ngFor="let Titul of TituloLib">
+
+
+    <table class="table table-success table-striped table-bordered table-borderless"
+      *ngIf="hayRegistros(); else sinarticulos">
+      <tbody>
+
+        <tr>
+          <td>id</td>
+          <td>Titulo</td>
+          <td>author</td>
+          <td>ImgLibro</td>
+
+
+          <td>Ejem</td>
+          <td>Prestados</td>
+
+          <td>Disponible</td>
+
+
+
+        </tr>
+
+
+        <tr>
+          <td>{{Titul.id}}</td>
+          <td>{{Titul.title}}</td>
+          <td>{{Titul.author}}</td>
+          <td><img id="CssImage" src="{{Titul.ImgLibro}}" alt="Imagen de libro"></td>
+          <td>{{Titul.ejemplares}}</td>
+          <td>{{Titul.SumCantLendigs}}</td>
+          <td>{{Titul.available}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #sinarticulos>
+    <p>No hay articulos.</p>
+  </ng-template>
+ 
+
