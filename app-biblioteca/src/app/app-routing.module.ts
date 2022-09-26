@@ -14,6 +14,7 @@ import { LibrosAdminComponent } from './Page/LibrosAdmin/LibrosAdmin.component';
 import { UsuarioAdminComponent } from './Page/UsuarioAdmin/UsuarioAdmin.component';
 import { UsuarioAlquilerComponent } from './Page/usuarioAlquiler/usuarioAlquiler.component';
 import { UsuarioDevolucionComponent } from './Page/usuarioDevolucion/usuarioDevolucion.component';
+import { NosotrosComponent } from './Page/nosotros/nosotros.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'UsuarioAdm', component: UsuarioAdminComponent},
   { path: 'Alquiler', component: UsuarioAlquilerComponent},
   { path: 'Devolucion', component: UsuarioDevolucionComponent},
+  { path: 'Nosotros', component: NosotrosComponent},
   /* re direcciona al inicio */
 {path: '', redirectTo: '/home', pathMatch: 'full'},
 

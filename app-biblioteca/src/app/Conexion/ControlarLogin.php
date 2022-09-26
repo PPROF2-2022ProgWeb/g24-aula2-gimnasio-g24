@@ -26,10 +26,10 @@ if($varTipoUsuario=true){
   $response = new Result();
   $response->resultado = 'OK';
   $response->mensaje ='Ingresado';
-}else{
+}if($varTipoUsuario=false){
   $response = new Result();
-$response->resultado = 'No OK';
-$response->mensaje ='error';
+  $response->resultado = 'No Ok';
+  $response->mensaje ='No Logeado';
 }
 
 

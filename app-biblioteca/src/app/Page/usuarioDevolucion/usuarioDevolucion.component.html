@@ -6,7 +6,7 @@
     <div class="col-3" id="ColIzq">
 <div ngForm class="form-control col-sm-2 float-right">
 
-  <label for="user_id" class="form-label ">id de usuario</label>
+  <label for="user_id" class="form-label ">Id</label>
   <input type="text" class="form-control" id="user_id" name="user_id"  required [(ngModel)]="Titul.user_id" >
 
   <label for="book_id" class="form-label ">id del libro</label>
@@ -55,7 +55,8 @@
         <td>author</td>
         <td>Descripcion</td>
         <td>ImgLibro</td>
-        <td>Disp</td>
+        <td>Prestado</td>
+        <td>UserId</td>
         <td>User</td>
         <td>Seleccionar</td>
       </tr>
@@ -67,10 +68,11 @@
         <td>{{Titul.author}}</td>
         <td>{{Titul.description}}</td>
         <td><img id="CssImage" src="{{Titul.ImgLibro}}" alt=""></td>
-        <td>{{Titul.available}}</td>
+        <td>{{Titul.CantLendigs}}</td>
+        <td>{{Titul.user_id}}</td>
         <td>{{Titul.name}}</td>
         <td><button class="btn btn-info text-white" (click)="Seleccionar(Titul.id)">Seleccionar</button></td>
-
+       <!-- <li  class="nav-item dropdown" [(ngModel)]="Usuarios.name"><a href="#">{{Usuarios.name}}</a></li>-->
       </tr>
     </tbody>
   </table>

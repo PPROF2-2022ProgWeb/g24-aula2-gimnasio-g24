@@ -6,11 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeService {
 
-   url = 'http://localhost/planidear/app-Biblioteca/my-app/src/app/Conexion/';
+   url = 'https://planidear.com.ar/my-app/Conexion/';
 
   constructor(private http: HttpClient) { }
 
-   mostrarTodos(){
+   mostrarTodosHome(){
 
     return this.http.get(`${this.url}mostrarDisponibles.php`);
 

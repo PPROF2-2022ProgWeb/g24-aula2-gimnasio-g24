@@ -5,9 +5,11 @@
       <form  [formGroup]="userForm" >
      <div ngForm  class="form-control col-sm-2 float-right">
 
+      <label for="IdUser" class="form-label">Id</label>
+      <input type="text" class="form-control" id="IdUser" name="IdUser" [(ngModel)]="Usuarios.id" required placeholder="El numero de id se auto generara" />
+
 <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="Usuarios.name"
-      required minlength="4" placeholder="Debe ingresas mas de un caracter"/>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="Usuarios.name" required minlength="4" />
 
 
 <!--
@@ -24,7 +26,7 @@
 
 <label for="last_name_p" class="form-label">Apellido paterno</label>
       <input type="text" class="form-control" id="last_name_p" name="last_name_p" [(ngModel)]="Usuarios.last_name_p"
-     required minlength="4" placeholder="Apellido paterno"/>
+     required minlength="4" />
 
 
 
@@ -32,16 +34,16 @@
       <input type="text" class="form-control" id="last_name_m" name="last_name_m" [(ngModel)]="Usuarios.last_name_m" />
 
       <label for="domicilio" class="form-label">Domicilio</label>
-      <input type="text" class="form-control" id="domicilio" name="domicilio" [(ngModel)]="Usuarios.domicilio" required minlength="4" placeholder="Domicilio"/>
+      <input type="text" class="form-control" id="domicilio" name="domicilio" [(ngModel)]="Usuarios.domicilio" required minlength="4"/>
 
       <label for="tel" class="form-label">Telefono</label>
-      <input type="text" class="form-control" id="tel" name="tel" [(ngModel)]="Usuarios.tel" required minlength="4" placeholder="Telefono"/>
+      <input type="text" class="form-control" id="tel" name="tel" [(ngModel)]="Usuarios.tel" required minlength="4"/>
 
       <label for="sanctions" class="form-label">Sanciones</label>
-      <input type="text" class="form-control" id="sanctions" name="sanctions" [(ngModel)]="Usuarios.sanctions" />
+      <input type="number" class="form-control" id="sanctions" name="sanctions" [(ngModel)]="Usuarios.sanctions" />
 
       <label for="sanc_money" class="form-label">Ejemplares</label>
-      <input type="text" class="form-control" id="sanc_money" name="sanc_money" [(ngModel)]="Usuarios.sanc_money" />
+      <input type="number" class="form-control" id="sanc_money" name="sanc_money" [(ngModel)]="Usuarios.sanc_money" />
 
       <label for="Clave" class="form-label">Clave</label>
       <input type="text" class="form-control" id="Clave" name="Clave" [(ngModel)]="Usuarios.Clave" />

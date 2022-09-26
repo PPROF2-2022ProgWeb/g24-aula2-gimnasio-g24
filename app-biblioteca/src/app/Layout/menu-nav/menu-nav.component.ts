@@ -21,7 +21,7 @@ export class MenuNavComponent implements OnInit {
   NameUse: any;
   NameUse2: null;
   userForm: FormGroup;
-logeado: true;
+logeado: boolean;
 
  titulo = 'Consulta Usuarios';
 
@@ -65,27 +65,49 @@ logeado: true;
   }
 
     MostrarTodos() {
-    this.loginservice.mostrarTodos().subscribe((result:any) => this.NameUse = result);
+    this.loginservice.mostrarTodos().subscribe((result:any) => this.NameUse =result);
     this.createForm();
   }
 
-  MostrarTodos1(){
+  ControlarLogin(){
 
     this.loginservice.mostrarTodos1(this.Usuarios).subscribe((datos: any) =>{
       if(datos['resultado'] == 'OK') {
         alert(datos['mensaje']);
         this.MostrarTodos();
+
         this.logeado = true;
 
+      }else{
+        alert(datos['mensaje']);
+        this.MostrarTodos();
+
+        this.logeado = false;
 
       }
       console.log(this.userForm);
 
-
-    });  }
-
+    }); }
 
 
 
 
+}
+export class Usuario{
+  constructor(
+   public email: string,
+   public  usuario: string,
+
+   public id : null,
+   public name: null,
+   public last_name_p: null,
+
+   public last_name_m: null,
+   public domicilio: null,
+   public tel: null,
+   public sanctions: null,
+   public sanc_money: null,
+   public Clave: null,
+
+  ){}
 }

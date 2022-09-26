@@ -1,17 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-img {
+body{
+ background-image:  url("https://planidear.com.ar/my-app/assets/img/ImgFondo.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
 
-  width: 50px;
-  height: 50px;
-
- border-radius: 50% 50%;
 }
-
 .ImagenFondo{
   width: 50%;
   height: 50%;
-  border-radius: 0;
 
+}
+
+
+
+
+.DivImg{
+  align-items: center;
 }
 
 .error-input{
@@ -19,17 +23,11 @@ img {
   }
 
 
-
-
-#estiloBody {
-  background: linear-gradient(to right, rgb(16 38 54 / 46%), rgb(209 170 124 / 40%)); /*fondos degradados en una dirección específica */
-  background-image: url(http://planidear.com.ar/g24-aula2-gimnasio-g24/img/fondogym3.jpg);
-  background-size: cover; /*La imagen es renderizada, preservando su proporción propia,*/
-  background-position: top; /* Posicion de la imagen: 0% en la posición vertical*/
-font-size: x-large;
-
-  background-attachment: fixed; /* determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor: a imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor*/
+body{
+  background-color: rgb(198, 255, 190);
 }
+
+
 a{
   color: black;
 }

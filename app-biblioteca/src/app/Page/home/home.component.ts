@@ -56,22 +56,22 @@ export class HomeComponent implements OnInit {
   constructor(private homeService: HomeService) {  }
 
   ngOnInit() {
-    this.MostrarTodos();
+    this.MostrarTodosHome();
   }
 
     hayRegistros(){
     return true;
   }
 
-    MostrarTodos() {
-    this.homeService.mostrarTodos().subscribe((result:any) => this.TituloLib = result);
+    MostrarTodosHome() {
+    this.homeService.mostrarTodosHome().subscribe((result:any) => this.TituloLib = result);
   }
 
     Agregar(){
     this.homeService.agregar(this.Titul).subscribe((datos: any) =>{
       if(datos['resultado'] == 'OK') {
         alert(datos['mensaje']);
-        this.MostrarTodos();
+        this.MostrarTodosHome();
       }
 
     });  }
@@ -82,7 +82,7 @@ export class HomeComponent implements OnInit {
     this.homeService.eliminar(id).subscribe(datos =>{
       if(datos['resultado'] == 'OK') {
         alert(datos['mensaje']);
-        this.MostrarTodos();
+        this.MostrarTodosHome();
       }
     });  }
 
@@ -103,7 +103,7 @@ export class HomeComponent implements OnInit {
     this.homeService.update(this.Titul).subscribe((datos:any) =>{
       if(datos['resultado'] == 'OK') {
         alert(datos['mensaje']);
-        this.MostrarTodos();
+        this.MostrarTodosHome();
       }
 
     }); }

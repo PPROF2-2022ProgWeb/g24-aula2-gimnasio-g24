@@ -47,9 +47,9 @@ import { UsuarioDevolucionComponent } from './Page/usuarioDevolucion/usuarioDevo
       UsuarioAdminComponent,
       UsuarioAlquilerComponent,
       UsuarioDevolucionComponent,
-
-
-
+      ConexionComponent,
+      HomeComponent,
+      UsuarioAdminComponent,
    ],
   imports: [
     BrowserModule,

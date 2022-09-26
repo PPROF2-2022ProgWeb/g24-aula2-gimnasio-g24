@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdminService {
 
-  url = 'http://localhost/planidear/app-Biblioteca/my-app/src/app/Conexion/';
+  url = 'https://planidear.com.ar/my-app/Conexion/';
 
   constructor(private http: HttpClient) { }
 
