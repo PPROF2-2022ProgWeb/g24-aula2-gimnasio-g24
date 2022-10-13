@@ -8,6 +8,10 @@ export class HomeService {
 
    url = 'https://planidear.com.ar/my-app/Conexion/';
 
+   /*
+   https://planidear.com.ar/my-app/Conexion/
+   http://localhost:8080/listar*/
+
   constructor(private http: HttpClient) { }
 
    mostrarTodosHome(){

@@ -13,6 +13,7 @@ import { FormControl,  Validators } from '@angular/forms';
 import { FormBuilder, FormGroup } from '@angular/forms';
 /*El debounce para dejar que pase un tiempo en el formulario reactivo */
 import { debounce, debounceTime } from 'rxjs/operators';
+import { text } from 'express';
 
 @Component({
   selector: 'app-home',
@@ -53,9 +54,12 @@ export class HomeComponent implements OnInit {
   }
 
 
-  constructor(private homeService: HomeService) {  }
+  constructor(private homeService: HomeService, private http: HttpClient) {  }
 
   ngOnInit() {
+
+
+
     this.MostrarTodosHome();
   }
 

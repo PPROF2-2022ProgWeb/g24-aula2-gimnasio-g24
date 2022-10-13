@@ -71,7 +71,8 @@ logeado: boolean;
 
   ControlarLogin(){
 
-    this.loginservice.mostrarTodos1(this.Usuarios).subscribe((datos: any) =>{
+    this.loginservice.mostrarTodos1(this.Usuarios).subscribe
+    ((datos: any) =>{
       if(datos['resultado'] == 'OK') {
         alert(datos['mensaje']);
         this.MostrarTodos();

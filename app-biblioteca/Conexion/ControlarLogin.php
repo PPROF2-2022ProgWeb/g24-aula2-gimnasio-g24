@@ -28,7 +28,7 @@ if($varTipoUsuario=true){
   $response->mensaje ='Ingresado';
 }else{
   $response = new Result();
-$response->resultado = 'No OK';
+$response->resultado = 'ERROR';
 $response->mensaje ='error';
 }
 

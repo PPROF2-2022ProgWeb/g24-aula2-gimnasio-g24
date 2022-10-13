@@ -19,10 +19,6 @@ public logeado = false;
 
   title = 'Biblioteca virtual';
 
-  constructor(private loginProd: AuntenticacionService){}
+  constructor(){}
 
-  public visualizarMenu(): Boolean{
-    return this.loginProd.habilitarlogeo();
-
-  }
 }
