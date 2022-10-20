@@ -23,8 +23,8 @@
     <input type="number" class="form-control" id="CantLendigs" name="CantLendigs" minlength="0" required [(ngModel)]="Titul.CantLendigs" placeholder="Cantidad alquilar?" />
 
 
-    <label for="ImgLibro" class="form-label">ImgLibro</label>
-    <td> <img id="CssImage1"  src="{{Titul.ImgLibro}}" alt="Imagen de libro"></td>
+    <label for="imagen" class="form-label">imagen</label>
+    <td> <img id="CssImage1"  src="{{Titul.imagen}}" alt="Imagen de libro"></td>
 
 
   <div class="row">
@@ -50,7 +50,7 @@
         <td>Titulo</td>
         <td>author</td>
         <td>Descripcion</td>
-        <td>ImgLibro</td>
+        <td>imagen</td>
         <td>Disponible</td>
         <td>Seleccionar</td>
       </tr>
@@ -61,7 +61,7 @@
         <td>{{Titul.title}}</td>
         <td>{{Titul.author}}</td>
         <td>{{Titul.description}}</td>
-        <td><img id="CssImage" src="{{Titul.ImgLibro}}" alt=""></td>
+        <td><img id="CssImage" src="{{Titul.imagen}}" alt=""></td>
         <td>{{Titul.available}}</td>
         <td><button class="btn btn-info text-white" (click)="Seleccionar(Titul.id)">Seleccionar</button></td>
 

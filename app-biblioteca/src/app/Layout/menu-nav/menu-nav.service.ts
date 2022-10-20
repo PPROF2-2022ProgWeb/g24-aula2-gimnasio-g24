@@ -5,10 +5,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MenuNavService {
-  url = 'http://localhost/planidear/g24-aula2-gimnasio-g24/app-Biblioteca/src/app/Conexion/';
+  url = 'https://planidear.com.ar/my-app/Conexion/';
 
   /*   url = 'https://planidear.com.ar/my-app/Conexion/';*/
-
+  /* http://localhost:8080/libro/ */
 /* url = 'http://localhost/planidear/g24-aula2-gimnasio-g24/app-Biblioteca/src/app/Conexion/'; */
 
 

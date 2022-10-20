@@ -44,7 +44,7 @@ export class AdminComponent implements OnInit {
       ejemplares: null,
       stock: null,
       available: null,
-      ImgLibro: null,
+      imagen: null,
       FechaAlquiler: null,
   }
 

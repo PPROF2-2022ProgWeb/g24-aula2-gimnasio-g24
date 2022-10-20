@@ -43,8 +43,8 @@
       <label for="ejem" class="form-label">Ejemplares</label>
       <input type="number" class="form-control" id="ejem" name="ejem" [(ngModel)]="Titul.ejemplares" />
 
-      <label for="ImgLibro" class="form-label">ImgLibro</label>
-      <input type="text" class="form-control" id="ImgLibro" name="ImgLibro" [(ngModel)]="Titul.ImgLibro" />
+      <label for="imagen" class="form-label">imagen</label>
+      <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="Titul.imagen" />
 
       <label for="FechaAlquiler" class="form-label">Fecha Alquiler </label>
       <input type="date" class="form-control" id="FechaAlquiler" name="FechaAlquiler" [(ngModel)]="Titul.FechaAlquiler" />
@@ -81,7 +81,7 @@
               <td></td>
               <td></td>
 
-              <td>ImgLibro</td>
+              <td>imagen</td>
               <td>Borrar</td>
               <td>Selecc</td>
 
@@ -97,7 +97,7 @@
               <td>{{Titul.FechaAlquiler}}</td>
               <td colspan="4">{{Titul.description}}</td>
 
-              <td><img id="CssImage" src="{{Titul.ImgLibro}}" alt=""></td>
+              <td><img id="CssImage" src="{{Titul.imagen}}" alt=""></td>
 
               <td><button class="btn btn-danger text-white" (click)="Eliminar(Titul.id)">Borrar</button></td>
               <td><button class="btn btn-info text-white" (click)="Seleccionar(Titul.id)">Seleccionar</button></td>

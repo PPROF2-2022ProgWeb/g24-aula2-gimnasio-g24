@@ -10,7 +10,7 @@ $params = json_decode($json);
 require("./conexion.php");
 $con = returnConection();
 
-mysqli_query($con ,"INSERT INTO `books` (`id`, `title`, `date`, `description`, `author`, `category`, `edit`, `lang`, `pages`, `ejemplares`, `stock`, `available`, `ImgLibro`)
+mysqli_query($con ,"INSERT INTO `books` (`id`, `title`, `date`, `description`, `author`, `category`, `edit`, `lang`, `pages`, `ejemplares`, `stock`, `available`, `imagen`)
 VALUES (NULL, '$params->title', CURRENT_TIMESTAMP, '$params->description', '$params->author', '$params->category', '$params->edit',
 '$params->lang', '$params->pages', '$params->ejemplares', '$params->stock', 'Si', 'https://planidear.com.ar/RRHH/img/LogoIdearSin_Fondo.png');");
 

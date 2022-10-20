@@ -10,7 +10,7 @@ export class HomeService {
 
    /*
    https://planidear.com.ar/my-app/Conexion/
-   http://localhost:8080/listar*/
+   http://localhost:8080/libro/*/
 
   constructor(private http: HttpClient) { }
 

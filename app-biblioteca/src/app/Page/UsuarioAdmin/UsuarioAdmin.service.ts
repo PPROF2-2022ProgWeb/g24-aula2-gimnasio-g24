@@ -8,11 +8,14 @@ export class UsuarioAdminService {
 
   url = 'https://planidear.com.ar/my-app/Conexion/';
 
+  /*url = 'https://planidear.com.ar/my-app/Conexion/';*/
+
   constructor(private http: HttpClient) { }
 
    mostrarTodos(){
 
     return this.http.get(`${this.url}mostrarUsuarios.php`);
+    /*return this.http.get(`${this.url}`);*/
 
   }
   agregar(Name: any){

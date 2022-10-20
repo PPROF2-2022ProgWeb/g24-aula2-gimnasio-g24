@@ -44,7 +44,7 @@ export class UsuarioComponent implements OnInit {
       ejemplares: null,
       stock: null,
 
-      ImgLibro: null,
+      imagen: null,
       FechaAlquiler: null,
 
       book_id: null,

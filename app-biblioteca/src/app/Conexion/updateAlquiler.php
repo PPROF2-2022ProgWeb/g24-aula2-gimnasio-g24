@@ -9,7 +9,7 @@ $con = returnConection();
 
 mysqli_query($con ,"UPDATE `books` SET `title` = '$params->title', `description` = '$params->description'
 , `author` = '$params->author', `category` = '$params->category', `edit` = '$params->edit', `pages` = '$params->pages', `ejemplares` = '$params->ejemplares',
- `stock` = '$params->stock', `ImgLibro` = '$params->ImgLibro', `FechaAlquiler` = '$params->FechaAlquiler'
+ `stock` = '$params->stock', `imagen` = '$params->imagen', `FechaAlquiler` = '$params->FechaAlquiler'
 WHERE `books`.`id` = '$params->id';");
 
 //Descripcion
