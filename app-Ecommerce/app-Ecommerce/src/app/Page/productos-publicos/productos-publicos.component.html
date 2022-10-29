@@ -1,0 +1,108 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-3" id="ColIzq">
+
+      <form [formGroup]="prodForm" (ngSubmit)="guardar()">
+        <div class="form-group">
+          <label for="producto">Producto</label>
+          <input type="text" formControlName="producto" class="form-control"  id="producto" name="producto" minlength="4" required>
+        </div>
+        <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+          <span *ngIf="prodForm.controls['producto'].errors?.['minlength']">Producto debe tener al menos un 4 caracteres </span><br></div>
+
+        <div class="form-group">
+          <label for="clave">Clave</label>
+          <input type="text"  formControlName="clave" class="form-control" id="clave" name="clave" >
+        </div>
+
+        <div class="form-group">
+          <label for="costo">Costo</label>
+          <input type="number" formControlName="costo" class="form-control" id="costo" name="costo">
+        </div>
+
+        <div class="form-group">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" formControlName="cantidad" class="form-control" id="cantidad" name="cantidad" required>
+        </div>
+        <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+          <span *ngIf="prodForm.controls['cantidad'].errors?.['required']">Cantidad es requerido </span><br></div>
+
+
+        <div class="form-group">
+          <label for="valor">Valor</label>
+          <input type="number" formControlName="valor" class="form-control" id="valor" name="valor" required>
+        </div>
+        <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+          <span *ngIf="prodForm.controls['valor'].errors?.['required']">Valor es requerido </span><br></div>
+
+
+        <div class="form-group">
+          <label for="fechaing">Fecha ingreso</label>
+          <input type="date" formControlName="fechaing" class="form-control" id="fechaing" name="fechaing" required>
+        </div>
+        <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+          <span *ngIf="prodForm.controls['fechaing'].errors?.['required']">Fecha de eingreso es requerido </span><br></div>
+
+        <div class="form-group">
+          <label for="imgprod">imgprod</label>
+          <input type="text" formControlName="imgprod" class="form-control" id="imgprod" name="imgprod" >
+        </div>
+
+        <button class="btn btn-primary" [disabled]="prodForm.invalid" type="submit">Cargar</button>
+        </form>
+    </div>
+
+
+
+    <div class="col-9" id="ColCentral">
+
+      <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>producto</th>
+                <th>clave</th>
+                <th>costo</th>
+
+                <th>cant</th>
+                <th>valor</th>
+                <th>Fecha</th>
+                <th>Tipo</th>
+                <th>Imagen</th>
+                <th>R</th>
+
+                <th colspan="3">Opciones</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let item of productos">
+                <!-- {{}} Es interpolación para acceder a los campos -->
+                <td>{{item.id}}</td>
+                <td>{{item.producto}}</td>
+                <td>{{item.clave}}</td>
+                <td>{{item.costo}}</td>
+
+                <td>{{item.cantidad}}</td>
+                <td>{{item.valor}}</td>
+                <td>{{item.fechaing}}</td>
+                <td>{{item.idtipoprod}}</td>
+                <td> <img class="CssImage" src="{{item.imgprod}}" width="50" height="50" alt="Imagen logo" /></td>
+
+                <td>{{item.rol}}</td>
+
+
+<td><button class="btn btn-success" (click)="editar(item)" type="button">Editar</button></td>
+<td><button class="btn btn-danger" (click)="eliminar(item)" type="button">Eliminar</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+
+
+  </div>
+
+    </div>

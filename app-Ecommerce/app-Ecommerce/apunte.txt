@@ -1,0 +1,60 @@
+https://www.youtube.com/watch?v=liGDWn55fxw&list=PLI4dAv2GvnrQqCC1cjUdoE_lq4ke-EOmx&index=2
+
+
+
+SELECT
+    `pr_movim`.`idmovim`,
+    `pr_movim`.`idproducto`,
+    `pr_producto`.`producto`,
+    `pr_movim`.`idcliente`,
+    `pr_usuario`.`usuario`,
+    `pr_movim`.`cantidad`,
+    `pr_movim`.`fechamovim`,
+    `pr_movim`.`obsmovim`,
+    `pr_movim`.`lugarentrega`,
+    `pr_movim`.`formadepago`,
+    `pr_movim`.`tipomovim`,
+    `pr_tipomov`.`tipomov`
+FROM
+    `pr_movim`
+LEFT JOIN `pr_producto` ON `pr_movim`.`idproducto` = `pr_producto`.`id`
+LEFT JOIN `pr_usuario` ON `pr_movim`.`idcliente` = `pr_usuario`.`id`
+LEFT JOIN `pr_tipomov` ON `pr_movim`.`tipomovim` = `pr_tipomov`.`idtipomov`;
+
+VistPrMovDispon
+
+vist_pr_mov_dispon
+
+SELECT
+    `pr_movim`.`idmovim`,
+    `pr_movim`.`idproducto`,
+    `pr_producto`.`producto`,
+    `pr_movim`.`idcliente`,
+    `pr_usuario`.`usuario`,
+    `pr_movim`.`cantidad`,
+    `pr_movim`.`fechamovim`,
+    `pr_movim`.`obsmovim`,
+    `pr_movim`.`lugarentrega`,
+    `pr_movim`.`formadepago`,
+    `pr_movim`.`tipomovim`,
+    `pr_tipomov`.`tipomov`,
+
+    SUM(
+        `c2110488_PrIspc`.`pr_movim`.`cantidad`
+    ) AS `Resto`
+
+
+FROM
+
+    `pr_movim`
+LEFT JOIN `pr_producto` ON `pr_movim`.`idproducto` = `pr_producto`.`id`
+LEFT JOIN `pr_usuario` ON `pr_movim`.`idcliente` = `pr_usuario`.`id`
+LEFT JOIN `pr_tipomov` ON `pr_movim`.`tipomovim` = `pr_tipomov`.`idtipomov`
+
+GROUP BY
+    `pr_producto`.`producto`,
+
+
+ProdDisponibles
+
+select `c2110488_PrIspc`.`pr_movim`.`idmovim` AS `idmovim`,`c2110488_PrIspc`.`pr_movim`.`idproducto` AS `idproducto`,`c2110488_PrIspc`.`pr_producto`.`producto` AS `producto`,`c2110488_PrIspc`.`pr_movim`.`idcliente` AS `idcliente`,`c2110488_PrIspc`.`pr_usuario`.`usuario` AS `usuario`,`c2110488_PrIspc`.`pr_movim`.`cantidad` AS `cantidad`,`c2110488_PrIspc`.`pr_movim`.`fechamovim` AS `fechamovim`,`c2110488_PrIspc`.`pr_movim`.`obsmovim` AS `obsmovim`,`c2110488_PrIspc`.`pr_movim`.`lugarentrega` AS `lugarentrega`,`c2110488_PrIspc`.`pr_movim`.`formadepago` AS `formadepago`,`c2110488_PrIspc`.`pr_movim`.`tipomovim` AS `tipomovim`,`c2110488_PrIspc`.`pr_tipomov`.`tipomov` AS `tipomov`,sum(`c2110488_PrIspc`.`pr_movim`.`cantidad`) AS `Resto` from (((`c2110488_PrIspc`.`pr_movim` left join `c2110488_PrIspc`.`pr_producto` on((`c2110488_PrIspc`.`pr_movim`.`idproducto` = `c2110488_PrIspc`.`pr_producto`.`id`))) left join `c2110488_PrIspc`.`pr_usuario` on((`c2110488_PrIspc`.`pr_movim`.`idcliente` = `c2110488_PrIspc`.`pr_usuario`.`id`))) left join `c2110488_PrIspc`.`pr_tipomov` on((`c2110488_PrIspc`.`pr_movim`.`tipomovim` = `c2110488_PrIspc`.`pr_tipomov`.`idtipomov`))) group by `c2110488_PrIspc`.`pr_producto`.`producto`

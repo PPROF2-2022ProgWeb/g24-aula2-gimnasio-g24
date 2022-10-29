@@ -1,0 +1,80 @@
+<div class="container-fluid" >
+
+  <div class="row">
+    <div class="col-6" id="ColIzq">
+      <h1>Agregar</h1>
+      <form [formGroup]="prodForm" (ngSubmit)="guardar()">
+        <div class="form-group" >
+
+          <label for="idproducto">Producto</label>
+          <select formControlName="idproducto" class="form-control" name="idproducto" size="1" id="idproducto"  required>
+                  <option *ngFor = "let item1 of productos" value="{{item1.id}}" >{{item1.producto}}</option>
+
+                </select>
+                <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+                  <span *ngIf="prodForm.controls['idproducto'].errors?.['required']">Producto es requerido </span><br></div>
+        </div>
+
+        <div class="form-group">
+          <label for="idcliente">idcliente</label>
+          <input type="number" formControlName="idcliente" class="form-control" id="idcliente" name="idcliente">
+</div>
+
+        <div class="form-group">
+          <label for="cantidad">cantidad</label>
+          <input type="number" formControlName="cantidad" class="form-control" id="cantidad" name="cantidad" required>
+        </div>
+        <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+          <span *ngIf="prodForm.controls['cantidad'].errors?.['required']">cantidad es requerido </span><br></div>
+
+
+        <div class="form-group">
+          <label for="obsmovim">obsmovim</label>
+          <input type="text" formControlName="obsmovim" class="form-control" id="obsmovim" name="obsmovim">
+        </div>
+
+        <button class="btn btn-primary" [disabled]="prodForm.invalid" type="submit">Cargar</button>
+        </form>
+    </div>
+
+
+
+    <div class="col-6" id="ColCentral">
+<h1>Productos disponibles</h1>
+      <table class = "table table-striped">
+        <thead>
+            <tr >
+                <th>Producto</th>
+                <th>Valor</th>
+                <th>Resto</th>
+                <th>imgprod</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let item of productosDisp">
+                <!-- {{}} Es interpolación para acceder a los campos -->
+
+                <td>{{item.idproducto}}-{{item.producto}}</td>
+                <td>$ {{item.valor}}</td>
+                <td>{{item.resto}}</td>
+                <td><img class="CssImage" src="{{item.imgprod}}" width="50" height="50" alt="{{item.imgprod}}" />
+
+                </td>
+
+
+
+
+
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+
+
+  </div>
+
+    </div>
+
