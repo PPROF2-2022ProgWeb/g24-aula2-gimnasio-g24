@@ -4,6 +4,7 @@
     <div class="col-3" id="ColIzq">
 
       <form [formGroup]="prodForm" (ngSubmit)="guardar()">
+
         <div class="form-group">
           <label for="producto">Producto</label>
           <input type="text" formControlName="producto" class="form-control"  id="producto" name="producto" minlength="4" required>
@@ -42,7 +43,7 @@
           <input type="date" formControlName="fechaing" class="form-control" id="fechaing" name="fechaing" required>
         </div>
         <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
-          <span *ngIf="prodForm.controls['fechaing'].errors?.['required']">Fecha de eingreso es requerido </span><br></div>
+          <span *ngIf="prodForm.controls['fechaing'].errors?.['required']">Fecha de ingreso es requerido </span><br></div>
 
         <div class="form-group">
           <label for="imgprod">imgprod</label>
@@ -79,7 +80,7 @@
         <tbody>
             <tr *ngFor = "let item of productos">
                 <!-- {{}} Es interpolación para acceder a los campos -->
-                <td>{{item.id}}</td>
+                <td>{{item.idmovim}}</td>
                 <td>{{item.producto}}</td>
                 <td>{{item.clave}}</td>
                 <td>{{item.costo}}</td>

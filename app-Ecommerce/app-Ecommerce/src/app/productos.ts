@@ -3,10 +3,11 @@ export class Productos {
   Producto: string;
   Clave: string;
   Costo: number;
-  Valor: number;
+  valor: number;
   Cantidad: number;
   Fechaing: string;
   Idtipoprod: number;
   imgprod: string;
   rol: number;
+
 }
