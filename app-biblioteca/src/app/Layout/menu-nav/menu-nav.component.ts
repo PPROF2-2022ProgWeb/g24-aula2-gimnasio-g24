@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginComponent } from 'src/app/Page/login/login.component';
 /*angular traer sus propias validaciones */
 import { FormControl,  Validators, ReactiveFormsModule } from '@angular/forms';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {  FormGroup } from '@angular/forms';
 import { RouterEvent } from '@angular/router';
 
 /*El debounce para dejar que pase un tiempo en el formulario reactivo */

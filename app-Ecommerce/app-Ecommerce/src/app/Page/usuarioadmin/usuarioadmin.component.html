@@ -1,7 +1,7 @@
-<div class="container-fluid">
-
-  <div class="row">
-    <div class="col-3" id="ColIzq" >
+<div *ngIf="usuario" class="container-fluid">
+  <p>Hola {{usuario}}</p>
+  <div   class="row">
+    <div  class="col-3" id="ColIzq" >
 
       <form [formGroup]="usuaForm" (ngSubmit)="guardar()">
         <div class="form-group">
@@ -25,26 +25,23 @@
         <div class="form-group">
           <label for="password">passwords</label>
 
-          <input type="text" formControlName="password" class="form-control" id="password" name="password" minlength="4" required >
+          <input type="text" formControlName="password" class="form-control" id="password" name="password" minlength="4" >
         </div>
         <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
           <span *ngIf="usuaForm.controls['password'].errors?.['minlength']">Password debe tener al menos un 4 caracteres</span><br>
         </div>
 
-
-        <div class="form-group">
-        <label for="rol">Rol</label>
-        <select formControlName="rol" class="form-control" name="rol" size="1" id="rol"  >
-                <option value="user" selected>user</option>
-                <option value="admin" >admin</option>
-              </select>
-            </div>
-
-
         <div class="form-group">
           <label for="imagen">imagen</label>
           <input type="text" formControlName="imagen" class="form-control" id="imagen" name="imagen">
         </div>
+<div class="form-group">
+          <label for="role_id">role_id</label>
+          <select formControlName="role_id" class="form-control" name="role_id" size="1" id="role_id"  >
+                  <option value="1" selected>user</option>
+                  <option value="2" >admin</option>
+                </select>
+              </div>
 
 
         <button class="btn btn-primary" [disabled]="usuaForm.invalid" type="submit">Cargar</button>
@@ -76,7 +73,7 @@
                 <td>{{item.email}}</td>
                 <td>{{item.password}}</td>
 
-                <td>{{item.rol}}</td>
+                <td>{{item.role_id}}</td>
                 <td><img class="CssImage" src="{{item.imagen}}" width="50" height="50" alt="{{item.imagen}}" /></td>
 
 <td><button class="btn btn-success" (click)="editar(item)" type="button">Editar</button></td>

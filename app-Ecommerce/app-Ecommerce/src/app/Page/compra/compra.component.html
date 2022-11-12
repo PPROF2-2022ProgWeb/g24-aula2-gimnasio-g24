@@ -1,7 +1,8 @@
-<div class="container-fluid" >
-
+<div *ngIf="usuario" class="container-fluid" >
+  <p>Hola {{usuario}} estas en compras</p>
   <div class="row">
     <div class="col-3" id="ColIzq">
+
       <h1>Compra</h1>
       <form [formGroup]="prodForm" (ngSubmit)="guardar()">
         <div class="form-group" >
@@ -16,8 +17,9 @@
         </div>
 
         <div class="form-group">
-          <label for="idcliente">idcliente</label>
-          <input type="number" formControlName="idcliente" class="form-control" id="idcliente" name="idcliente">
+
+          <label for="usercompra">usercompra</label>
+          <input type="text" formControlName="usercompra" class="form-control" id="usercompra" name="usercompra" value="{{usuario}}" >
 </div>
 
         <div class="form-group">

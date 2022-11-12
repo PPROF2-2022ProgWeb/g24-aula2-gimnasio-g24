@@ -1,5 +1,5 @@
-<div class="container-fluid" >
-
+<div *ngIf="usuario" class="container-fluid" >
+  <p>Hola {{usuario}}  podes agregar productos en stock!!!</p>
   <div class="row">
     <div class="col-6" id="ColIzq">
       <h1>Agregar</h1>
@@ -16,8 +16,15 @@
         </div>
 
         <div class="form-group">
-          <label for="idcliente">idcliente</label>
-          <input type="number" formControlName="idcliente" class="form-control" id="idcliente" name="idcliente">
+          <label for="usermov">usermov</label>
+            <select formControlName="usermov" class="form-control" name="usermov" size="1" id="usermov" required>
+            <option value="{{usuario}}" >{{usuario}}</option>
+
+          </select>
+          <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+            <span *ngIf="prodForm.controls['usermov'].errors?.['required']">usermov es requerido </span><br></div>
+
+
 </div>
 
         <div class="form-group">

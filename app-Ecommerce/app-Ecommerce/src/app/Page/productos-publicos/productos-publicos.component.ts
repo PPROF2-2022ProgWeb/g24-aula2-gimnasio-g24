@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MenuservService } from 'src/app/Layout/menu/menuserv.service';
 import { ProductoservService } from 'src/app/Service/productoserv.service';
 
 
@@ -12,10 +13,20 @@ import { ProductoservService } from 'src/app/Service/productoserv.service';
 export class ProductosPublicosComponent implements OnInit {
   prodForm: FormGroup;
   productos: any;
-  constructor(public fb: FormBuilder, public ProdSer: ProductoservService) { }
+
+  usuario: string;
+  id: number;
+  userListado: any;
+
+  constructor(public fb: FormBuilder, public ProdSer: ProductoservService, private loginservice: MenuservService) { }
 
   ngOnInit() {
 
+    this.loginservice.consultaMenu.subscribe((data: string)=>{
+      this.usuario=data;
+    })
+
+    this.MostrarTodos();
 
     this.prodForm = this.fb.group({
       id: [''],
@@ -39,6 +50,11 @@ export class ProductosPublicosComponent implements OnInit {
             }
             )
   }
+
+  MostrarTodos() {
+    this.loginservice.mostrarTodos().subscribe((result:any) => this.userListado = result);
+  }
+
 prod: any;
   guardar(): void{
     this.ProdSer.saveProd(this.prodForm.value).subscribe(resp=>{

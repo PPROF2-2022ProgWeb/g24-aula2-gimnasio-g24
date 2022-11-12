@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 import { Router } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { from } from 'rxjs';
+import { LoginservService } from 'src/app/Service/loginserv/loginserv.service';
 
 
 
@@ -13,5 +14,13 @@ import { from } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'app-Ecommerce';
+  public logeado = false;
+  usuarioHijo="usuario"
+  parentMessage = "message from parent"; // <-- Nuevo atributo
+
+constructor() {
+
+}
 }

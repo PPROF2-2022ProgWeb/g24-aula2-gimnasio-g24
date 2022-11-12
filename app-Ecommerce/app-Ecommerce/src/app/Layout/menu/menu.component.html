@@ -1,6 +1,7 @@
-<header class="menu container-fluid">
+<header class="menu container-fluid centr">
+
   <nav class="navbar navbar-expand-lg col ">
-    <div class="container-fluid">
+    <div class="container-fluid" (click)="enviarDato()">
       <!--container-fluid para que ocupe todo el ancho disponible-->
       <a routerLink="home">
         <img class="CssImage" src="assets/img/LogoSF.png" width="50" height="50" alt="Imagen logo" />
@@ -12,19 +13,19 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <div id="MenuNavegacion" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="nav-item dropdown"><a class="active" routerLink="home"> Principal</a></li>
+          <li class="nav-item dropdown"><a class="active" routerLink="home" > Principal</a></li>
 
 
 
           <li class="nav-item dropdown"><a class="active" routerLink="Nosotros"> Nosotros </a></li>
-          <li class="nav-item dropdown"><a class="active" routerLink="Carrito"> Carrito </a></li>
-          <li  class="nav-item dropdown"><a class="active dropdown-toggle" data-bs-toggle="dropdown" role="button"
-              aria-expanded="false" routerLink="usuario">Usuarios</a>
+          <li  *ngIf="logeado || logeadoAdmin" class="nav-item dropdown" ><a class="active dropdown-toggle" data-bs-toggle="dropdown" role="button"
+              aria-expanded="false" routerLink="usuario" >{{Usuarios.id}}{{Usuarios.usuario}}</a>
             <ul class="dropdown-menu subMenu">
+
               <li  class="dropdown-item "><a class="dropdown-item" routerLink="Compra">Compra</a>
-              <li class="dropdown-item"><a class="dropdown-item" routerLink="Devolucion">Devolucion</a>
+
             </ul>
-          <li  class="nav-item"><a class="active dropdown-toggle" data-bs-toggle="dropdown" role="button"
+          <li *ngIf="logeadoAdmin"  class="nav-item"><a class="active dropdown-toggle" data-bs-toggle="dropdown" role="button"
               aria-expanded="false" routerLink="admin"> Administrador </a>
             <ul  class="dropdown-menu subMenu">
               <li class="dropdown-item"><a class="dropdown-item" routerLink="Productos">Productos </a>
@@ -32,9 +33,28 @@
               <li class="dropdown-item"><a class="dropdown-item" routerLink="Usuarios">Usuarios</a>
             </ul>
           </li>
-          <li  class="nav-item dropdown" ><a href="#"></a></li>
+
+
         </ul>
+        <form *ngIf="!logeado && !logeadoAdmin" name="fomrMenu"  [formGroup]="userForm" (ngSubmit)="ControlarLogin()" >
+          <input type="text" class="" id="usuario" name="usuario" [(ngModel)]="Usuarios.usuario"
+          formControlName="usuario" placeholder="usuario"/>
+
+          <input type="password" class="" id="password" name="password" [(ngModel)]="Usuarios.password"
+          formControlName="password" placeholder="password"/>
+
+
+          <button class="btn text-white" name="btnLogin" type="submit" >Ingresar</button>
+
+     </form>
+     <ul *ngIf="!logeado && !logeadoAdmin" class="nav navbar-nav">
+      <li class="nav-item dropdown"><a class="active" routerLink="Registro">Registro</a>
+    </ul>
       </div>
+
+
       </div>
     </div>
   </nav>
+
+
