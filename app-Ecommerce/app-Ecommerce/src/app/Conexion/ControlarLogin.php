@@ -10,7 +10,6 @@ require("./conexion.php");
 
 $con = returnConection();
 
-//$registro=mysqli_query($con ,"SELECT * FROM `users` WHERE `name` LIKE '$params->name' AND `Clave` LIKE '$params->Clave';");
 $registro=mysqli_query($con ,"SELECT * FROM `pr_usuario` WHERE `usuario` LIKE '$params->usuario' AND `password` LIKE '$params->password' AND `role_id` = 1;");
 
   while ($fila = mysqli_fetch_array($registro))

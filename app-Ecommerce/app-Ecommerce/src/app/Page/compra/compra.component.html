@@ -1,7 +1,7 @@
-<div *ngIf="usuario" class="container-fluid" >
-  <p>Hola {{usuario}} estas en compras</p>
+<div *ngIf="usuario" class="container-fluid " >
+  <p class="presentacion">Hola {{usuario}} estas en compras</p>
   <div class="row">
-    <div class="col-3" id="ColIzq">
+    <div class="col-3 CentroHome" id="ColIzq">
 
       <h1>Compra</h1>
       <form [formGroup]="prodForm" (ngSubmit)="guardar()">
@@ -31,7 +31,7 @@
 
           <div class="form-group">
             <label for="valor">valor</label>
-            <input type="number" formControlName="valor" class="form-control" id="valor" name="valor" (invalid)="prodForm" required>
+            <input type="number" formControlName="valor" class="form-control" id="valor" name="valor" required>
           </div>
           <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
             <span *ngIf="prodForm.controls['valor'].errors?.['required']">Valor es requerido </span><br></div>
@@ -48,7 +48,9 @@
                 <input type="text" formControlName="formadepago" class="form-control" id="formadepago" name="formadepago" required>
               </div>
               <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
-                <span *ngIf="prodForm.controls['formadepago'].errors?.['required']">Forma de pago es requerido </span><br></div>
+                <span *ngIf="prodForm.controls['formadepago'].errors?.['required']">Forma de pago es requerido </span><br>
+
+              </div>
 
         <div class="form-group">
           <label for="obscompra">obscompra</label>
@@ -65,10 +67,10 @@
     </div>
 
 
-
-    <div class="col-9" id="ColCentral">
+<br>
+    <div class="col-9 CentroHome" id="ColCentral">
 <h1>Disponibles</h1>
-      <table class = "table table-striped">
+      <table class = "table ">
         <thead>
             <tr >
                 <th>Producto</th>

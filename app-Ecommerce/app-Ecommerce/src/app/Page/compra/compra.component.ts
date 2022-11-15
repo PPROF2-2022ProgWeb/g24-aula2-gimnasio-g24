@@ -39,7 +39,7 @@ export class CompraComponent implements OnInit {
 
     this.prodForm = this.fbmov.group({
       valor: ['', Validators.required],
-      idmovim: [''],
+      idcompra: [''],
       idproducto: ['', Validators.required],
       idcliente: [''],
       usercompra: [''],
@@ -78,9 +78,10 @@ export class CompraComponent implements OnInit {
   guardar(): void {
     this.CompSer.saveMov(this.prodForm.value).subscribe(
       (resp) => {
-        this.prodForm.reset();
-        this.productos = this.productos.filter((prod) => resp.id !== prod.id);
+
+        this.productos = this.productos.filter((prod) => resp.idcompra !== prod.idcompra);
         this.productos.push(resp);
+        this.prodForm.reset();
       },
       (error) => {
         console.error(error);
@@ -106,9 +107,9 @@ export class CompraComponent implements OnInit {
     this.prodForm.setValue({
       cantidad: 1,
       valor: producto.valor,
-      idmovim: producto.idmovim,
+      idcompra: null,
       idproducto: producto.idproducto,
-      obscompra: producto.id,
+      obscompra: "",
       tipomovim: producto.tipomovim,
       idcliente: producto.idcliente,
       usercompra: this.usuario,
@@ -117,4 +118,5 @@ export class CompraComponent implements OnInit {
       fechacompra: producto,
     });
   }
+
 }

@@ -1,7 +1,7 @@
 <div *ngIf="usuario" class="container-fluid">
-  <p>Hola {{usuario}}</p>
+  <p class="presentacion">Hola {{usuario}}</p>
   <div   class="row">
-    <div  class="col-3" id="ColIzq" >
+    <div  class="col-3 CentroHome" id="ColIzq" >
 
       <form [formGroup]="usuaForm" (ngSubmit)="guardar()">
         <div class="form-group">
@@ -50,9 +50,9 @@
 
 
 
-    <div class="col-9" id="ColCentral">
+    <div class="col-9 CentroHome" id="ColCentral">
 
-      <table class = "table table-striped">
+      <table class = "table">
         <thead>
             <tr>
                 <th>id</th>

@@ -18,6 +18,8 @@ import { ViewChild, AfterViewInit } from '@angular/core'; // <--- Nuevo
 import { debounce, debounceTime } from 'rxjs/operators';
 import { MenuservService } from './menuserv.service';
 
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -43,6 +45,7 @@ export class MenuComponent implements OnInit {
   constructor(
     public fbmov: FormBuilder,
     private loginservice: MenuservService,
+    public _router: Router, public _location: Location,
   ) {}
 
   ngOnInit() {
@@ -82,6 +85,13 @@ export class MenuComponent implements OnInit {
 enviarDato(){
   this.loginservice.consultaMenu.emit(this.Usuarios.usuario);
 }
+refresh(): void {
+  this._router.navigateByUrl("/refresh", { skipLocationChange: true }).then(() => {
+  console.log(decodeURI(this._location.path()));
+  this._router.navigate([decodeURI(this._location.path())]);
+  });
+}
+
 
 }
 export class UsuarioMenu {

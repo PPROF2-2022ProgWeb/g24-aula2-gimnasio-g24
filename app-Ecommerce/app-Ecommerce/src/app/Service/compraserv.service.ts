@@ -28,8 +28,8 @@ public saveMov(productos: any): Observable<any>{
 
 }
 
-public deleteMov(idmovim): Observable<any>{
-  return this.httpClient.delete(this.urlmov + "deletemovimiento/" + idmovim);
+public deleteMov(idcompra): Observable<any>{
+  return this.httpClient.delete(this.urlmov + "deletemovimiento/" + idcompra);
 
  }
 

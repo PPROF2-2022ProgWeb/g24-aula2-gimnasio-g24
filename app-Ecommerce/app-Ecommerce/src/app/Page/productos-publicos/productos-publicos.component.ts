@@ -88,7 +88,7 @@ this.productos.push(resp);
       id: producto.id,
       producto: producto.producto,
       clave : producto.clave,
-      costo: producto.costo,
+      costo: 1,
       cantidad: producto.cantidad,
       valor: producto.valor,
       fechaing: producto.fechaing,

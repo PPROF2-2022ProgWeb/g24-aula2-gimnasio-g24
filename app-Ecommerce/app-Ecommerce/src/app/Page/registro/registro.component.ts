@@ -18,10 +18,10 @@ export class RegistroComponent implements OnInit {
     usuario: ['',Validators.minLength],
     email: ['', Validators.email],
     password: ['',Validators.minLength],
-      imagen: [''],
+      imagen: ['assets/img/LogoSF.png'],
       clave: [''],
       rol: ['user'],
-
+      role_id:[1],
 
   })
 
@@ -70,6 +70,7 @@ editar(usuario){
     password: usuario.password,
     rol: usuario.rol,
     imagen: usuario.imagen,
+    role_id: 1,
   })
 }
   }
