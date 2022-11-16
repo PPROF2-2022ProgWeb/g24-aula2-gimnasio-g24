@@ -22,6 +22,31 @@
       </div>
     </section>
     <br>
+    <div class="container">
+    <div   class="row justify-contenet-center">
+      <div *ngFor="let item of productosDisp" class="col-3">
+        <div class="card CentroHome">
+          <div class="card-herder">
+  <h4>{{item.id}}</h4>
+          </div>
+          <div class="card-body">
+  <div class="container-fluid">
+    <div class="row">
+  <p>Producto: <span>{{item.producto}}</span></p>
+    </div>
+    <div class="row">
+      <p>Valor: <span>$ {{item.valor}}</span></p>
+    </div>
+    <div class="row">
+      <p><img class="CssImage" src="{{item.imgprod}}" width="100" height="100" alt="{{item.imgprod}}" /></p>
+    </div>
+  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br>
 
     <div class="container">
       <div class="row">

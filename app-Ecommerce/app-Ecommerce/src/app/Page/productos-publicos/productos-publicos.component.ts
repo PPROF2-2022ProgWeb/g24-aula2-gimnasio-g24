@@ -37,7 +37,7 @@ export class ProductosPublicosComponent implements OnInit {
       cantidad: [1,Validators.required],
       fechaing: ['',Validators.required],
       idtipoprod: [1],
-      imgprod: [''],
+      imgprod: ['assets/img/LogoSF.png'],
       rol: [1],
     })
 

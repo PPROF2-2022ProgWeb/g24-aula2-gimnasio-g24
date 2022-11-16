@@ -43,7 +43,7 @@ export class UsuarioadminComponent implements OnInit {
       email: ['', Validators.email],
       password: ['', Validators.minLength],
       rol: ['user'],
-      imagen: [''],
+      imagen: ['assets/img/LogoSF.png'],
       role_id: [''],
     });
 

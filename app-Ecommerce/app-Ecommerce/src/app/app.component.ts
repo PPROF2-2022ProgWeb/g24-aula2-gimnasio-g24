@@ -48,7 +48,7 @@ paymentRequest: google.payments.api.PaymentDataRequest = {
     totalPriceStatus: 'FINAL',
     totalPriceLabel: 'Total',
     totalPrice: '0.10',
-    currencyCode: '$',
+    currencyCode: 'EUR',
     countryCode: 'AR'
   },
   callbackIntents: ['PAYMENT_AUTHORIZATION']
