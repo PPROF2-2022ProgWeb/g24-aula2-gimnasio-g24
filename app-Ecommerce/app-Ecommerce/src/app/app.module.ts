@@ -14,6 +14,7 @@ import { MenuComponent } from './Layout/menu/menu.component';
 import { HomeComponent } from './Page/home/home.component';
 import { MenuservService } from './Layout/menu/menuserv.service';
 import { GooglePayButtonComponent, GooglePayButtonModule } from '@google-pay/button-angular';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [AppComponent, MenuComponent, HomeComponent,
@@ -26,6 +27,7 @@ import { GooglePayButtonComponent, GooglePayButtonModule } from '@google-pay/but
     HttpClientModule,
     GooglePayButtonModule,
     LayoutModule,
+    NgxPayPalModule
   ],
   providers: [MenuservService],
   bootstrap: [AppComponent, MenuservService, GooglePayButtonModule],

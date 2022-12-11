@@ -7,6 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class UsuarioAdminService {
 
   url = 'https://planidear.com.ar/my-app/Conexion/';
+  urljava= 'http://localhost:8080/users/';
+
 
   /*url = 'https://planidear.com.ar/my-app/Conexion/';*/
 
@@ -14,7 +16,7 @@ export class UsuarioAdminService {
 
    mostrarTodos(){
 
-    return this.http.get(`${this.url}mostrarUsuarios.php`);
+    return this.http.get(`${this.urljava}`);
     /*return this.http.get(`${this.url}`);*/
 
   }

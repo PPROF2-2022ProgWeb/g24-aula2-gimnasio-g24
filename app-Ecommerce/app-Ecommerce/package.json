@@ -19,6 +19,9 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "@google-pay/button-angular": "^3.0.0",
+    "@paypal/paypal-js": "^5.1.4",
+    "mercadopago": "^1.5.14",
+    "ngx-paypal": "^10.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

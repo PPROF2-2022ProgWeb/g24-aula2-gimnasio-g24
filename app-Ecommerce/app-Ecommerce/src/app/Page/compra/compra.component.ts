@@ -10,6 +10,8 @@ import { CompraservService } from '../../Service/compraserv.service';
   styleUrls: ['./compra.component.css'],
 })
 export class CompraComponent implements OnInit {
+
+
   prodForm: FormGroup;
   productos: any;
   productosDisp: any;
@@ -35,13 +37,14 @@ export class CompraComponent implements OnInit {
       this.usuario = data;
     });
 
-    this.MostrarTodos();
+   // this.MostrarTodos();
 
     this.prodForm = this.fbmov.group({
       valor: ['', Validators.required],
       idcompra: [''],
    id: [''],
       idproducto: [''],
+      producto: [''],
       idcliente: [''],
       usercompra: [''],
       cantidad: ['', Validators.required],
@@ -70,9 +73,9 @@ export class CompraComponent implements OnInit {
     );
   }
 
-  MostrarTodos() {
-    this.loginservice.mostrarTodos().subscribe((result:any) => this.userListado = result);
-  }
+ /* MostrarTodos() {
+    this.CompSer.getAllMovDisp.subscribe((result:any) => this.userListado = result);
+  }*/
 
   prod: any;
   guardar(): void {
@@ -89,7 +92,7 @@ export class CompraComponent implements OnInit {
     );
   }
 
-  eliminar(producto) {
+ /* eliminar(producto) {
     this.CompSer.deleteMov(producto.id).subscribe(
       (resp) => {
         if (!resp === true) {
@@ -101,7 +104,9 @@ export class CompraComponent implements OnInit {
         console.error(error);
       }
     );
-  }
+  } */
+
+
 
   editar(producto) {
     this.prodForm.setValue({
@@ -110,6 +115,7 @@ export class CompraComponent implements OnInit {
       idcompra: null,
       id: null,
       idproducto: producto.idproducto,
+      producto: producto.producto,
       obscompra: "",
       //tipomovim: 1,
       idcliente: 1,
@@ -120,4 +126,9 @@ export class CompraComponent implements OnInit {
     });
   }
 
+
+
 }
+
+
+

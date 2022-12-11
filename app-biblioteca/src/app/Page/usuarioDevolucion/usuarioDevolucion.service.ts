@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class UsuarioDevolucionService {
 
   url = 'https://planidear.com.ar/my-app/Conexion/';
+  urljava = 'http://localhost:8080/libroDisp/';
 
   constructor(private http: HttpClient) { }
 

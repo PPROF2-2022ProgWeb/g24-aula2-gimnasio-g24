@@ -7,12 +7,13 @@ import { HttpClient } from '@angular/common/http';
 export class UsuarioAlquilerService {
 
   url = 'https://planidear.com.ar/my-app/Conexion/';
+  urljava = 'http://localhost:8080/libroDisp/';
 
   constructor(private http: HttpClient) { }
 
    mostrarTodos(){
 
-    return this.http.get(`${this.url}mostrarDisponibles.php`);
+    return this.http.get(`${this.urljava}`);
 
   }
   agregar(Titul: any){

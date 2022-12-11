@@ -1,11 +1,10 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, OnInit,ElementRef, VERSION, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { from } from 'rxjs';
 import { LoginservService } from 'src/app/Service/loginserv/loginserv.service';
 import { MenuservService } from './Layout/menu/menuserv.service';
-
-
+import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +13,13 @@ import { MenuservService } from './Layout/menu/menuserv.service';
 })
 export class AppComponent {
 
-  usuario: any;
+  //inicio pago paypal
+
+
+
+
+  //final pago de paypal
+  usuario: "gustavog";
   id: any;
   userListado: any;
 
@@ -47,8 +52,8 @@ paymentRequest: google.payments.api.PaymentDataRequest = {
   transactionInfo: {
     totalPriceStatus: 'FINAL',
     totalPriceLabel: 'Total',
-    totalPrice: '0.10',
-    currencyCode: 'EUR',
+    totalPrice: '50',
+    currencyCode: 'USD',
     countryCode: 'AR'
   },
   callbackIntents: ['PAYMENT_AUTHORIZATION']
@@ -82,6 +87,8 @@ constructor(private loginservice: MenuservService) {
 ngOnInit() {
   this.loginservice.consultaMenu.subscribe((data: any) => {
     this.usuario = data;
+
+
   });
 
   this.MostrarTodos();
