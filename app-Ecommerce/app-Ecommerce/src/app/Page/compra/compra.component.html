@@ -68,9 +68,10 @@
 
 
 <br>
-    <div class="col-9 CentroHome" id="ColCentral">
+    <div class="col-9 CentroHome form-group" id="ColCentral">
 <h1>Disponibles</h1>
-      <table class = "table ">
+<input type="text" class="form-control" name="filterPost" placeholder="Buscar..." [(ngModel)]="filterPost">
+      <table class = "table">
         <thead>
             <tr >
                 <th>Producto</th>
@@ -82,16 +83,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor = "let item of productosDisp">
+          <!--   <tr *ngFor="let post of productosDisp">-->
+       <tr *ngFor="let post of productosDisp | filter:filterPost">
                 <!-- {{}} Es interpolación para acceder a los campos -->
 
-                <td>{{item.producto}}</td>
-                <td>$ {{item.valor}}</td>
-                <td>{{item.resto}}</td>
-                <td><img class="CssImage" src="{{item.imgprod}}" width="50" height="50" alt="{{item.imgprod}}" />
+                <td>{{post.producto}}</td>
+                <td>$ {{post.valor}}</td>
+                <td>{{post.resto}}</td>
+                <td><img class="CssImage" src="{{post.imgprod}}" width="50" height="50" alt="{{post.imgprod}}" />
 
                 </td>
-                <td><button class="btn btn-success" (click)="editar(item)" type="button">Seleccionar</button></td>
+                <td><button class="btn btn-success" (click)="editar(post)" type="button">Seleccionar</button></td>
 
 
 
@@ -106,3 +108,5 @@
 
 
     </div>
+
+

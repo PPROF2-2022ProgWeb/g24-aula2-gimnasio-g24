@@ -9,6 +9,9 @@ import { RegistroComponent } from './Page/registro/registro.component';
 import { LoginComponent } from './Page/login/login.component';
 import { HomeComponent } from './Page/home/home.component';
 import { NosotrosComponent } from './Page/nosotros/nosotros.component';
+import { CompradoComponent } from './Page/Comprado/Comprado.component';
+
+
 
 const routes: Routes = [
 
@@ -17,6 +20,7 @@ const routes: Routes = [
   { path: 'Nosotros', component: NosotrosComponent },
   { path: 'Ingreso', component: IngresomovimComponent },
   { path: 'Compra', component: CompraComponent },
+  { path: 'Comprado', component: CompradoComponent },
   { path: 'Registro', component: RegistroComponent },
   { path: 'Login', component: LoginComponent },
 
@@ -28,6 +32,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+   declarations: [
+
+  ]
 })
 export class AppRoutingModule { }

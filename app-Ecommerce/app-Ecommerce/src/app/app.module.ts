@@ -15,9 +15,14 @@ import { HomeComponent } from './Page/home/home.component';
 import { MenuservService } from './Layout/menu/menuserv.service';
 import { GooglePayButtonComponent, GooglePayButtonModule } from '@google-pay/button-angular';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { CompraComponent } from './Page/compra/compra.component';
+import { FilterPipe } from './pipes/filter.pipe';
+
+
+
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, HomeComponent,
+  declarations: [AppComponent, MenuComponent, HomeComponent
    ],
   imports: [
     BrowserModule,
@@ -28,6 +33,7 @@ import { NgxPayPalModule } from 'ngx-paypal';
     GooglePayButtonModule,
     LayoutModule,
     NgxPayPalModule
+
   ],
   providers: [MenuservService],
   bootstrap: [AppComponent, MenuservService, GooglePayButtonModule],

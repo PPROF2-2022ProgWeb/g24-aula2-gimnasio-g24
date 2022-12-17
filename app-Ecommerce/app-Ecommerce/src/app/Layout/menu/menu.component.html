@@ -14,7 +14,7 @@
         <ul class="navbar-nav ms-3">
           <li class="nav-item"><a class="active" routerLink="home" > Principal</a></li>
           <li class="nav-item"><a class="active" routerLink="Nosotros"> Nosotros </a></li>
-          <li *ngIf="logeado || logeadoAdmin" class="dropdown-item "><a class="dropdown-item" routerLink="Compra">Ecommerce</a>
+       <!--   <li *ngIf="logeado || logeadoAdmin" class="dropdown-item "><a class="dropdown-item" routerLink="Compra">Ecommerce</a>-->
 
 
         <li *ngIf="logeadoAdmin"  class="nav-item"><a class="active dropdown-toggle" data-bs-toggle="dropdown" role="button"
@@ -25,7 +25,18 @@
             <li class="dropdown-item"><a class="dropdown-item" routerLink="Usuarios">Usuarios</a>
           </ul>
         </li>
-        <li *ngIf="logeado || logeadoAdmin" class="nav-item"><a class="active" href="http://localhost:4200/"> {{Usuarios.id}}{{Usuarios.usuario}} </a></li>
+
+        <li *ngIf="logeado || logeadoAdmin"  class="nav-item"><a class="active dropdown-toggle" data-bs-toggle="dropdown" role="button"
+          aria-expanded="false" routerLink="admin"> {{Usuarios.id}}{{Usuarios.usuario}}  </a>
+        <ul  class="dropdown-menu subMenu">
+          <li class="dropdown-item"><a class="dropdown-item" routerLink="Compra">Ecommerce </a>
+           <!-- <li class="dropdown-item"><a class="dropdown-item" routerLink="Ingreso">Ingreso</a>-->
+          <li class="dropdown-item"><a class="dropdown-item" routerLink="Comprado">Comprado</a>
+            <li class="dropdown-item"><a class="dropdown-item" href="http://localhost:4200/">Cerrar</a>
+        </ul>
+      </li>
+
+
           <a *ngIf="logeado || logeadoAdmin"  (click)="refresh()">
           <img class="CssImage" src="assets/img/btnActualizar.png" width="20" height="20" alt="actualizar" />
         </a>

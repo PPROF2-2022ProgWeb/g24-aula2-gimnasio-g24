@@ -30,7 +30,7 @@ export class ProductosPublicosComponent implements OnInit {
 
     this.prodForm = this.fb.group({
       id: [''],
-      producto: ['',Validators.minLength(4)],
+      producto: ['',Validators.required,[]],
       clave : [''],
       costo: [1],
       valor: [1,Validators.required],

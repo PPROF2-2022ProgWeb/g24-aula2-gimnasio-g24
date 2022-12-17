@@ -1,7 +1,12 @@
+import { group } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { filter } from 'rxjs';
 import { MenuservService } from 'src/app/Layout/menu/menuserv.service';
+import { FilterPipe } from 'src/app/pipes/filter.pipe';
 import { CompraservService } from '../../Service/compraserv.service';
+
+
 
 
 @Component({
@@ -10,6 +15,7 @@ import { CompraservService } from '../../Service/compraserv.service';
   styleUrls: ['./compra.component.css'],
 })
 export class CompraComponent implements OnInit {
+
 
 
   prodForm: FormGroup;
@@ -31,6 +37,15 @@ export class CompraComponent implements OnInit {
     public CompSer: CompraservService,
     private loginservice: MenuservService
   ) {}
+  filterPost = '';
+  post =
+  [
+    {
+    producto: null,
+    valor: null,
+    resto: null,
+    imgprod: null,
+  }];
 
   ngOnInit() {
     this.loginservice.consultaMenu.subscribe((data: any) => {

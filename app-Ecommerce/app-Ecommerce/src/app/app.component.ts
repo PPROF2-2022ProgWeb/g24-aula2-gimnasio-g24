@@ -13,12 +13,7 @@ import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 })
 export class AppComponent {
 
-  //inicio pago paypal
 
-
-
-
-  //final pago de paypal
   usuario: "gustavog";
   id: any;
   userListado: any;

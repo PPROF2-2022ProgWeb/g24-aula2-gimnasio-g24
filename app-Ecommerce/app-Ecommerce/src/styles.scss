@@ -1,20 +1,10 @@
 body{
   background-image: url(http://planidear.com.ar/g24-aula2-gimnasio-g24/img/fondogym3.jpg);
-  /*
 
-*/
 color: white;
 
-/*La imagen es renderizada, preservando su proporción propia, en el tamaño mayor contenido dentro de, o cubriendo
-*/
-
-
-
-/*
-la imagen del fondo permanece fija
-*/
 background-attachment: fixed;
-/*aliena al centro*/
+
 align-content: center;
   background-size: cover;
 }
@@ -26,8 +16,6 @@ align-content: center;
   align-content: center;
   align-items: center;
   text-align: center;
-/*Puede ser 0.9*/
-  opacity: 90%;
   border-radius: 1% 1%;
 }
 
@@ -42,11 +30,7 @@ align-content: center;
   border-radius: 1% 1%;
 }
 
-.EstiloFuente {
-  font-family: 'Kanit', sans-serif;
-/*el texto estará en negrita;*/
-  font-weight: bold;
-}
+
 
 .EstiloFuenteSobreNosotros {
   font-family: arial, helvetica, sans-serif;
@@ -93,14 +77,10 @@ a, p, table, td, tr, thead{
 }
 
 h1 {
-  font-family: Facon, "sans-serif";
+  font-family: 'Courier New', Courier, monospace,"sans-serif";
 }
 
 
-
-#AlinearLogoInicio{
-text-align: center;
-}
 
 #AlinearLogoInicio{
 text-align: center;
@@ -110,6 +90,17 @@ text-align: center;
 .errorUsuarios{
   color: red;
 }
-.presentacion{
-  text-align-last:right;
-}
+
+.errorUsuarios {
+  color: red; }
+  .CentroHome {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: white;
+    background-color: black;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  /*Puede ser 0.9*/
+    opacity: 90%;
+    border-radius: 1% 1%;
+  }

@@ -10,8 +10,8 @@
           <input type="text" formControlName="producto" class="form-control"  id="producto" name="producto" minlength="4" required>
         </div>
         <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
-          <span *ngIf="prodForm.controls['producto'].errors?.['minlength']">Producto debe tener al menos un 4 caracteres </span><br></div>
-
+          <span *ngIf="prodForm.controls['producto'].errors?.['required']">Producto es requerido </span>
+          <span *ngIf="prodForm.controls['producto'].errors?.['minlength']">Producto debe tener mas de 4 caracteres </span><br></div>
         <div class="form-group">
           <label for="clave">Clave</label>
           <input type="text"  formControlName="clave" class="form-control" id="clave" name="clave" >

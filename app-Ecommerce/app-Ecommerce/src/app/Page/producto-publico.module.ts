@@ -11,6 +11,11 @@ import { RegistroComponent } from './registro/registro.component';
 
 import {LoginComponent} from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { CompradoComponent } from './Comprado/Comprado.component';
+//import { CompraPipePipe } from './compra/compra-pipe.pipe';
+import { FilterPipe } from '../pipes/filter.pipe';
+import { UserpipePipe } from '../pipes/userpipe';
+
 
 
 @NgModule({
@@ -21,7 +26,9 @@ import { HomeComponent } from './home/home.component';
     CompraComponent,
     RegistroComponent,
     LoginComponent,
-
+    CompradoComponent,
+     FilterPipe,
+     UserpipePipe
 
   ],
   imports: [
