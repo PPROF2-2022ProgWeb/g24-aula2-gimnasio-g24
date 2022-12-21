@@ -2,10 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MenuComponent } from 'src/app/Layout/menu/menu.component';
 import { UsuarioservService } from 'src/app/Service/usuarioserv.service';
-import { ViewChild, AfterViewInit } from "@angular/core"; // <--- Nuevo
+import { ViewChild, AfterViewInit } from '@angular/core';
 import { MenuservService } from 'src/app/Layout/menu/menuserv.service';
-
-
 
 @Component({
   selector: 'app-usuarioadmin',
@@ -26,12 +24,16 @@ export class UsuarioadminComponent implements OnInit {
   id: number;
   userListado: any;
 
-  constructor(public fbu: FormBuilder, public UsuaSer: UsuarioservService,  private loginservice: MenuservService) {}
+  constructor(
+    public fbu: FormBuilder,
+    public UsuaSer: UsuarioservService,
+    private loginservice: MenuservService
+  ) {}
 
   ngOnInit() {
-    this.loginservice.consultaMenu.subscribe((data: string)=>{
-      this.usuario=data;
-    })
+    this.loginservice.consultaMenu.subscribe((data: string) => {
+      this.usuario = data;
+    });
 
     this.MostrarTodos();
 
@@ -58,7 +60,9 @@ export class UsuarioadminComponent implements OnInit {
   }
 
   MostrarTodos() {
-    this.loginservice.mostrarTodos().subscribe((result:any) => this.userListado = result);
+    this.loginservice
+      .mostrarTodos()
+      .subscribe((result: any) => (this.userListado = result));
   }
 
   user: any;

@@ -1,52 +1,41 @@
-<br>
-<!-- <div *ngIf="usuario" class="container-fluid " ></div>-->
-<div class="container-fluid " >
-  <p class="presentacion">Hola {{usuario}} este es tu listado de compras</p>
-<div class="col-12 m-4 CentroHome" id="ColCentral">
-  <h1>Comprado</h1>
-<input type="text" name="filterPost" placeholder="{{usuario}}" value="{{usuario}}" [(ngModel)]="filterPost" >
+<br />
+<!-- <div *ngIf="usuario" class="container-fluid " > -->
+<div class="container-fluid">
+  <p class="presentacion">Hola {{ usuario }} este es tu listado de compras</p>
+  <div class="col-12 m-4 CentroHome" id="ColCentral">
+    <h1>Comprado</h1>
+    <input
+      type="text"
+      name="filterPost"
+      placeholder="{{ usuario }}"
+      value="{{ usuario }}"
+      [(ngModel)]="filterPost"
+    />
 
-        <table class ="table">
-          <thead>
-              <tr >
-                  <th>Id</th>
-                  <th>Usuario</th>
-                  <th>Producto</th>
-
-                  <th>Valor</th>
-                  <th>Cantidad</th>
-                  <th>Fecha</th>
-
-                  <th>Entrega</th>
-                  <th>Pago</th>
-
-
-              </tr>
-          </thead>
-             <tr *ngFor = "let item of productosComprado | userpipe:filterPost" >
-              <!-- <tr *ngFor = "let item of productosComprado" > -->
-
-
-                  <td>{{item.idcompra}}</td>
-                  <td>{{item.usercompra}}</td>
-                  <td>$ {{item.producto}}</td>
-                  <td>{{item.valor}}</td>
-
-
-                  <td>{{item.cantidad}}</td>
-                  <td>{{item.fechacompra}}</td>
-
-                  <td>{{item.lugarentrega}}</td>
-                  <td>{{item.formadepago}}</td>
-
-
-
-
-
-              </tr>
-
-      </table>
-
-      </div>
-
-    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Usuario</th>
+          <th>Producto</th>
+          <th>Valor</th>
+          <th>Cantidad</th>
+          <th>Fecha</th>
+          <th>Entrega</th>
+          <th>Pago</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let item of productosComprado | userpipe : filterPost">
+        <!--  <tr *ngFor = "let item of productosComprado" >-->
+        <td>{{ item.idcompra }}</td>
+        <td>{{ item.usercompra }}</td>
+        <td>{{ item.producto }}</td>
+        <td>$ {{ item.valor }}</td>
+        <td>{{ item.cantidad }}</td>
+        <td>{{ item.fechacompra }}</td>
+        <td>{{ item.lugarentrega }}</td>
+        <td>{{ item.formadepago }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

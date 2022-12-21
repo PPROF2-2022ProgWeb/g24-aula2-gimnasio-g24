@@ -1,112 +1,183 @@
-<div *ngIf="usuario" class="container-fluid " >
-  <p class="presentacion">Hola {{usuario}} estas en compras</p>
-
+<div *ngIf="usuario" class="container-fluid">
+  <p class="presentacion">Hola {{ usuario }} estas en compras</p>
 
   <div class="row">
     <div class="col-3 CentroHome" id="ColIzq">
-
       <h1>Compra</h1>
       <form [formGroup]="prodForm" (ngSubmit)="guardar()">
-        <div class="form-group" >
-
+        <div class="form-group">
           <label for="idproducto">Producto</label>
-          <select formControlName="idproducto" class="form-control" name="idproducto" size="1" id="idproducto"  required>
-                  <option *ngFor = "let item1 of productos" value="{{item1.id}}" >{{item1.producto}}</option>
-
-                </select>
-                <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
-                  <span *ngIf="prodForm.controls['idproducto'].errors?.['required']">Producto es requerido </span><br></div>
+          <select
+            formControlName="idproducto"
+            class="form-control"
+            name="idproducto"
+            size="1"
+            id="idproducto"
+            required
+          >
+            <option *ngFor="let item1 of productos" value="{{ item1.id }}">
+              {{ item1.producto }}
+            </option>
+          </select>
+          <div
+            *ngIf="prodForm.invalid && prodForm.touched"
+            class="errorUsuarios"
+          >
+            <span *ngIf="prodForm.controls['idproducto'].errors?.['required']"
+              >Producto es requerido </span
+            ><br />
+          </div>
         </div>
 
         <div class="form-group">
-
           <label for="usercompra">usercompra</label>
-          <input type="text" formControlName="usercompra" class="form-control" id="usercompra" name="usercompra" value="{{usuario}}" >
-</div>
+          <input
+            type="text"
+            formControlName="usercompra"
+            class="form-control"
+            id="usercompra"
+            name="usercompra"
+            value="{{ usuario }}"
+          />
+        </div>
 
         <div class="form-group">
           <label for="cantidad">cantidad</label>
-          <input type="number" formControlName="cantidad" class="form-control" id="cantidad" name="cantidad" required >
+          <input
+            type="number"
+            formControlName="cantidad"
+            class="form-control"
+            id="cantidad"
+            name="cantidad"
+            required
+          />
         </div>
         <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
-          <span *ngIf="prodForm.controls['cantidad'].errors?.['required']">cantidad es requerido </span><br></div>
+          <span *ngIf="prodForm.controls['cantidad'].errors?.['required']"
+            >cantidad es requerido </span
+          ><br />
+        </div>
 
-          <div class="form-group">
-            <label for="valor">valor</label>
-            <input type="number" formControlName="valor" class="form-control" id="valor" name="valor" required>
-          </div>
-          <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
-            <span *ngIf="prodForm.controls['valor'].errors?.['required']">Valor es requerido </span><br></div>
+        <div class="form-group">
+          <label for="valor">valor</label>
+          <input
+            type="number"
+            formControlName="valor"
+            class="form-control"
+            id="valor"
+            name="valor"
+            required
+          />
+        </div>
+        <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+          <span *ngIf="prodForm.controls['valor'].errors?.['required']"
+            >Valor es requerido </span
+          ><br />
+        </div>
 
-            <div class="form-group">
-              <label for="lugarentrega">Lugar de entrega</label>
-              <input type="text" formControlName="lugarentrega" class="form-control" id="lugarentrega" name="lugarentrega" required>
-            </div>
-            <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
-              <span *ngIf="prodForm.controls['valor'].errors?.['required']">Lugar de entrega es requerido </span><br></div>
+        <div class="form-group">
+          <label for="lugarentrega">Lugar de entrega</label>
+          <input
+            type="text"
+            formControlName="lugarentrega"
+            class="form-control"
+            id="lugarentrega"
+            name="lugarentrega"
+            required
+          />
+        </div>
+        <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+          <span *ngIf="prodForm.controls['valor'].errors?.['required']"
+            >Lugar de entrega es requerido </span
+          ><br />
+        </div>
 
-              <div class="form-group">
-                <label for="formadepago">Forma de pago</label>
-                <input type="text" formControlName="formadepago" class="form-control" id="formadepago" name="formadepago" required>
-              </div>
-              <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
-                <span *ngIf="prodForm.controls['formadepago'].errors?.['required']">Forma de pago es requerido </span><br>
-
-              </div>
+        <div class="form-group">
+          <label for="formadepago">Forma de pago</label>
+          <input
+            type="text"
+            formControlName="formadepago"
+            class="form-control"
+            id="formadepago"
+            name="formadepago"
+            required
+          />
+        </div>
+        <div *ngIf="prodForm.invalid && prodForm.touched" class="errorUsuarios">
+          <span *ngIf="prodForm.controls['formadepago'].errors?.['required']"
+            >Forma de pago es requerido </span
+          ><br />
+        </div>
 
         <div class="form-group">
           <label for="obscompra">obscompra</label>
-          <input type="text" formControlName="obscompra" class="form-control" id="obscompra" name="obscompra" >
+          <input
+            type="text"
+            formControlName="obscompra"
+            class="form-control"
+            id="obscompra"
+            name="obscompra"
+          />
         </div>
 
-
-        <button class="btn btn-primary" [disabled]="prodForm.invalid" type="submit">Comprar</button>
-        </form>
+        <button
+          class="btn btn-primary"
+          [disabled]="prodForm.invalid"
+          type="submit"
+        >
+          Comprar
+        </button>
+      </form>
     </div>
 
-
-
-
-<br>
+    <br />
     <div class="col-9 CentroHome form-group" id="ColCentral">
-<h1>Disponibles</h1>
-<input type="text" class="form-control" name="filterPost" placeholder="Buscar..." [(ngModel)]="filterPost">
-      <table class = "table">
+      <h1>Disponibles</h1>
+      <input
+        type="text"
+        class="form-control"
+        name="filterPost"
+        placeholder="Buscar..."
+        [(ngModel)]="filterPost"
+      />
+      <table class="table">
         <thead>
-            <tr >
-                <th>Producto</th>
-                <th>Valor</th>
-                <th>Resto</th>
-                <th colspan="2">imgprod</th>
-
-
-            </tr>
+          <tr>
+            <th>Producto</th>
+            <th>Valor</th>
+            <th>Resto</th>
+            <th colspan="2">imgprod</th>
+          </tr>
         </thead>
         <tbody>
           <!--   <tr *ngFor="let post of productosDisp">-->
-       <tr *ngFor="let post of productosDisp | filter:filterPost">
-                <!-- {{}} Es interpolación para acceder a los campos -->
+          <tr *ngFor="let post of productosDisp | filter : filterPost">
+            <!-- {{}} Es interpolación para acceder a los campos -->
 
-                <td>{{post.producto}}</td>
-                <td>$ {{post.valor}}</td>
-                <td>{{post.resto}}</td>
-                <td><img class="CssImage" src="{{post.imgprod}}" width="50" height="50" alt="{{post.imgprod}}" />
-
-                </td>
-                <td><button class="btn btn-success" (click)="editar(post)" type="button">Seleccionar</button></td>
-
-
-
-            </tr>
+            <td>{{ post.producto }}</td>
+            <td>$ {{ post.valor }}</td>
+            <td>{{ post.resto }}</td>
+            <td>
+              <img
+                class="CssImage"
+                src="{{ post.imgprod }}"
+                width="50"
+                height="50"
+                alt="{{ post.imgprod }}"
+              />
+            </td>
+            <td>
+              <button
+                class="btn btn-success"
+                (click)="editar(post)"
+                type="button"
+              >
+                Seleccionar
+              </button>
+            </td>
+          </tr>
         </tbody>
-    </table>
-
+      </table>
     </div>
-
-
   </div>
-
-
-    </div>
-
-
+</div>

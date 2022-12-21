@@ -1,47 +1,73 @@
 <div class="container CentroHome">
+  <h2>REGISTRO</h2>
+  <form [formGroup]="usuaForm" (ngSubmit)="guardar()">
+    <div class="form-group">
+      <label for="usuario">usuario</label>
+      <input
+        type="text"
+        formControlName="usuario"
+        class="form-control"
+        id="usuario"
+        name="usuario"
+        minlength="4"
+        required
+      />
+    </div>
+    <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
+      <span *ngIf="usuaForm.controls['usuario'].errors?.['minlength']"
+        >Usuario debe tener al menos un 4 caracteres</span
+      ><br />
+    </div>
 
-
-    <form [formGroup]="usuaForm" (ngSubmit)="guardar()">
-      <div class="form-group">
-        <label for="usuario">usuario</label>
-        <input type="text" formControlName="usuario" class="form-control"  id="usuario" name="usuario" minlength="4" required >
-      </div>
-      <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
-        <span *ngIf="usuaForm.controls['usuario'].errors?.['minlength']">Usuario debe tener al menos un 4 caracteres</span><br>
-               </div>
-
-      <div class="form-group">
-        <label for="email">emails</label>
-        <input type="email" formControlName="email" class="form-control" id="email" name="email">
-      </div>
+    <div class="form-group">
+      <label for="email">emails</label>
+      <input
+        type="email"
+        formControlName="email"
+        class="form-control"
+        id="email"
+        name="email"
+      />
+    </div>
 
     <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
-      <span *ngIf="usuaForm.controls['email'].errors?.['email']">EL email debe tener @</span><br>
+      <span *ngIf="usuaForm.controls['email'].errors?.['email']"
+        >EL email debe tener @</span
+      ><br />
+    </div>
 
-             </div>
+    <div class="form-group">
+      <label for="password">passwords</label>
 
-      <div class="form-group">
-        <label for="password">passwords</label>
+      <input
+        type="text"
+        formControlName="password"
+        class="form-control"
+        id="password"
+        name="password"
+        minlength="8"
+        required
+      />
+    </div>
+    <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
+      <span *ngIf="usuaForm.controls['password'].errors?.['minlength']"
+        >Password debe tener al menos un 8 caracteres</span
+      ><br />
+    </div>
 
-        <input type="text" formControlName="password" class="form-control" id="password" name="password" minlength="4" required >
-      </div>
-      <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
-        <span *ngIf="usuaForm.controls['password'].errors?.['minlength']">Password debe tener al menos un 4 caracteres</span><br>
-      </div>
+    <div class="form-group">
+      <label for="imagen">imagen</label>
+      <input
+        type="text"
+        formControlName="imagen"
+        class="form-control"
+        id="imagen"
+        name="imagen"
+      />
+    </div>
 
-
-      <div class="form-group">
-        <label for="imagen">imagen</label>
-        <input type="text" formControlName="imagen" class="form-control" id="imagen" name="imagen">
-      </div>
-
-
-      <button class="btn btn-primary" [disabled]="usuaForm.invalid" type="submit">Cargar</button>
-      </form>
-
-
-
-
+    <button class="btn btn-primary" [disabled]="usuaForm.invalid" type="submit">
+      Cargar
+    </button>
+  </form>
 </div>
-
-

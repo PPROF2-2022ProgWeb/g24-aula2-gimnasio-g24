@@ -36,7 +36,6 @@ export class MenuComponent implements OnInit {
   titulo = 'Consulta Usuarios';
 
   Usuarios = {
-
     id: null,
     usuario: null,
     password: null,
@@ -45,7 +44,8 @@ export class MenuComponent implements OnInit {
   constructor(
     public fbmov: FormBuilder,
     private loginservice: MenuservService,
-    public _router: Router, public _location: Location,
+    public _router: Router,
+    public _location: Location
   ) {}
 
   ngOnInit() {
@@ -60,7 +60,7 @@ export class MenuComponent implements OnInit {
   ControlarLogin() {
     this.loginservice.loginUsuario(this.Usuarios).subscribe((datos: any) => {
       if (datos['resultado'] == 'OK') {
-       // this.loginservice.consultaMenu.emit(this.Usuarios.usuario);
+        // this.loginservice.consultaMenu.emit(this.Usuarios.usuario);
 
         alert(datos['mensaje']);
         this.logeado = true;
@@ -73,7 +73,7 @@ export class MenuComponent implements OnInit {
 
     this.loginservice.loginAdmin(this.Usuarios).subscribe((datos: any) => {
       if (datos['resultado'] == 'OK') {
-       // this.loginservice.consultaMenu.emit(this.Usuarios.usuario);
+        // this.loginservice.consultaMenu.emit(this.Usuarios.usuario);
         this.logeadoAdmin = true;
       } else {
         this.logeadoAdmin = false;
@@ -82,17 +82,17 @@ export class MenuComponent implements OnInit {
     });
   }
 
-enviarDato(){
-  this.loginservice.consultaMenu.emit(this.Usuarios.usuario);
-}
-refresh(): void {
-  this._router.navigateByUrl("/refresh", { skipLocationChange: true }).then(() => {
-  console.log(decodeURI(this._location.path()));
-  this._router.navigate([decodeURI(this._location.path())]);
-  });
-}
-
-
+  enviarDato() {
+    this.loginservice.consultaMenu.emit(this.Usuarios.usuario);
+  }
+  refresh(): void {
+    this._router
+      .navigateByUrl('/refresh', { skipLocationChange: true })
+      .then(() => {
+        console.log(decodeURI(this._location.path()));
+        this._router.navigate([decodeURI(this._location.path())]);
+      });
+  }
 }
 export class UsuarioMenu {
   constructor(

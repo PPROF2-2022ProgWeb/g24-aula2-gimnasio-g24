@@ -1,91 +1,149 @@
 <div *ngIf="usuario" class="container-fluid">
-  <p class="presentacion">Hola {{usuario}}</p>
-  <div   class="row">
-    <div  class="col-3 CentroHome" id="ColIzq" >
-
+  <p class="presentacion">Hola {{ usuario }}</p>
+  <div class="row">
+    <div class="col-3 CentroHome" id="ColIzq">
       <form [formGroup]="usuaForm" (ngSubmit)="guardar()">
         <div class="form-group">
           <label for="usuario">usuario</label>
-          <input type="text" formControlName="usuario" class="form-control"  id="usuario" name="usuario" minlength="4" required >
+          <input
+            type="text"
+            formControlName="usuario"
+            class="form-control"
+            id="usuario"
+            name="usuario"
+            minlength="4"
+            required
+          />
         </div>
         <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
-          <span *ngIf="usuaForm.controls['usuario'].errors?.['minlength']">Usuario debe tener al menos un 4 caracteres</span><br>
-                 </div>
+          <span *ngIf="usuaForm.controls['usuario'].errors?.['minlength']"
+            >Usuario debe tener al menos un 4 caracteres</span
+          ><br />
+        </div>
 
         <div class="form-group">
           <label for="email">emails</label>
-          <input type="email" formControlName="email" class="form-control" id="email" name="email">
+          <input
+            type="email"
+            formControlName="email"
+            class="form-control"
+            id="email"
+            name="email"
+          />
         </div>
 
-      <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
-        <span *ngIf="usuaForm.controls['email'].errors?.['email']">EL email debe tener @</span><br>
-
-               </div>
+        <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
+          <span *ngIf="usuaForm.controls['email'].errors?.['email']"
+            >EL email debe tener @</span
+          ><br />
+        </div>
 
         <div class="form-group">
           <label for="password">passwords</label>
 
-          <input type="text" formControlName="password" class="form-control" id="password" name="password" minlength="4" >
+          <input
+            type="text"
+            formControlName="password"
+            class="form-control"
+            id="password"
+            name="password"
+            minlength="4"
+          />
         </div>
         <div class="errorUsuarios" *ngIf="usuaForm.invalid && usuaForm.touched">
-          <span *ngIf="usuaForm.controls['password'].errors?.['minlength']">Password debe tener al menos un 4 caracteres</span><br>
+          <span *ngIf="usuaForm.controls['password'].errors?.['minlength']"
+            >Password debe tener al menos un 4 caracteres</span
+          ><br />
         </div>
 
         <div class="form-group">
           <label for="imagen">imagen</label>
-          <input type="text" formControlName="imagen" class="form-control" id="imagen" name="imagen" placeholder="imagen muestra" >
+          <input
+            type="text"
+            formControlName="imagen"
+            class="form-control"
+            id="imagen"
+            name="imagen"
+            placeholder="imagen muestra"
+          />
         </div>
-<div class="form-group">
+        <div class="form-group">
           <label for="role_id">role_id</label>
-          <select formControlName="role_id" class="form-control" name="role_id" size="1" id="role_id"  >
-                  <option value="1" selected>user</option>
-                  <option value="2" >admin</option>
-                </select>
-              </div>
+          <select
+            formControlName="role_id"
+            class="form-control"
+            name="role_id"
+            size="1"
+            id="role_id"
+          >
+            <option value="1" selected>user</option>
+            <option value="2">admin</option>
+          </select>
+        </div>
 
-
-        <button class="btn btn-primary" [disabled]="usuaForm.invalid" type="submit">Cargar</button>
-        </form>
+        <button
+          class="btn btn-primary"
+          [disabled]="usuaForm.invalid"
+          type="submit"
+        >
+          Cargar
+        </button>
+      </form>
     </div>
-
-
 
     <div class="col-9 CentroHome" id="ColCentral">
-
-      <table class = "table">
+      <table class="table">
         <thead>
-            <tr>
-                <th>id</th>
-                <th>usuario</th>
-                <th>email</th>
-                <th>password</th>
-                <th>Rol</th>
-                <th>imagen</th>
-                <th colspan="3">Opciones</th>
-
-            </tr>
+          <tr>
+            <th>id</th>
+            <th>usuario</th>
+            <th>email</th>
+            <th>password</th>
+            <th>Rol</th>
+            <th>imagen</th>
+            <th colspan="3">Opciones</th>
+          </tr>
         </thead>
         <tbody>
-            <tr *ngFor = "let item of usuarios">
-                <!-- {{}} Es interpolación para acceder a los campos -->
-                <td>{{item.id}}</td>
-                <td>{{item.usuario}}</td>
-                <td>{{item.email}}</td>
-                <td>{{item.password}}</td>
+          <tr *ngFor="let item of usuarios">
+            <!-- {{}} Es interpolación para acceder a los campos -->
+            <td>{{ item.id }}</td>
+            <td>{{ item.usuario }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.password }}</td>
 
-                <td>{{item.role_id}}</td>
-                <td><img class="CssImage" src="{{item.imagen}}" width="50" height="50" alt="{{item.imagen}}" /></td>
+            <td>{{ item.role_id }}</td>
+            <td>
+              <img
+                class="CssImage"
+                src="{{ item.imagen }}"
+                width="50"
+                height="50"
+                alt="{{ item.imagen }}"
+              />
+            </td>
 
-<td><button class="btn btn-success" (click)="editar(item)" type="button">Editar</button></td>
-<td><button class="btn btn-danger" (click)="eliminar(item)" type="button">Eliminar</button></td>
-
-            </tr>
+            <td>
+              <button
+                class="btn btn-success"
+                (click)="editar(item)"
+                type="button"
+              >
+                Editar
+              </button>
+            </td>
+            <td>
+              <button
+                class="btn btn-danger"
+                (click)="eliminar(item)"
+                type="button"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
         </tbody>
-    </table>
-
+      </table>
     </div>
-
-
   </div>
-
-    </div>
+</div>

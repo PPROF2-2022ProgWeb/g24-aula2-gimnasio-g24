@@ -1,165 +1,252 @@
-<!doctype html>
-<html lang="es">
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <!-- caracter en lenguaje humano -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- Vista distintas ventanas -->
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1"
+    />
     <!-- Informacion de la pagina -->
-    <meta name="Sistema web para gimnasio" content="Pagina de inicio"/>
+    <meta name="Sistema web para gimnasio" content="Pagina de inicio" />
     <!-- Etiquetas para los bucadores -->
-    <meta name="keywords" content="Sistema web, gimnasio, inicio"/>
+    <meta name="keywords" content="Sistema web, gimnasio, inicio" />
 
-  <title>AppEcommerce</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="http://localhost:4200/assets/img/LogoSF.png">
-  <link rel="stylesheet" href="styles.scss">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    <title>AppEcommerce</title>
+    <!--  en el head para indicar el enrutamiento inicial al cargar la app, se
+  podría cargar <base href="/login" si deseamos mostrarlo al ingresar a nuestro sitio> -->
+    <base href="/" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="http://localhost:4200/assets/img/LogoSF.png"
+    />
+
+
+    <!--
+descargado con npm install bootstrap
+en “angular.json”
+
+  -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
   rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <app-root></app-root>
 
-</head>
-<body>
+    <!-- tag para cargar el componente raíz por defecto -->
 
-  <app-root></app-root>
-<!--inicio pago paypal-->
-<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <!--inicio pago paypal -->
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD"
+      data-sdk-integration-source="button-factory"
+    ></script>
 
+    <div
+      id="smart-button-container"
+      style="
+        background-color: black;
+        margin-top: 2%;
+        margin-left: 10%;
+        margin-right: 10%;
+        opacity: 90%;
+      "
+    >
+      <div style="text-align: center">
+        <label for="description">Producto </label
+        ><input
+          type="text"
+          name="descriptionInput"
+          id="description"
+          maxlength="127"
+          value=""
+        />
+      </div>
+      <p
+        id="descriptionError"
+        style="visibility: hidden; color: red; text-align: center"
+      >
+        Please enter a description
+      </p>
+      <div style="text-align: center">
+        <label for="amount">Monto </label
+        ><input name="amountInput" type="number" id="amount" value="" /><span>
+          USD</span
+        >
+      </div>
+      <p
+        id="priceLabelError"
+        style="visibility: hidden; color: red; text-align: center"
+      >
+        Please enter a price
+      </p>
+      <div id="invoiceidDiv" style="text-align: center; display: none">
+        <label for="invoiceid"> </label
+        ><input
+          name="invoiceid"
+          maxlength="127"
+          type="text"
+          id="invoiceid"
+          value=""
+        />
+      </div>
+      <p
+        id="invoiceidError"
+        style="visibility: hidden; color: red; text-align: center"
+      >
+        Please enter an Invoice ID
+      </p>
 
-<div id="smart-button-container"
- style="background-color: black;
-  margin-top: 2%; margin-left: 10%;
-   margin-right: 10%;
-   opacity: 90%;">
-  <div style="text-align: center"><label for="description">Producto </label><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
-    <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
-  <div style="text-align: center"><label for="amount">Monto </label><input name="amountInput" type="number" id="amount" value="" ><span> USD</span></div>
-    <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
-  <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
-    <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+      <div
+        style="text-align: center; margin-top: 0.625rem"
+        id="paypal-button-container"
+      ></div>
+    </div>
 
-    <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD"
+      data-sdk-integration-source="button-factory"
+    ></script>
+    <script>
+      function initPayPalButton() {
+        var description = document.querySelector(
+          "#smart-button-container #description"
+        );
+        var amount = document.querySelector("#smart-button-container #amount");
+        var descriptionError = document.querySelector(
+          "#smart-button-container #descriptionError"
+        );
+        var priceError = document.querySelector(
+          "#smart-button-container #priceLabelError"
+        );
+        var invoiceid = document.querySelector(
+          "#smart-button-container #invoiceid"
+        );
+        var invoiceidError = document.querySelector(
+          "#smart-button-container #invoiceidError"
+        );
+        var invoiceidDiv = document.querySelector(
+          "#smart-button-container #invoiceidDiv"
+        );
 
-</div>
+        var elArr = [description, amount];
 
+        if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+          invoiceidDiv.style.display = "block";
+        }
 
+        var purchase_units = [];
+        purchase_units[0] = {};
+        purchase_units[0].amount = {};
 
-<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-<script>
-function initPayPalButton() {
-  var description = document.querySelector('#smart-button-container #description');
-  var amount = document.querySelector('#smart-button-container #amount');
-  var descriptionError = document.querySelector('#smart-button-container #descriptionError');
-  var priceError = document.querySelector('#smart-button-container #priceLabelError');
-  var invoiceid = document.querySelector('#smart-button-container #invoiceid');
-  var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
-  var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+        function validate(event) {
+          return event.value.length > 0;
+        }
 
-  var elArr = [description, amount];
+        paypal
+          .Buttons({
+            style: {
+              color: "silver",
+              shape: "pill",
+              label: "checkout",
+              layout: "horizontal",
+            },
 
-  if (invoiceidDiv.firstChild.innerHTML.length > 1) {
-    invoiceidDiv.style.display = "block";
-  }
+            onInit: function (data, actions) {
+              actions.disable();
 
-  var purchase_units = [];
-  purchase_units[0] = {};
-  purchase_units[0].amount = {};
+              if (invoiceidDiv.style.display === "block") {
+                elArr.push(invoiceid);
+              }
 
-  function validate(event) {
-    return event.value.length > 0;
-  }
+              elArr.forEach(function (item) {
+                item.addEventListener("keyup", function (event) {
+                  var result = elArr.every(validate);
+                  if (result) {
+                    actions.enable();
+                  } else {
+                    actions.disable();
+                  }
+                });
+              });
+            },
 
-  paypal.Buttons({
-    style: {
-      color: 'silver',
-      shape: 'pill',
-      label: 'checkout',
-      layout: 'horizontal',
+            onClick: function () {
+              if (description.value.length < 1) {
+                descriptionError.style.visibility = "visible";
+              } else {
+                descriptionError.style.visibility = "hidden";
+              }
 
-    },
+              if (amount.value.length < 1) {
+                priceError.style.visibility = "visible";
+              } else {
+                priceError.style.visibility = "hidden";
+              }
 
-    onInit: function (data, actions) {
-      actions.disable();
+              if (
+                invoiceid.value.length < 1 &&
+                invoiceidDiv.style.display === "block"
+              ) {
+                invoiceidError.style.visibility = "visible";
+              } else {
+                invoiceidError.style.visibility = "hidden";
+              }
 
-      if(invoiceidDiv.style.display === "block") {
-        elArr.push(invoiceid);
+              purchase_units[0].description = description.value;
+              purchase_units[0].amount.value = amount.value;
+
+              if (invoiceid.value !== "") {
+                purchase_units[0].invoice_id = invoiceid.value;
+              }
+            },
+
+            createOrder: function (data, actions) {
+              return actions.order.create({
+                purchase_units: purchase_units,
+              });
+            },
+
+            onApprove: function (data, actions) {
+              return actions.order.capture().then(function (orderData) {
+                // Full available details
+                console.log(
+                  "Capture result",
+                  orderData,
+                  JSON.stringify(orderData, null, 2)
+                );
+
+                // Show a success message within this page, e.g.
+                const element = document.getElementById(
+                  "paypal-button-container"
+                );
+                element.innerHTML = "";
+                element.innerHTML =
+                  '<h3>¡Gracias por tu pago!</h3> <a href="https://developer.paypal.com/dashboard/notifications" target="_parent" > revisar cuenta </a>';
+
+                // Or go to another URL:  actions.redirect('thank_you.html');
+              });
+            },
+
+            onError: function (err) {
+              console.log(err);
+            },
+          })
+          .render("#paypal-button-container");
       }
+      initPayPalButton();
+    </script>
+    <!--Final pago paypal-->
 
-      elArr.forEach(function (item) {
-        item.addEventListener('keyup', function (event) {
-          var result = elArr.every(validate);
-          if (result) {
-            actions.enable();
-          } else {
-            actions.disable();
-          }
-        });
-      });
-    },
+    <br />
 
-    onClick: function () {
-      if (description.value.length < 1) {
-        descriptionError.style.visibility = "visible";
-      } else {
-        descriptionError.style.visibility = "hidden";
-      }
-
-      if (amount.value.length < 1) {
-        priceError.style.visibility = "visible";
-      } else {
-        priceError.style.visibility = "hidden";
-      }
-
-      if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
-        invoiceidError.style.visibility = "visible";
-      } else {
-        invoiceidError.style.visibility = "hidden";
-      }
-
-      purchase_units[0].description = description.value;
-      purchase_units[0].amount.value = amount.value;
-
-      if(invoiceid.value !== '') {
-        purchase_units[0].invoice_id = invoiceid.value;
-      }
-    },
-
-    createOrder: function (data, actions) {
-      return actions.order.create({
-        purchase_units: purchase_units,
-      });
-    },
-
-    onApprove: function (data, actions) {
-      return actions.order.capture().then(function (orderData) {
-
-        // Full available details
-        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-        // Show a success message within this page, e.g.
-        const element = document.getElementById('paypal-button-container');
-        element.innerHTML = '';
-        element.innerHTML = '<h3>¡Gracias por tu pago!</h3> <a href="https://developer.paypal.com/dashboard/notifications" target="_parent" > revisar cuenta </a>';
-
-        // Or go to another URL:  actions.redirect('thank_you.html');
-
-      });
-    },
-
-    onError: function (err) {
-      console.log(err);
-    }
-  }).render('#paypal-button-container');
-}
-initPayPalButton();
-</script>
-<!--Final pago paypal-->
-
-<br>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

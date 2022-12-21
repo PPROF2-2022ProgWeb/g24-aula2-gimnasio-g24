@@ -29,10 +29,6 @@ AdminComponent,
 LibrosAdminComponent,
 LoginComponent,
 PageNotFoundComponent,
-UsuarioComponent,]
+UsuarioComponent]
 })
-export class PageModule {
-
-
-
-}
+export class PageModule { }

@@ -11,9 +11,8 @@ describe('NosotrosComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NosotrosComponent ]
-    })
-    .compileComponents();
+      declarations: [NosotrosComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

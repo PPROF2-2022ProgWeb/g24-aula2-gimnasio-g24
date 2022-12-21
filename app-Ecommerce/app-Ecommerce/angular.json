@@ -7,6 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
+
           "style": "scss"
         }
       },
@@ -27,11 +28,13 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
-          },
+            "src/styles.scss"
+          ],
+          "styles": [
+            "src/styles.scss"
+          ],
+          "scripts": []
+        },
           "configurations": {
             "production": {
               "budgets": [

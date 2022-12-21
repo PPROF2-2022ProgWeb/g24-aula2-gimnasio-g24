@@ -1,139 +1,217 @@
 <body>
-<main >
-
-<div *ngIf="usuario" class="container-fluid " >
-  <p class="presentacion">Hola {{usuario}} difruta de nuestra app!!"</p>
-</div>
-<div *ngIf="!usuario" class="container-fluid">
-  <a class="presentacion" class="active" routerLink="/Registro">No estas logeado?? Quieres registrasrte?</a>
+  <main>
+    <div *ngIf="usuario" class="container-fluid">
+      <p class="presentacion">Hola {{ usuario }} difruta de nuestra app!!"</p>
+    </div>
+    <div *ngIf="!usuario" class="container-fluid">
+      <a class="presentacion" class="active" routerLink="/Registro"
+        >No estas logeado?? Quieres registrasrte?</a
+      >
     </div>
 
     <section>
       <div class="container" id="">
-        <div class="col CentroHome" > <a href="sobre_nosotros.html"><img class="" src="assets/img/LogoSF.png" id="logo" width="100" height="100" alt="Imagen logo" onMouseOver="CambiarImagen()" /></a>
-          <h2><strong class="active" routerLink="/Registro">Queres ver nuestros productos?</strong></h2>
-          <h2><a class="active" routerLink="/Registro"> Deberas registrarte!!</a></h2>
-<br>
+        <div class="col CentroHome">
+          <a href="sobre_nosotros.html"
+            ><img
+              class=""
+              src="assets/img/LogoSF.png"
+              id="logo"
+              width="100"
+              height="100"
+              alt="Imagen logo"
+              onMouseOver="CambiarImagen()"
+          /></a>
+          <h2>
+            <strong class="active" routerLink="/Registro"
+              >Queres ver nuestros productos?</strong
+            >
+          </h2>
+          <h2>
+            <a class="active" routerLink="/Registro"> Deberas registrarte!!</a>
+          </h2>
+          <br />
           <h1><strong>Entrenate como los MEJORES !!</strong></h1>
-          <img src="assets/img/ImgCentroHome.jpg" alt="" width="50%" height="50%" id="IdIMagenCentro" img-fluid>
-          <h2><a class="active" routerLink="/Registro">Registrate y empeza el entrenamiento profesional</a></h2>
-          <br>
+          <img
+            src="assets/img/ImgCentroHome.jpg"
+            alt=""
+            width="50%"
+            height="50%"
+            id="IdIMagenCentro"
+            img-fluid
+          />
+          <h2>
+            <a class="active" routerLink="/Registro"
+              >Registrate y empeza el entrenamiento profesional</a
+            >
+          </h2>
+          <br />
         </div>
       </div>
     </section>
-    <br>
+    <br />
     <div class="container">
-    <div   class="row justify-contenet-center">
-      <div *ngFor="let item of productosDisp" class="col-3 ">
-        <div class="card CentroHome m-2">
-          <div class="card-herder">
-  <h4>{{item.id}}</h4>
-          </div>
-          <div class="card-body">
-  <div class="container-fluid">
-    <div class="row">
-  <p>Producto: <span>{{item.producto}}</span></p>
-    </div>
-    <div class="row">
-      <p>Valor: <span>$ {{item.valor}}</span></p>
-    </div>
-    <div class="row">
-      <p><img class="CssImage" src="{{item.imgprod}}" width="100" height="100" alt="{{item.imgprod}}" /></p>
-    </div>
-  </div>
+      <div class="row justify-contenet-center">
+        <div *ngFor="let item of productosDisp" class="col-3">
+          <div class="card CentroHome m-2">
+            <div class="card-herder">
+              <h4>{{ item.id }}</h4>
+            </div>
+            <div class="card-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <p>
+                    Producto: <span>{{ item.producto }}</span>
+                  </p>
+                </div>
+                <div class="row">
+                  <p>
+                    Valor: <span>$ {{ item.valor }}</span>
+                  </p>
+                </div>
+                <div class="row">
+                  <p>
+                    <img
+                      class="CssImage"
+                      src="{{ item.imgprod }}"
+                      width="100"
+                      height="100"
+                      alt="{{ item.imgprod }}"
+                    />
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-    <br>
+    <br />
 
     <div class="container">
       <div class="row">
-        <div class="col">
-
-        </div>
+        <div class="col"></div>
         <div class="col" id="idVideoYoutube">
           <a href="https://www.youtube.com/embed/lKx2qCeX-kw" target="_blank">
-          <iframe width="420" height="315"  src="https://www.youtube.com/embed/lKx2qCeX-kw" title="YouTube video player" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-        </a>
-       </div>
-       <div class="col">
+            <iframe
+              width="420"
+              height="315"
+              src="https://www.youtube.com/embed/lKx2qCeX-kw"
+              title="YouTube video player"
+              frameborder="0"
+              allowfullscreen="allowfullscreen"
+            ></iframe>
+          </a>
+        </div>
+        <div class="col"></div>
 
-      </div>
+        <section class="EstiloFuente" id="idEstiloFuentes">
+          <div class="container">
+            <div class="row">
+              <div class="col-4 CentroHome">
+                <br />
+                <h3>
+                  Una vez registrado se harán algunas consultas y cuáles son tus
+                  metas.
+                </h3>
+                <h3>
+                  En tu gimnasio amigo administrara tus horarios y maquinarias
+                  que podrás utilizar.
+                </h3>
+              </div>
+              <div class="col-4 CentroHome border">
+                <br />
 
-       <section class="EstiloFuente" id="idEstiloFuentes">
-        <div class="container">
-          <div class="row">
-            <div class="col-4 CentroHome">
-              <br>
-              <h3>Una vez registrado se harán algunas consultas y cuáles son tus metas.</h3>
-              <h3>En tu gimnasio amigo administrara tus horarios y maquinarias que podrás utilizar.</h3>
-            </div>
-            <div class="col-4 CentroHome border ">
-              <br>
+                <h3>
+                  <p>
+                    En nuestro sitio usted podrá guiarse que ejercicios debe
+                    hacer, con el asesoramiento de un especialista y podrás
+                    llevas registrado tus avances y fortalezas.
+                  </p>
+                </h3>
 
-              <h3><p>En nuestro sitio usted podrá guiarse que ejercicios debe hacer, con el asesoramiento de un especialista y podrás llevas registrado tus avances y fortalezas. </p></h3>
-
-              <br>
-            </div>
-            <div class="col-4 CentroHome">
-              <br>
-              <h3>Podrás tener una lista de ejercicio para hacer y evaluado por tu gimnasio </h3>
-              <h3> Nuestra página te avisara y motivara en todo momento</h3>
+                <br />
+              </div>
+              <div class="col-4 CentroHome">
+                <br />
+                <h3>
+                  Podrás tener una lista de ejercicio para hacer y evaluado por
+                  tu gimnasio
+                </h3>
+                <h3>Nuestra página te avisara y motivara en todo momento</h3>
+              </div>
             </div>
           </div>
-        </div>
-        <br>
-      </section>
+          <br />
+        </section>
 
-      <section id="idSeccionCorreo">
-        <div class="container">
-          <div class="row justify-content-md-center">
-
-            <div class="col-6 EstiloContacto">
-
-              <form id="idFormCorreo" method="post" action="http://planidear.com.ar/a5-g6-gimnasio/EnvCorreo.php" name="formContacto">
-
-
-                <h2>
-                  ¿Quieres hacer una consulta?
-                </h2>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <label form="usuario">nombre</label>
+        <section id="idSeccionCorreo">
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-6 EstiloContacto">
+                <form
+                  id="idFormCorreo"
+                  method="post"
+                  action="http://planidear.com.ar/a5-g6-gimnasio/EnvCorreo.php"
+                  name="formContacto"
+                >
+                  <h2>¿Quieres hacer una consulta?</h2>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label form="usuario">nombre</label>
+                    </div>
+                    <div class="col-sm-6">
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="txtNombre"
+                        id="txtNombre"
+                        minlength="2"
+                        maxlength="20"
+                        placeholder="Ingrese su nombre"
+                        required
+                      />
+                    </div>
                   </div>
-                  <div class="col-sm-6">
-                    <input class="form-control" type="text" name="txtNombre" id="txtNombre" minlength="2"  maxlength="20" placeholder="Ingrese su nombre" required >
+                  <br />
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label form="clave">E-mail</label>
+                    </div>
+                    <div class="col-sm-6">
+                      <input
+                        class="form-control"
+                        type="email"
+                        name="txtEmail"
+                        id="txtEmail"
+                        required
+                      />
+                    </div>
                   </div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <label form="clave">E-mail</label>
+                  <br />
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label form="clave">Consulta</label>
+                    </div>
+                    <div class="col-sm-6">
+                      <input
+                        name="txtConsulta"
+                        type="text"
+                        class="form-control"
+                        id="txtConsulta"
+                        size="100"
+                        required
+                      />
+                    </div>
                   </div>
-                  <div class="col-sm-6">
-                    <input class="form-control" type="email" name="txtEmail"  id="txtEmail" required >
-                  </div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <label form="clave">Consulta</label>
-                  </div>
-                  <div class="col-sm-6">
-                    <input name="txtConsulta" type="text" class="form-control"  id="txtConsulta" size="100" required >
-                  </div>
-                </div>
-                <button class="btn btn-primary" type="submit" name="login">Enviar</button>
-              </form>
-
+                  <button class="btn btn-primary" type="submit" name="login">
+                    Enviar
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-
+        </section>
       </div>
     </div>
   </main>

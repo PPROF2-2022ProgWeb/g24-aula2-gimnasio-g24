@@ -1,7 +1,7 @@
-img:hover  {
+img:hover {
 
   width: 350px;
   height: 350px;
 
- border-radius: 150% 150%;
+  border-radius: 150% 150%;
 }

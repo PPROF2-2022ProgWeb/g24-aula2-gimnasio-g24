@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
 })
 export class FilterPipe implements PipeTransform {
   post: any;
@@ -11,14 +11,8 @@ export class FilterPipe implements PipeTransform {
     for (const post of value) {
       if (post.producto.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
         resultPosts.push(post);
-      };
-    };
+      }
+    }
     return resultPosts;
   }
-
-
-
-  }
-
-
-
+}

@@ -20,6 +20,7 @@
     "@angular/router": "^14.2.0",
     "@google-pay/button-angular": "^3.0.0",
     "@paypal/paypal-js": "^5.1.4",
+    "bootstrap": "^5.2.3",
     "mercadopago": "^1.5.14",
     "ngx-paypal": "^10.1.0",
     "rxjs": "~7.5.0",

@@ -6,18 +6,12 @@ import { MenuservService } from 'src/app/Layout/menu/menuserv.service';
 import { FilterPipe } from 'src/app/pipes/filter.pipe';
 import { CompraservService } from '../../Service/compraserv.service';
 
-
-
-
 @Component({
   selector: 'app-compra',
   templateUrl: './compra.component.html',
   styleUrls: ['./compra.component.css'],
 })
 export class CompraComponent implements OnInit {
-
-
-
   prodForm: FormGroup;
   productos: any;
   productosDisp: any;
@@ -38,26 +32,26 @@ export class CompraComponent implements OnInit {
     private loginservice: MenuservService
   ) {}
   filterPost = '';
-  post =
-  [
+  post = [
     {
-    producto: null,
-    valor: null,
-    resto: null,
-    imgprod: null,
-  }];
+      producto: null,
+      valor: null,
+      resto: null,
+      imgprod: null,
+    },
+  ];
 
   ngOnInit() {
     this.loginservice.consultaMenu.subscribe((data: any) => {
       this.usuario = data;
     });
 
-   // this.MostrarTodos();
+    // this.MostrarTodos();
 
     this.prodForm = this.fbmov.group({
       valor: ['', Validators.required],
       idcompra: [''],
-   id: [''],
+      id: [''],
       idproducto: [''],
       producto: [''],
       idcliente: [''],
@@ -88,7 +82,7 @@ export class CompraComponent implements OnInit {
     );
   }
 
- /* MostrarTodos() {
+  /* MostrarTodos() {
     this.CompSer.getAllMovDisp.subscribe((result:any) => this.userListado = result);
   }*/
 
@@ -96,8 +90,9 @@ export class CompraComponent implements OnInit {
   guardar(): void {
     this.CompSer.saveMov(this.prodForm.value).subscribe(
       (resp) => {
-
-        this.productos = this.productos.filter((prod) => resp.idcompra !== prod.idcompra);
+        this.productos = this.productos.filter(
+          (prod) => resp.idcompra !== prod.idcompra
+        );
         this.productos.push(resp);
         this.prodForm.reset();
       },
@@ -107,7 +102,7 @@ export class CompraComponent implements OnInit {
     );
   }
 
- /* eliminar(producto) {
+  /* eliminar(producto) {
     this.CompSer.deleteMov(producto.id).subscribe(
       (resp) => {
         if (!resp === true) {
@@ -121,8 +116,6 @@ export class CompraComponent implements OnInit {
     );
   } */
 
-
-
   editar(producto) {
     this.prodForm.setValue({
       cantidad: 1,
@@ -131,7 +124,7 @@ export class CompraComponent implements OnInit {
       id: null,
       idproducto: producto.idproducto,
       producto: producto.producto,
-      obscompra: "",
+      obscompra: '',
       //tipomovim: 1,
       idcliente: 1,
       usercompra: this.usuario,
@@ -140,10 +133,4 @@ export class CompraComponent implements OnInit {
       fechacompra: producto,
     });
   }
-
-
-
 }
-
-
-

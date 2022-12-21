@@ -1,11 +1,11 @@
-body{
+body {
   background-image: url(http://planidear.com.ar/g24-aula2-gimnasio-g24/img/fondogym3.jpg);
 
-color: white;
+  color: white;
 
-background-attachment: fixed;
+  background-attachment: fixed;
 
-align-content: center;
+  align-content: center;
   background-size: cover;
 }
 
@@ -38,14 +38,14 @@ align-content: center;
 }
 
 .video-responsive {
-/*Para no mostrar ningún marcador en una lista de elementos */
+  /*Para no mostrar ningún marcador en una lista de elementos */
   list-style: none;
-/*margen interior*/
+  /*margen interior*/
   padding: 0;
   background: #000000;
   width: 100%;
   margin: auto;
-/* Nos posiciona todos los elementos en centro*/
+  /* Nos posiciona todos los elementos en centro*/
   align-content: initial;
 }
 
@@ -58,49 +58,59 @@ align-content: center;
 .CssImag {
   width: 50px;
   height: 50px;
- border-radius: 50% 50%;
+  border-radius: 50% 50%;
 }
 
 
 
 
-a, p, table, td, tr, thead{
+a,
+p,
+table,
+td,
+tr,
+thead {
   color: white;
 }
 
 
 
 #estiloBody {
-  background-size: cover; /*La imagen es renderizada, preservando su proporción propia,*/
-  background-position: top; /* Posicion de la imagen: 0% en la posición vertical*/
-  background-attachment: fixed; /* determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor: a imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor*/
+  background-size: cover;
+  /*La imagen es renderizada, preservando su proporción propia,*/
+  background-position: top;
+  /* Posicion de la imagen: 0% en la posición vertical*/
+  background-attachment: fixed;
+  /* determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor: a imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor*/
 }
 
 h1 {
-  font-family: 'Courier New', Courier, monospace,"sans-serif";
+  font-family: 'Courier New', Courier, monospace, "sans-serif";
 }
 
 
 
-#AlinearLogoInicio{
-text-align: center;
+#AlinearLogoInicio {
+  text-align: center;
 }
 
 
-.errorUsuarios{
+.errorUsuarios {
   color: red;
 }
 
 .errorUsuarios {
-  color: red; }
-  .CentroHome {
-    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    color: white;
-    background-color: black;
-    align-content: center;
-    align-items: center;
-    text-align: center;
+  color: red;
+}
+
+.CentroHome {
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  color: white;
+  background-color: black;
+  align-content: center;
+  align-items: center;
+  text-align: center;
   /*Puede ser 0.9*/
-    opacity: 90%;
-    border-radius: 1% 1%;
-  }
+  opacity: 90%;
+  border-radius: 1% 1%;
+}
